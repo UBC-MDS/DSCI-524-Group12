@@ -31,7 +31,7 @@ The official documentation is hosted on Read the Docs: https://datascience_eda.r
 
 ## Contributors
 
-We welcome and recognize all contributions. You can see a list of current contributors in the [contributors tab](https://github.com/lephanthuymai/datascience_eda/graphs/contributors).
+We welcome and recognize all contributions. You can see a list of current contributors in the [contributors tab](https://github.com/UBC-MDS/datascience_eda/graphs/contributors).
 
 ### Credits
 
