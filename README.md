@@ -1,6 +1,9 @@
 # datascience_eda 
 
-![](https://github.com/lephanthuymai/datascience_eda/workflows/build/badge.svg) [![codecov](https://codecov.io/gh/lephanthuymai/datascience_eda/branch/main/graph/badge.svg)](https://codecov.io/gh/lephanthuymai/datascience_eda) ![Release](https://github.com/lephanthuymai/datascience_eda/workflows/Release/badge.svg) [![Documentation Status](https://readthedocs.org/projects/datascience_eda/badge/?version=latest)](https://datascience_eda.readthedocs.io/en/latest/?badge=latest)
+![](https://github.com/lephanthuymai/datascience_eda/workflows/build/badge.svg) 
+[![codecov](https://codecov.io/gh/UBC-MDS/datascience_eda/branch/main/graph/badge.svg?token=FL08APHGDS)](https://codecov.io/gh/UBC-MDS/datascience_eda)
+![Release](https://github.com/lephanthuymai/datascience_eda/workflows/Release/badge.svg) 
+[![Documentation Status](https://readthedocs.org/projects/datascience_eda/badge/?version=latest)](https://datascience_eda.readthedocs.io/en/latest/?badge=latest)
 
 This package includes functions helping with common tasks during EDA stage of a data science project
 
