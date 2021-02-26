@@ -24,8 +24,8 @@ from scipy.cluster.hierarchy import (
 import nltk
 import spacy
 import en_core_web_md
-from wordcloud import WordCloud, STOPWORDS
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+from wordcloud import WordCloud, STOPWORDS
 # endregion
 
 def get_clustering_default_hyperparameters():
