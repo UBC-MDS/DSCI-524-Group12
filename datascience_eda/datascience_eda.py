@@ -100,7 +100,34 @@ def initial_clustering(
 
 
 def eda_text_columns(df, text_col = None, params = dict()):
+    """Perfroms EDA of text features.
+    - prints the summary statistics of character length
+    - plots the distribution of character length
+    - prints the summary statistics of word count
+    - plots the distribution of word count
+    - plots the word cloud
+    - plots bar charts of stopwords, words other than stopwords and bigrams
+    - plots the distribution of polarity and subjectivity scores
+    - plots bar charts of sentiments, name entities and part of speech tags
 
+
+    Parameters
+    ----------
+    df : pandas.DataFrame
+        the dataset (X)
+    text_col : str
+        name of text column
+    params : dict
+        a dictionary of parameters
+
+    Returns
+    -------
+    None
+
+    Examples
+    -------
+    >>> eda_text_columns(X)
+    """
 
     # identify text columns if not specified by user
 
