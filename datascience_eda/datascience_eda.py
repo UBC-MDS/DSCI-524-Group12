@@ -23,7 +23,6 @@ from scipy.cluster.hierarchy import (
 # import libraries for eda of text features
 import nltk
 import spacy
-import en_core_web_md
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from wordcloud import WordCloud, STOPWORDS
 # endregion
