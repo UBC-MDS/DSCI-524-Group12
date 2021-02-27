@@ -18,9 +18,14 @@ from scipy.cluster.hierarchy import (
     single,
     ward,
 )
-
 # endregion
 
+# import libraries for eda of text features
+import nltk
+import spacy
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+from wordcloud import WordCloud, STOPWORDS
+# endregion
 
 def get_clustering_default_hyperparameters():
     """create a dictionary listing default hyperparameters for K-Means and DBSCAN clustering
@@ -91,3 +96,72 @@ def initial_clustering(
     # add all plots to result dictionary
 
     return result
+
+
+def eda_text_columns(df, text_col = None, params = dict()):
+    """Perfroms EDA of text features.
+    - prints the summary statistics of character length
+    - plots the distribution of character length
+    - prints the summary statistics of word count
+    - plots the distribution of word count
+    - plots the word cloud
+    - plots bar chart of top n stopwords
+    - plots bar chart of top n words other than stopwords 
+    - plots bar chart of top n bigrams
+    - plots the distribution of polarity and subjectivity scores
+    - plots bar charts of sentiments, name entities and part of speech tags
+
+
+    Parameters
+    ----------
+    df : pandas.DataFrame
+        the dataset (X)
+    text_col : str
+        name of text column
+    params : dict
+        a dictionary of parameters
+
+    Returns
+    -------
+    None
+
+    Examples
+    -------
+    >>> eda_text_columns(X)
+    """
+
+    # identify text columns if not specified by user
+
+    # print average, minimum, maximum and median character length of text
+
+    # show the shortest and longest text (number of characters)
+
+    # plot a histogram of the length of text (number of characters)
+
+    # print average, minimum, maximum and median number of words
+
+    # show text with least and most number of words
+
+    # plot a histogram of the number of words
+
+    # plot word cloud of text
+
+    # if target is specified, plot word cloud of text conditioned on target
+
+    # plot a bar chart of the top stopwords
+
+    # plot a bar chart of words other than stopwords
+
+    # plot a bar chart of top bigrams
+
+    # plot the distribution of polarity scores
+
+    # plot the distribution of subjectivity scores
+
+    # plot a bar chart of sentiments: Positive, Negative and Neutral
+
+    # plot a bar chart of named entities
+
+    # plot a bar chart of most common tokens per entity
+
+    # plot a bar chart of Part-of-speech tags
