@@ -165,3 +165,41 @@ def eda_text_columns(df, text_col = None, params = dict()):
     # plot a bar chart of most common tokens per entity
 
     # plot a bar chart of Part-of-speech tags
+
+def explore_numeric_columns(data, hist_cols = None, pairplot_cols = None, corr_method = 'pearson'):
+    """This function will create common exploratory analysis visualizations on numeric columns in the dataset which is provided to it.
+
+    The visualizations that will be created are:
+
+    1. Histograms for all numeric columns or for columns specified in optional paramter `hist_cols`
+    2. Scatterplot Matrix (SPLOM) for all numeric columns or for columns specified in optional paramter `hist_cols`
+    3. Heatmap showing correlation coefficient (pearson, kendall or spearman) between all numeric columns
+
+    Parameters
+    ----------
+    data : pandas.DataFrame
+        The dataframe for which exploratory analysis is to be carried out
+    hist_cols : list, optional
+        If passed, it will limit histograms to a subset of columns
+    pairplot_cols : list, optional
+        If passed, it will limit pairplots to a subset of columns
+    corr_method : str, optional
+        Chooses the metric for correlation. Default value is 'pearson'. Possible values:
+            * pearson : standard correlation coefficient
+            * kendall : Kendall Tau correlation coefficient
+            * spearman : Spearman rank correlation
+
+    Returns
+    -------
+    list
+        A list of plot objects created by this function
+    
+    Examples
+    -------
+    >>> explore_numeric_columns(df)
+    """
+
+    # Generate plots
+    
+    results = [] # List will store plot objects created by this function to return to user
+    return results
