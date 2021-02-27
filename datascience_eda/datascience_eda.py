@@ -216,3 +216,34 @@ def explore_numeric_columns(
         []
     )  # List will store plot objects created by this function to return to user
     return results
+
+
+def explore_categorical_columns(df, categorical_cols):
+    """Performs EDA of categorical features.
+    - Creates a dataframe containing column names and corresponding details about unique values, null values and most frequent category in the column
+    - Plots countplots for given categorical columns
+
+    Parameters
+    ----------
+    df : pandas.DataFrame
+        the dataset (X)
+    categorical_col : list
+        name of categorical column(s)
+        
+    Returns
+    -------
+    dataframe
+        A Dataframe with column names, corresponding unique categories, count of null values, percentage of null values and most frequent categories    
+        
+    Examples
+    -------
+    >>> explore_categorical_columns(X, ['col1', 'col2'])
+    """
+
+    # Create dataframe with column names, unique categories, number of nulls, percentage of nulls and most frequent categories
+    
+    # Sort the dataframe using percentage of nulls (descending)  
+
+    # plot countplots of provided categorical features
+
+    return cat_df 
