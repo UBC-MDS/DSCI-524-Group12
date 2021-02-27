@@ -191,9 +191,15 @@ def explore_numeric_columns(data, hist_cols = None, pairplot_cols = None, corr_m
 
     Returns
     -------
-    None
+    list
+        A list of plot objects created by this function
     
     Examples
     -------
     >>> explore_numeric_columns(df)
     """
+
+    # Generate plots
+    
+    results = [] # List will store plot objects created by this function to return to user
+    return results
