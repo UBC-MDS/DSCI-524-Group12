@@ -105,7 +105,9 @@ def eda_text_columns(df, text_col = None, params = dict()):
     - prints the summary statistics of word count
     - plots the distribution of word count
     - plots the word cloud
-    - plots bar charts of stopwords, words other than stopwords and bigrams
+    - plots bar chart of top n stopwords
+    - plots bar chart of top n words other than stopwords 
+    - plots bar chart of top n bigrams
     - plots the distribution of polarity and subjectivity scores
     - plots bar charts of sentiments, name entities and part of speech tags
 
