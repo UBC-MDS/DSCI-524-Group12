@@ -219,7 +219,7 @@ def explore_numeric_columns(
 
 
 def explore_categorical_columns(df, categorical_cols):
-    """Perfroms EDA of categorical features.
+    """Performs EDA of categorical features.
     - Creates a dataframe containing column names and corresponding details about unique values, null values and most frequent category in the column
     - Plots countplots for given categorical columns
 
@@ -237,7 +237,7 @@ def explore_categorical_columns(df, categorical_cols):
         
     Examples
     -------
-    >>> eda_categorical_columns(X, ['col1', 'col2'])
+    >>> explore_categorical_columns(X, ['col1', 'col2'])
     """
 
     # Create dataframe with column names, unique categories, number of nulls, percentage of nulls and most frequent categories
