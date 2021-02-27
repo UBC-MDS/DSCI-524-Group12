@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 # region import libraries for clustering
 from sklearn import cluster, datasets, metrics
@@ -25,6 +26,10 @@ import nltk
 import spacy
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from wordcloud import WordCloud, STOPWORDS
+# endregion
+
+# import libraries for eda of categorical features
+import seaborn as sns
 # endregion
 
 def get_clustering_default_hyperparameters():
@@ -165,3 +170,33 @@ def eda_text_columns(df, text_col = None, params = dict()):
     # plot a bar chart of most common tokens per entity
 
     # plot a bar chart of Part-of-speech tags
+
+
+def eda_categorical_columns(df, categorical_cols):
+    """Perfroms EDA of categorical features.
+    - Creates a dataframe containing column its details about unique values, null values and most frequenct category in the column
+    - Plots count plots for given categorical columns
+
+    Parameters
+    ----------
+    df : pandas.DataFrame
+        the dataset (X)
+    categorical_col : list
+        name of categorical column(s)
+        
+    Returns
+    -------
+    dataframe
+
+    Examples
+    -------
+    >>> eda_categorical_columns(X)
+    """
+
+    # Create dataframe with column names, unique categories, number of nulls, percentage of nulls and most frequent category
+    
+    # Sort the dataframe using percentage of nulls (descending)  
+
+    # plot countplots of provided categorical features
+
+    return cat_df 
