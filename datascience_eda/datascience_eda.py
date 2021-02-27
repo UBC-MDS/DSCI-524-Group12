@@ -131,7 +131,7 @@ def explore_text_columns(df, text_col=None, params=dict()):
 
     Examples
     -------
-    >>> eda_text_columns(X)
+    >>> explore_text_columns(X)
     """
 
     # identify text columns if not specified by user
