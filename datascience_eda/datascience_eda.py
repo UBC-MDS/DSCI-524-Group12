@@ -101,8 +101,8 @@ def explore_clustering(
     return result
 
 
-def eda_text_columns(df, text_col=None, params=dict()):
-    """Perfroms EDA of text features.
+def explore_text_columns(df, text_col=None, params=dict()):
+    """Performs EDA of text features.
     - prints the summary statistics of character length
     - plots the distribution of character length
     - prints the summary statistics of word count
@@ -126,7 +126,8 @@ def eda_text_columns(df, text_col=None, params=dict()):
 
     Returns
     -------
-    None
+    list
+        A list of plot objects created by this function
 
     Examples
     -------
@@ -168,6 +169,10 @@ def eda_text_columns(df, text_col=None, params=dict()):
     # plot a bar chart of most common tokens per entity
 
     # plot a bar chart of Part-of-speech tags
+
+    result = ([])  # List to store plot objects and return to user
+
+    return result
 
 
 def explore_numeric_columns(
