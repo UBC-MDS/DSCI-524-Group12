@@ -7,6 +7,12 @@
 
 This package includes functions assisting data scientists with some common tasks during the exploratory data analysis stage of a data science project. This library will help the data scientist to do preliminary analysis on common column types like numeric columns, categorical columns and text columns and also conduct several experimental clustering on the dataset.
 
+Our functions are tailored based on our own experience, there are also similar packages published on [PyPi](https://pypi.org/search/?q=eda&page=1), a few good ones worth mentioning:
+* [eda-viz](https://github.com/ajaymaity/eda-viz)
+* [eda_and_beyond](https://github.com/FredaXin/eda_and_beyond)
+* [Quick-EDA](https://github.com/sid-the-coder/QuickDA)
+* [easy-data-analysis](https://github.com/jschnab/easy-data-analysis)
+
 ## Installation
 
 ```bash
