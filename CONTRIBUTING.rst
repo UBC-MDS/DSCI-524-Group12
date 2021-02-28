@@ -12,6 +12,10 @@ You can contribute in many ways:
 Types of Contributions
 ----------------------
 
+Development team contributions: The core developers of this project are following a standard Github branching workflow. For any new changes, we will work on a new branch, and create pull request to merge it into the main branch, post approval from other team members.
+
+All other contributers can follow the below steps to contribute to the project.
+
 Report Bugs
 ~~~~~~~~~~~
 
