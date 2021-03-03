@@ -7,8 +7,10 @@ from sklearn.datasets import make_blobs
 from sklearn.decomposition import PCA
 from sklearn.metrics.pairwise import euclidean_distances
 from sklearn.preprocessing import StandardScaler
+from sklearn.impute import SimpleImputer
+from sklearn.pipeline import Pipeline, make_pipeline
 
-from yellowbrick.cluster import SilhouetteVisualizer
+from yellowbrick.cluster import KElbowVisualizer, SilhouetteVisualizer
 
 from scipy.cluster.hierarchy import (
     average,
@@ -21,13 +23,32 @@ from scipy.cluster.hierarchy import (
 
 # endregion
 
-# import libraries for eda of text features
+# region import libraries for eda of text features
 import nltk
 import spacy
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from wordcloud import WordCloud, STOPWORDS
 
 # endregion
+
+# region support functions
+
+
+def get_numeric_columns(df):
+    """get all numeric columns' names
+
+    Parameters
+    ----------
+    df : [pandas.DataFrame]
+        the dataset
+
+    Returns
+    -------
+    list
+        list of numeric column names
+    """
+    numeric_cols = df.select_dtypes("number").columns.tolist()
+    return numeric_cols
 
 
 def get_clustering_default_hyperparameters():
@@ -55,8 +76,14 @@ def get_clustering_default_hyperparameters():
     return clustering_default_hyperparameters
 
 
+# endregion
+
+# region clustering functions
 def explore_clustering(
-    df, hyperparameter_dict=get_clustering_default_hyperparameters()
+    df,
+    numeric_cols=None,
+    hyperparameter_dict=get_clustering_default_hyperparameters(),
+    numeric_transformer=make_pipeline(SimpleImputer(), StandardScaler()),
 ):
     """fit and plot K-Means, DBScan clustering algorithm on the dataset
 
@@ -64,6 +91,8 @@ def explore_clustering(
     ----------
     df : pandas.DataFrame
         the dataset (X)
+    numeric_cols: list, optional
+        a list of numeric columns used for clustering, by default None, will be assigned with all numeric columns
     hyperparameter_dict : dict, optional
         the distance metric and hyperparameters to be used in the clustering algorithm, by default get_clustering_default_hyperparameters()
 
@@ -99,6 +128,21 @@ def explore_clustering(
     # add all plots to result dictionary
 
     return result
+
+
+def explore_KMeans_clustering(
+    df, hyperameters, include_silhoutte=False, include_PCA=False
+):
+    raise NotImplementedError()
+
+
+def explore_DBSCAN_clustering(
+    df, hyperparameters, include_silhoutte=True, include_PCA=False
+):
+    raise NotImplementedError()
+
+
+# endregion
 
 
 def explore_text_columns(df, text_col=None, params=dict()):
@@ -170,7 +214,7 @@ def explore_text_columns(df, text_col=None, params=dict()):
 
     # plot a bar chart of Part-of-speech tags
 
-    result = ([])  # List to store plot objects and return to user
+    result = []  # List to store plot objects and return to user
 
     return result
 
@@ -229,21 +273,21 @@ def explore_categorical_columns(df, categorical_cols):
         the dataset (X)
     categorical_col : list
         name of categorical column(s)
-        
+
     Returns
     -------
     dataframe
-        A Dataframe with column names, corresponding unique categories, count of null values, percentage of null values and most frequent categories    
-        
+        A Dataframe with column names, corresponding unique categories, count of null values, percentage of null values and most frequent categories
+
     Examples
     -------
     >>> explore_categorical_columns(X, ['col1', 'col2'])
     """
 
     # Create dataframe with column names, unique categories, number of nulls, percentage of nulls and most frequent categories
-    
-    # Sort the dataframe using percentage of nulls (descending)  
+
+    # Sort the dataframe using percentage of nulls (descending)
 
     # plot countplots of provided categorical features
 
-    return cat_df 
+    return cat_df
