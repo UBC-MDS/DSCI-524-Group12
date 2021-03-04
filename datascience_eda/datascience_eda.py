@@ -183,12 +183,18 @@ def explore_clustering(
 
     # region validate parameters, throw exception upon invalid ones
 
+    if not (type(df) == pd.DataFrame):
+        raise TypeError("df must be a DataFrame.")
+
     all_num_cols = get_numeric_columns(df)
     if numeric_cols is None:
         numeric_cols = all_num_cols
     else:
         # check if the column names are valid
         _verify_numeric_cols(df, numeric_cols)
+
+    if not (type(hyperparameter_dict) == dict):
+        raise TypeError("hyperparameter_dict must be a dict.")
 
     if not ("KMeans" in hyperparameter_dict):
         raise Exception("Expecting Kmeans hyperparams.")

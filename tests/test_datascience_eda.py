@@ -2,6 +2,7 @@ from datascience_eda import __version__
 from datascience_eda import datascience_eda as eda
 
 import pytest
+from pytest import raises
 import pandas as pd
 
 import os, sys, inspect
@@ -119,6 +120,49 @@ def test_explore_clustering(df):
     assert len(dbscan_plots) == 2, "Invalid number of DBSCAN plots"
 
     # DBSCAN plot generation is tested under test_explore_DBSCAN_clustering
+
+
+def test_explore_clustering_input_types(df):
+    """test inputs for explore_clustering
+
+    Parameters
+    ----------
+    df : pandas.DataFrame
+        the dataset
+    """
+
+    with raises(TypeError):
+        eda.explore_clustering(1)
+
+    with raises(TypeError):
+        eda.explore_clustering(df, 1)
+
+    hyperparams = {}
+    with raises(Exception):
+        eda.explore_clustering(df, hyperparameter_dict=hyperparams)
+
+    hyperparams = {"KMeans": {}}
+    with raises(Exception):
+        eda.explore_clustering(df, hyperparameter_dict=hyperparams)
+
+    hyperparams = {"KMeans": {}, "DBSCAN": {}}
+    with raises(Exception):
+        eda.explore_clustering(df, hyperparameter_dict=hyperparams)
+
+    hyperparams = {"KMeans": {"n_clusters": [3, 4]}, "DBSCAN": {}}
+    with raises(Exception):
+        eda.explore_clustering(df, hyperparameter_dict=hyperparams)
+
+    hyperparams = {"KMeans": {"n_clusters": [3, 4]}, "DBSCAN": {"eps": [0.4]}}
+    with raises(Exception):
+        eda.explore_clustering(df, hyperparameter_dict=hyperparams)
+
+    hyperparams = {
+        "KMeans": {"n_clusters": [3, 4]},
+        "DBSCAN": {"eps": [0.4], "min_samples": [4, 5]},
+    }
+    with raises(Exception):
+        eda.explore_clustering(df, hyperparameter_dict=hyperparams)
 
 
 def test_explore_KMeans_clustering(df):
