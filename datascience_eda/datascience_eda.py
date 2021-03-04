@@ -129,8 +129,8 @@ def explore_text_columns(df, text_col=[], params=dict()):
     ----------
     df : pandas.DataFrame
         the dataset (X)
-    text_col : str
-        name of text column
+    text_col : list
+        name of text column(s) as list of string(s)
     params : dict
         a dictionary of parameters
 
@@ -365,11 +365,26 @@ def explore_text_columns(df, text_col=[], params=dict()):
             plt.ylabel(token);
             plt.xlabel("Count");
             result.append(entity_token[c])
-            plt.show();
+            plt.show(); 
             plt.close()
             c=c+1
 
     # plot a bar chart of Part-of-speech tags
+        tags=df[col].apply(lambda x : [tags.pos_ for tags in nlp(x)])
+        tags=[x for sub in tags for x in sub]
+        tag_counter=Counter(tags)
+        
+        tag_count_df = pd.DataFrame.from_dict(tag_counter, orient='index').reset_index()
+        tag_count_df.columns=['Tags', 'Count']
+        tag_count_df = tag_count_df.sort_values(by="Count", ascending=False)
+
+        printmd("### Bar Chart of Part of Speech Tags:<br>")
+        pos_plot = sns.barplot(y='Tags', x='Count', data=tag_count_df);
+        plt.ylabel("Part of Speech Tags");
+        plt.xlabel("Count");
+        result.append(pos_plot)
+        plt.show();
+        plt.close()
 
 
     return result

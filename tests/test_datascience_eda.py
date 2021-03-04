@@ -142,3 +142,9 @@ def test_explore_text_columns(text_df):
     ref_loc_entity_token_3 = currentdir + "/reference_plots/entity_token_3.png"
 
     assert((compare_images(test_loc_entity_token_3, ref_loc_entity_token_3, 0)) == None)
+
+    test_loc_pos_plot = currentdir + "/test_plots/pos_plot.png"
+    result[16].figure.savefig(test_loc_pos_plot)
+    ref_loc_pos_plot = currentdir + "/reference_plots/pos_plot.png"
+
+    assert((compare_images(test_loc_pos_plot, ref_loc_pos_plot, 0)) == None)
