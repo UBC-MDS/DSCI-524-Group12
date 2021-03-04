@@ -124,3 +124,21 @@ def test_explore_text_columns(text_df):
     ref_loc_entity = currentdir + "/reference_plots/entity.png"
 
     assert((compare_images(test_loc_entity, ref_loc_entity, 0)) == None)
+
+    test_loc_entity_token_1 = currentdir + "/test_plots/entity_token_1.png"
+    result[13].figure.savefig(test_loc_entity_token_1)
+    ref_loc_entity_token_1 = currentdir + "/reference_plots/entity_token_1.png"
+
+    assert((compare_images(test_loc_entity_token_1, ref_loc_entity_token_1, 0)) == None)
+
+    test_loc_entity_token_2 = currentdir + "/test_plots/entity_token_2.png"
+    result[14].figure.savefig(test_loc_entity_token_2)
+    ref_loc_entity_token_2 = currentdir + "/reference_plots/entity_token_2.png"
+
+    assert((compare_images(test_loc_entity_token_2, ref_loc_entity_token_2, 0)) == None)
+
+    test_loc_entity_token_3 = currentdir + "/test_plots/entity_token_3.png"
+    result[15].figure.savefig(test_loc_entity_token_3)
+    ref_loc_entity_token_3 = currentdir + "/reference_plots/entity_token_3.png"
+
+    assert((compare_images(test_loc_entity_token_3, ref_loc_entity_token_3, 0)) == None)

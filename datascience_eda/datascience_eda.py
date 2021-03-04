@@ -347,6 +347,27 @@ def explore_text_columns(df, text_col=[], params=dict()):
         plt.close()
 
     # plot a bar chart of most common tokens per entity
+        tokens = ["PERSON", "GPE", "ORG"]
+        c = 0
+        entity_token = [None] * len(tokens)
+        for token in tokens:
+            
+            token_list=df[col].apply(lambda x: [X.text for X in nlp(x).ents if X.label_ == token])
+            token_list=[i for x in token_list for i in x]
+            token_counter=Counter(token_list)
+
+            token_count_df = pd.DataFrame.from_dict(token_counter, orient='index').reset_index()
+            token_count_df.columns=[token, 'Count']
+            token_count_df = token_count_df.sort_values(by="Count", ascending=False)
+            
+            printmd("### Bar Chart of the token- "+'"'+token+'"'+":<br>")
+            entity_token[c] = sns.barplot(y=token, x='Count', data=token_count_df.head(10));
+            plt.ylabel(token);
+            plt.xlabel("Count");
+            result.append(entity_token[c])
+            plt.show();
+            plt.close()
+            c=c+1
 
     # plot a bar chart of Part-of-speech tags
 
