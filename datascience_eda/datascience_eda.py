@@ -70,8 +70,8 @@ def get_clustering_default_hyperparameters():
     """
     clustering_default_hyperparameters = {
         "distance_metric": "euclidean",
-        "K-Means": {"n_clusters": (3, 10)},
-        "DBSCAN": {"eps": (1, 3), "min_samples": (3, 10)},
+        "K-Means": {"n_clusters": range(3, 11)},
+        "DBSCAN": {"eps": range(1, 11), "min_samples": range(3, 11)},
     }
     return clustering_default_hyperparameters
 
@@ -131,13 +131,22 @@ def explore_clustering(
 
 
 def explore_KMeans_clustering(
-    df, hyperameters, include_silhoutte=False, include_PCA=False
+    df,
+    metric="euclidean",
+    n_clusters=[8],
+    include_silhoutte=False,
+    include_PCA=False,
 ):
     raise NotImplementedError()
 
 
 def explore_DBSCAN_clustering(
-    df, hyperparameters, include_silhoutte=True, include_PCA=False
+    df,
+    metric="euclidean",
+    eps=[0.5],
+    min_samples=[5],
+    include_silhouette=True,
+    include_PCA=False,
 ):
     raise NotImplementedError()
 
