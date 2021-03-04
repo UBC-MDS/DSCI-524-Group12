@@ -382,8 +382,11 @@ def explore_DBSCAN_clustering(
 
     Returns
     -------
-    dict
-        a dictionary with key=type of plot, value=list of plots
+    Tuple
+        list
+            a list of n_clusters values returned by DBSCAN models
+        dict
+            a dictionary with key=type of plot, value=list of plots
 
     Examples
     -------
@@ -397,7 +400,7 @@ def explore_DBSCAN_clustering(
     >>> df = pd.DataFrame(
     >>>     data=preprocessor.fit_transform(original_df), columns=numeric_features
     >>> )
-    >>> explore_DBSCAN_clusterting(df)
+    >>> n_clusters, dbscan_plots = explore_DBSCAN_clusterting(df)
     """
     if num_cols is None:
         num_cols = get_numeric_columns(df)
