@@ -70,3 +70,9 @@ def test_explore_text_columns(text_df):
     assert((compare_images(test_loc_hist_char, ref_loc_hist_char, 1)) == None)
 
     assert(result[3]==[15.49, 12, 171, text_df['sms'][1084]])
+
+    test_loc_hist_word = currentdir + "/test_plots/hist_word_count.png"
+    result[4].figure.savefig(test_loc_hist_word)
+    ref_loc_hist_word = currentdir + "/reference_plots/hist_word_count.png"
+
+    assert((compare_images(test_loc_hist_word, ref_loc_hist_word, 1)) == None)

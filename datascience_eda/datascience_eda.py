@@ -197,7 +197,7 @@ def explore_text_columns(df, text_col=[], params=dict()):
         plt.show()
 
     # print average, minimum, maximum and median number of words
-    # show text with least and most number of words
+    # show text with most number of words
         printmd("### Word Count:<br>")
 
         mean_word_count = df[col].str.split().apply(len).mean()
@@ -217,6 +217,12 @@ def explore_text_columns(df, text_col=[], params=dict()):
                     highest_word_count, text_most_words])
 
     # plot a histogram of the number of words
+        printmd(f"#### Histogram of number of words in \"{col}\":")
+        word_count_plot = sns.histplot(data=df[col].str.split().apply(len));
+        plt.xlabel("Number of words in "+'"'+col+'"');
+        plt.show()
+        result.append(word_count_plot)
+        printmd("<br>")
 
     # plot word cloud of text
 
