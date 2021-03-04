@@ -67,7 +67,7 @@ def test_explore_text_columns(text_df):
     result[2].figure.savefig(test_loc_hist_char)
     ref_loc_hist_char = currentdir + "/reference_plots/hist_char_length.png"
 
-    assert((compare_images(test_loc_hist_char, ref_loc_hist_char, 1)) == None)
+    assert((compare_images(test_loc_hist_char, ref_loc_hist_char, 0)) == None)
 
     assert(result[3]==[15.49, 12, 171, text_df['sms'][1084]])
 
@@ -75,10 +75,16 @@ def test_explore_text_columns(text_df):
     result[4].figure.savefig(test_loc_hist_word)
     ref_loc_hist_word = currentdir + "/reference_plots/hist_word_count.png"
 
-    assert((compare_images(test_loc_hist_word, ref_loc_hist_word, 1)) == None)
+    assert((compare_images(test_loc_hist_word, ref_loc_hist_word, 0)) == None)
 
     test_loc_word_cloud = currentdir + "/test_plots/word_cloud.png"
     result[5].figure.savefig(test_loc_word_cloud)
     ref_loc_word_cloud = currentdir + "/reference_plots/word_cloud.png"
 
-    assert((compare_images(test_loc_word_cloud, ref_loc_word_cloud, 1)) == None)
+    assert((compare_images(test_loc_word_cloud, ref_loc_word_cloud, 0)) == None)
+
+    test_loc_stopword = currentdir + "/test_plots/stopword.png"
+    result[6].figure.savefig(test_loc_stopword)
+    ref_loc_stopword = currentdir + "/reference_plots/stopword.png"
+
+    assert((compare_images(test_loc_stopword, ref_loc_stopword, 0)) == None)

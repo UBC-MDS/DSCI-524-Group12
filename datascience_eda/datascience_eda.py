@@ -27,6 +27,7 @@ import matplotlib.pyplot as plt
 import nltk
 import spacy
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+from nltk.corpus import stopwords
 from IPython.display import Markdown, display
 from wordcloud import WordCloud
 # from wordcloud import WordCloud, STOPWORDS
@@ -237,14 +238,29 @@ def explore_text_columns(df, text_col=[], params=dict()):
         wordcloud_plot = plt.imshow(wordcloud, interpolation="bilinear")
         plt.axis("off")
         result.append(wordcloud_plot)
-        plt.show()
-        
+        plt.show();
+        plt.close()        
         
         printmd("<br>")
 
-    # if target is specified, plot word cloud of text conditioned on target
-
     # plot a bar chart of the top stopwords
+        stop=set(stopwords.words('english'))
+        all_words=df[col].str.split()
+        all_words=all_words.values.tolist()
+        corpus=[word for i in all_words for word in i]
+        corpus=(pd.DataFrame(pd.DataFrame(corpus, columns=["counts"])
+                            .counts.value_counts())
+                            .reset_index())
+        corpus.columns=['words', 'counts']
+        
+        all_stopwords = corpus.merge(pd.DataFrame(stop, columns=['words']), on="words", how="right")
+        
+        printmd("### Bar Chart of the top stopwords:<br>")
+        stopwords_plot = sns.barplot(y="words", x="counts", data=all_stopwords.sort_values(by="counts", ascending=False).head(10));
+        plt.ylabel("Stop Words");
+        plt.xlabel("Count");
+        result.append(stopwords_plot)
+        plt.show()
 
     # plot a bar chart of words other than stopwords
 
