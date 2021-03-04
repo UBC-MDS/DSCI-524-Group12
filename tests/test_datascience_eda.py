@@ -57,12 +57,18 @@ def test_explore_text_columns(text_df):
     with raises(Exception):
         eda.explore_text_columns(['test'])
 
+    with raises(Exception):
+        eda.explore_text_columns(text_df.drop['sms'])
+
+    with raises(Exception):
+        eda.explore_text_columns(text_df, 'sms')
+
+    with raises(Exception):
+        eda.explore_text_columns(text_df, ['some_col_name'])
+
     result = eda.explore_text_columns(text_df)
 
     assert(result[0]==['sms'])
-
-    with raises(Exception):
-        eda.explore_text_columns(text_df.drop['sms'])
 
     assert(result[1]==[80.12, 61, 910, text_df['sms'][1084], 2, text_df['sms'][1924]])
     
@@ -104,50 +110,50 @@ def test_explore_text_columns(text_df):
 
     assert((compare_images(test_loc_bi_gram, ref_loc_bi_gram, 0)) == None)
 
-    # test_loc_polarity_scores = currentdir + "/test_plots/polarity_scores.png"
-    # result[9].figure.savefig(test_loc_polarity_scores)
-    # ref_loc_polarity_scores = currentdir + "/reference_plots/polarity_scores.png"
+    test_loc_polarity_scores = currentdir + "/test_plots/polarity_scores.png"
+    result[9].figure.savefig(test_loc_polarity_scores)
+    ref_loc_polarity_scores = currentdir + "/reference_plots/polarity_scores.png"
 
-    # assert((compare_images(test_loc_polarity_scores, ref_loc_polarity_scores, 0)) == None)
+    assert((compare_images(test_loc_polarity_scores, ref_loc_polarity_scores, 0)) == None)
 
-    # test_loc_sentiment = currentdir + "/test_plots/sentiment.png"
-    # result[10].figure.savefig(test_loc_sentiment)
-    # ref_loc_sentiment = currentdir + "/reference_plots/sentiment.png"
+    test_loc_sentiment = currentdir + "/test_plots/sentiment.png"
+    result[10].figure.savefig(test_loc_sentiment)
+    ref_loc_sentiment = currentdir + "/reference_plots/sentiment.png"
 
-    # assert((compare_images(test_loc_sentiment, ref_loc_sentiment, 0)) == None)
+    assert((compare_images(test_loc_sentiment, ref_loc_sentiment, 0)) == None)
 
-    # test_loc_subjectivity = currentdir + "/test_plots/subjectivity.png"
-    # result[11].figure.savefig(test_loc_subjectivity)
-    # ref_loc_subjectivity = currentdir + "/reference_plots/subjectivity.png"
+    test_loc_subjectivity = currentdir + "/test_plots/subjectivity.png"
+    result[11].figure.savefig(test_loc_subjectivity)
+    ref_loc_subjectivity = currentdir + "/reference_plots/subjectivity.png"
 
-    # assert((compare_images(test_loc_subjectivity, ref_loc_subjectivity, 0)) == None)
+    assert((compare_images(test_loc_subjectivity, ref_loc_subjectivity, 0)) == None)
 
-    # test_loc_entity = currentdir + "/test_plots/entity.png"
-    # result[12].figure.savefig(test_loc_entity)
-    # ref_loc_entity = currentdir + "/reference_plots/entity.png"
+    test_loc_entity = currentdir + "/test_plots/entity.png"
+    result[12].figure.savefig(test_loc_entity)
+    ref_loc_entity = currentdir + "/reference_plots/entity.png"
 
-    # assert((compare_images(test_loc_entity, ref_loc_entity, 0)) == None)
+    assert((compare_images(test_loc_entity, ref_loc_entity, 0)) == None)
 
-    # test_loc_entity_token_1 = currentdir + "/test_plots/entity_token_1.png"
-    # result[13].figure.savefig(test_loc_entity_token_1)
-    # ref_loc_entity_token_1 = currentdir + "/reference_plots/entity_token_1.png"
+    test_loc_entity_token_1 = currentdir + "/test_plots/entity_token_1.png"
+    result[13].figure.savefig(test_loc_entity_token_1)
+    ref_loc_entity_token_1 = currentdir + "/reference_plots/entity_token_1.png"
 
-    # assert((compare_images(test_loc_entity_token_1, ref_loc_entity_token_1, 0)) == None)
+    assert((compare_images(test_loc_entity_token_1, ref_loc_entity_token_1, 0)) == None)
 
-    # test_loc_entity_token_2 = currentdir + "/test_plots/entity_token_2.png"
-    # result[14].figure.savefig(test_loc_entity_token_2)
-    # ref_loc_entity_token_2 = currentdir + "/reference_plots/entity_token_2.png"
+    test_loc_entity_token_2 = currentdir + "/test_plots/entity_token_2.png"
+    result[14].figure.savefig(test_loc_entity_token_2)
+    ref_loc_entity_token_2 = currentdir + "/reference_plots/entity_token_2.png"
 
-    # assert((compare_images(test_loc_entity_token_2, ref_loc_entity_token_2, 0)) == None)
+    assert((compare_images(test_loc_entity_token_2, ref_loc_entity_token_2, 0)) == None)
 
-    # test_loc_entity_token_3 = currentdir + "/test_plots/entity_token_3.png"
-    # result[15].figure.savefig(test_loc_entity_token_3)
-    # ref_loc_entity_token_3 = currentdir + "/reference_plots/entity_token_3.png"
+    test_loc_entity_token_3 = currentdir + "/test_plots/entity_token_3.png"
+    result[15].figure.savefig(test_loc_entity_token_3)
+    ref_loc_entity_token_3 = currentdir + "/reference_plots/entity_token_3.png"
 
-    # assert((compare_images(test_loc_entity_token_3, ref_loc_entity_token_3, 0)) == None)
+    assert((compare_images(test_loc_entity_token_3, ref_loc_entity_token_3, 0)) == None)
 
-    # test_loc_pos_plot = currentdir + "/test_plots/pos_plot.png"
-    # result[16].figure.savefig(test_loc_pos_plot)
-    # ref_loc_pos_plot = currentdir + "/reference_plots/pos_plot.png"
+    test_loc_pos_plot = currentdir + "/test_plots/pos_plot.png"
+    result[16].figure.savefig(test_loc_pos_plot)
+    ref_loc_pos_plot = currentdir + "/reference_plots/pos_plot.png"
 
-    # assert((compare_images(test_loc_pos_plot, ref_loc_pos_plot, 0)) == None)
+    assert((compare_images(test_loc_pos_plot, ref_loc_pos_plot, 0)) == None)

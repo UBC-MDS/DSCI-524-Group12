@@ -111,7 +111,7 @@ def explore_clustering(
 def printmd(string):
     display(Markdown(string))
 
-def explore_text_columns(df, text_col=[], params=dict()):
+def explore_text_columns(df, text_col=None):
     """Performs EDA of text features.
     - prints the summary statistics of character length
     - plots the distribution of character length
@@ -124,15 +124,12 @@ def explore_text_columns(df, text_col=[], params=dict()):
     - plots the distribution of polarity and subjectivity scores
     - plots bar charts of sentiments, name entities and part of speech tags
 
-
     Parameters
     ----------
     df : pandas.DataFrame
         the dataset (X)
     text_col : list
         name of text column(s) as list of string(s)
-    params : dict
-        a dictionary of parameters
 
     Returns
     -------
@@ -145,22 +142,35 @@ def explore_text_columns(df, text_col=[], params=dict()):
     """
     result = []
 
+    # exception if df is not a pandas dataframe
     if type(df) != pd.core.frame.DataFrame:
         raise Exception("df is not a Pandas Dataframe")
 
     # identify text columns if not specified by user
-    if not text_col:
+    if text_col == None:
+        text_col = []
         non_num = df.columns[df.dtypes == ("object" or "string")]
         for col in non_num:
             if df[col].unique().shape[0]/df.shape[0] > 0.75:
                 if df[col].str.split().apply(len).median() > 5:
                     text_col.append(col)
 
+    # exception if text column cannot be identified
         if not text_col:
             raise Exception("Could not identify any text column. Please pass the text column(s) when calling the function")
         else:
             print("Identified the following as text columns:", text_col)
             result.append(text_col)
+    
+    # exception if text_col is not passed as a list
+    elif type(text_col) is not list:
+        raise Exception("text_col is not a list. Pass the text column(s) as a list")
+    
+    # exception if a column passes in text_col is not in df
+    else:
+        for col in text_col:
+            if col not in df.columns.values:
+                raise Exception(f"{col} is not a column in the dataframe")
 
     # print average, minimum, maximum and median character length of text
     # show the shortest and longest text (number of characters)
@@ -199,7 +209,6 @@ def explore_text_columns(df, text_col=[], params=dict()):
         printmd(f"#### Histogram of number of characters in \"{col}\":")
         sns.set_theme(style="whitegrid")
         plt.rcParams.update({'figure.figsize': (12,8)})
-#        plt.figure(1)
         char_length_plot = sns.histplot(data=df[col].str.len());
         plt.xlabel("Number of characters in "+'"'+col+'"');
         result.append(char_length_plot)
@@ -228,7 +237,6 @@ def explore_text_columns(df, text_col=[], params=dict()):
 
     # plot a histogram of the number of words
         printmd(f"#### Histogram of number of words in \"{col}\":")
-#        plt.figure(2)
         word_count_plot = sns.histplot(data=df[col].str.split().apply(len));
         plt.xlabel("Number of words in "+'"'+col+'"');
         result.append(word_count_plot)
@@ -239,7 +247,6 @@ def explore_text_columns(df, text_col=[], params=dict()):
     # plot word cloud of text
         printmd("### Word Cloud:<br>")
         wordcloud = WordCloud(random_state=1).generate(' '.join(df[col]))
-#        plt.figure(3)
         plt.rcParams.update({'figure.figsize': (12,8)})
         wordcloud_plot = plt.imshow(wordcloud, interpolation="bilinear")
         plt.axis("off")
@@ -288,7 +295,7 @@ def explore_text_columns(df, text_col=[], params=dict()):
         sum_words = bag_of_words.sum(axis=0) 
         words_freq = [(word, sum_words[0, idx]) 
             for word, idx in vec.vocabulary_.items()]
-        words_freq =sorted(words_freq, key = lambda x: x[1], reverse=True)
+        words_freq = sorted(words_freq, key = lambda x: x[1], reverse=True)
         top_bi_grams=words_freq[:10]
         x,y=map(list,zip(*top_bi_grams))
         
@@ -300,94 +307,94 @@ def explore_text_columns(df, text_col=[], params=dict()):
         plt.show();
         plt.close()
 
-    # # plot the distribution of polarity scores
-    #     polarity_scores=df[col].apply(lambda x : TextBlob(x).sentiment.polarity)
+    # plot the distribution of polarity scores
+        polarity_scores=df[col].apply(lambda x : TextBlob(x).sentiment.polarity)
         
-    #     printmd("### Distribution of Polarity scores:<br>")
-    #     plarity_scores_plot = sns.histplot(data=polarity_scores, bins=15);
-    #     plt.xlabel("Polarity scores in "+'"'+col+'"');
-    #     result.append(plarity_scores_plot)
-    #     plt.show();
-    #     plt.close()
+        printmd("### Distribution of Polarity scores:<br>")
+        plarity_scores_plot = sns.histplot(data=polarity_scores, bins=15);
+        plt.xlabel("Polarity scores in "+'"'+col+'"');
+        result.append(plarity_scores_plot)
+        plt.show();
+        plt.close()
 
-    # # plot a bar chart of sentiments: Positive, Negative and Neutral
-    #     polarity=polarity_scores.apply(lambda x: 'Negative' if x<0 else ('Neutral' if x==0 else 'Positive'))
+    # plot a bar chart of sentiments: Positive, Negative and Neutral
+        polarity=polarity_scores.apply(lambda x: 'Negative' if x<0 else ('Neutral' if x==0 else 'Positive'))
         
-    #     printmd("### Bar chart of Sentiments:<br>")
-    #     sentiment_plot = sns.countplot(x="sms", data=pd.DataFrame(polarity), order= ["Negative", "Neutral", "Positive"]);
-    #     plt.ylabel("Count");
-    #     plt.xlabel("Sentiments");
-    #     result.append(sentiment_plot)
-    #     plt.show();
-    #     plt.close()
+        printmd("### Bar chart of Sentiments:<br>")
+        sentiment_plot = sns.countplot(x="sms", data=pd.DataFrame(polarity), order= ["Negative", "Neutral", "Positive"]);
+        plt.ylabel("Count");
+        plt.xlabel("Sentiments");
+        result.append(sentiment_plot)
+        plt.show();
+        plt.close()
 
-    # # plot the distribution of subjectivity scores
-    #     subjectivity_scores=df[col].apply(lambda x : TextBlob(x).sentiment.subjectivity)
+    # plot the distribution of subjectivity scores
+        subjectivity_scores=df[col].apply(lambda x : TextBlob(x).sentiment.subjectivity)
         
-    #     printmd("### Distribution of Subjectivity scores:<br>")
-    #     subjectivity_plot = sns.histplot(data=subjectivity_scores, bins=15);
-    #     plt.xlabel("Subjectivity scores in "+'"'+col+'"');
-    #     result.append(subjectivity_plot)
-    #     plt.show();
-    #     plt.close()
+        printmd("### Distribution of Subjectivity scores:<br>")
+        subjectivity_plot = sns.histplot(data=subjectivity_scores, bins=15);
+        plt.xlabel("Subjectivity scores in "+'"'+col+'"');
+        result.append(subjectivity_plot)
+        plt.show();
+        plt.close()
 
-    # # plot a bar chart of named entities
-    #     nlp = en_core_web_md.load()
-    #     ent=df[col].apply(lambda x : [X.label_ for X in nlp(x).ents])
-    #     ent=[x for sub in ent for x in sub]
-    #     ent_counter=Counter(ent)
+    # plot a bar chart of named entities
+        nlp = en_core_web_md.load()
+        ent=df[col].apply(lambda x : [X.label_ for X in nlp(x).ents])
+        ent=[x for sub in ent for x in sub]
+        ent_counter=Counter(ent)
         
-    #     ent_count_df = pd.DataFrame.from_dict(ent_counter, orient='index').reset_index()
-    #     ent_count_df.columns=['Entity', 'Count']
-    #     ent_count_df = ent_count_df.sort_values(by="Count", ascending=False)
+        ent_count_df = pd.DataFrame.from_dict(ent_counter, orient='index').reset_index()
+        ent_count_df.columns=['Entity', 'Count']
+        ent_count_df = ent_count_df.sort_values(by="Count", ascending=False)
         
-    #     printmd("### Bar Chart of Named Entities:<br>")
-    #     entity_plot = sns.barplot(y='Entity', x='Count', data=ent_count_df);
-    #     plt.ylabel("Entity");
-    #     plt.xlabel("Count");
-    #     result.append(entity_plot)
-    #     plt.show();
-    #     plt.close()
+        printmd("### Bar Chart of Named Entities:<br>")
+        entity_plot = sns.barplot(y='Entity', x='Count', data=ent_count_df);
+        plt.ylabel("Entity");
+        plt.xlabel("Count");
+        result.append(entity_plot)
+        plt.show();
+        plt.close()
 
-    # # plot a bar chart of most common tokens per entity
-    #     tokens = ["PERSON", "GPE", "ORG"]
-    #     c = 0
-    #     entity_token = [None] * len(tokens)
-    #     for token in tokens:
+    # plot a bar chart of most common tokens per entity
+        tokens = ["PERSON", "GPE", "ORG"]
+        c = 0
+        entity_token = [None] * len(tokens)
+        for token in tokens:
             
-    #         token_list=df[col].apply(lambda x: [X.text for X in nlp(x).ents if X.label_ == token])
-    #         token_list=[i for x in token_list for i in x]
-    #         token_counter=Counter(token_list)
+            token_list=df[col].apply(lambda x: [X.text for X in nlp(x).ents if X.label_ == token])
+            token_list=[i for x in token_list for i in x]
+            token_counter=Counter(token_list)
 
-    #         token_count_df = pd.DataFrame.from_dict(token_counter, orient='index').reset_index()
-    #         token_count_df.columns=[token, 'Count']
-    #         token_count_df = token_count_df.sort_values(by="Count", ascending=False)
+            token_count_df = pd.DataFrame.from_dict(token_counter, orient='index').reset_index()
+            token_count_df.columns=[token, 'Count']
+            token_count_df = token_count_df.sort_values(by="Count", ascending=False)
             
-    #         printmd("### Bar Chart of the token- "+'"'+token+'"'+":<br>")
-    #         entity_token[c] = sns.barplot(y=token, x='Count', data=token_count_df.head(10));
-    #         plt.ylabel(token);
-    #         plt.xlabel("Count");
-    #         result.append(entity_token[c])
-    #         plt.show(); 
-    #         plt.close()
-    #         c=c+1
+            printmd("### Bar Chart of the token- "+'"'+token+'"'+":<br>")
+            entity_token[c] = sns.barplot(y=token, x='Count', data=token_count_df.head(10));
+            plt.ylabel(token);
+            plt.xlabel("Count");
+            result.append(entity_token[c])
+            plt.show(); 
+            plt.close()
+            c=c+1
 
-    # # plot a bar chart of Part-of-speech tags
-    #     tags=df[col].apply(lambda x : [tags.pos_ for tags in nlp(x)])
-    #     tags=[x for sub in tags for x in sub]
-    #     tag_counter=Counter(tags)
+    # plot a bar chart of Part-of-speech tags
+        tags=df[col].apply(lambda x : [tags.pos_ for tags in nlp(x)])
+        tags=[x for sub in tags for x in sub]
+        tag_counter=Counter(tags)
         
-    #     tag_count_df = pd.DataFrame.from_dict(tag_counter, orient='index').reset_index()
-    #     tag_count_df.columns=['Tags', 'Count']
-    #     tag_count_df = tag_count_df.sort_values(by="Count", ascending=False)
+        tag_count_df = pd.DataFrame.from_dict(tag_counter, orient='index').reset_index()
+        tag_count_df.columns=['Tags', 'Count']
+        tag_count_df = tag_count_df.sort_values(by="Count", ascending=False)
 
-    #     printmd("### Bar Chart of Part of Speech Tags:<br>")
-    #     pos_plot = sns.barplot(y='Tags', x='Count', data=tag_count_df);
-    #     plt.ylabel("Part of Speech Tags");
-    #     plt.xlabel("Count");
-    #     result.append(pos_plot)
-    #     plt.show();
-    #     plt.close()
+        printmd("### Bar Chart of Part of Speech Tags:<br>")
+        pos_plot = sns.barplot(y='Tags', x='Count', data=tag_count_df);
+        plt.ylabel("Part of Speech Tags");
+        plt.xlabel("Count");
+        result.append(pos_plot)
+        plt.show();
+        plt.close()
 
 
     return result
