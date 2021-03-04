@@ -22,7 +22,8 @@ from scipy.cluster.hierarchy import (
 # endregion
 
 # import libraries for eda of text features
-import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt 
 import nltk
 import spacy
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
@@ -186,6 +187,13 @@ def explore_text_columns(df, text_col=[], params=dict()):
                     shortest_char_length, shortest_text[0]])
 
     # plot a histogram of the length of text (number of characters)
+        printmd(f"#### Histogram of number of characters in \"{col}\":")
+        sns.set_theme(style="whitegrid")
+        plt.rcParams.update({'figure.figsize': (12,8)})
+        char_length_plot = sns.histplot(data=df[col].str.len());
+        plt.xlabel("Number of characters in "+'"'+col+'"');
+        result.append(char_length_plot)
+        plt.show()
 
     # print average, minimum, maximum and median number of words
 
