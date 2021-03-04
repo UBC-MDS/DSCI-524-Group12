@@ -22,10 +22,12 @@ from scipy.cluster.hierarchy import (
 # endregion
 
 # import libraries for eda of text features
+import numpy as np
 import nltk
 import spacy
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
-from wordcloud import WordCloud, STOPWORDS
+from IPython.display import Markdown, display
+# from wordcloud import WordCloud, STOPWORDS
 
 # endregion
 
@@ -100,8 +102,10 @@ def explore_clustering(
 
     return result
 
+def printmd(string):
+    display(Markdown(string))
 
-def explore_text_columns(df, text_col=None, params=dict()):
+def explore_text_columns(df, text_col=[], params=dict()):
     """Performs EDA of text features.
     - prints the summary statistics of character length
     - plots the distribution of character length
@@ -133,12 +137,53 @@ def explore_text_columns(df, text_col=None, params=dict()):
     -------
     >>> eda_text_columns(X)
     """
+    result = []
 
     # identify text columns if not specified by user
+    if not text_col:
+        non_num = df.columns[df.dtypes == ("object" or "string")]
+        for col in non_num:
+            if df[col].unique().shape[0]/df.shape[0] > 0.75:
+                if df[col].str.split().apply(len).median() > 5:
+                    text_col.append(col)
+
+        if not text_col:
+            raise Exception("Could not identify any text column. Please pass the text column(s) when calling the function")
+        else:
+            print("Identified the following as text columns:", text_col)
+            result.append(text_col)
 
     # print average, minimum, maximum and median character length of text
-
     # show the shortest and longest text (number of characters)
+    print("\n")
+    for col in text_col:
+        mean_char_length = df[col].str.len().mean()
+        median_char_length = df[col].str.len().median()
+        longest_char_length = df[col].str.len().max()
+        longest_text = df[col][df[col].str.len() == df[col].str.len().max()].unique()
+        shortest_char_length = df[col].str.len().min()
+        shortest_text = df[col][df[col].str.len() == df[col].str.len().min()].unique()
+
+        printmd("## Exploratory Data Analysis of \"" +col+ "\" column:<br>")
+        
+        printmd("### Character Length:<br>")
+        
+        printmd(f"- The average character length of text is {mean_char_length:.2f}")
+        printmd(f"- The median character length of text is {median_char_length:.0f}")
+
+        printmd(f"- The longest text(s) has {longest_char_length:.0f} characters:\n")
+        
+        for text in longest_text:
+            printmd("\"" + text + "\"")
+
+        printmd(f"- The shortest text(s) has {shortest_char_length:.0f} characters:\n")
+        
+        for text in shortest_text:
+            printmd("\"" + text + "\"<br><br>")
+        
+        result.append([round(mean_char_length, 2), median_char_length,
+                    longest_char_length, longest_text[0],
+                    shortest_char_length, shortest_text[0]])
 
     # plot a histogram of the length of text (number of characters)
 
@@ -170,7 +215,6 @@ def explore_text_columns(df, text_col=None, params=dict()):
 
     # plot a bar chart of Part-of-speech tags
 
-    result = ([])  # List to store plot objects and return to user
 
     return result
 
