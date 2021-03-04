@@ -30,6 +30,7 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from nltk.corpus import stopwords
 from IPython.display import Markdown, display
 from wordcloud import WordCloud
+from sklearn.feature_extraction.text import CountVectorizer
 # from wordcloud import WordCloud, STOPWORDS
 
 # endregion
@@ -277,6 +278,22 @@ def explore_text_columns(df, text_col=[], params=dict()):
         plt.close()
 
     # plot a bar chart of top bigrams
+        vec = CountVectorizer(ngram_range=(2, 2)).fit(df[col])
+        bag_of_words = vec.transform(df[col])
+        sum_words = bag_of_words.sum(axis=0) 
+        words_freq = [(word, sum_words[0, idx]) 
+            for word, idx in vec.vocabulary_.items()]
+        words_freq =sorted(words_freq, key = lambda x: x[1], reverse=True)
+        top_bi_grams=words_freq[:10]
+        x,y=map(list,zip(*top_bi_grams))
+        
+        printmd("### Bar Chart of the top Bi-grams:<br>")
+        bi_gram_plot = sns.barplot(x=y,y=x);
+        plt.ylabel("Bi-grams");
+        plt.xlabel("Count");
+        result.append(bi_gram_plot)
+        plt.show();
+        plt.close()
 
     # plot the distribution of polarity scores
 
