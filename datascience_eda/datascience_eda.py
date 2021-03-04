@@ -318,6 +318,14 @@ def explore_text_columns(df, text_col=[], params=dict()):
         plt.close()
 
     # plot the distribution of subjectivity scores
+        subjectivity_scores=df[col].apply(lambda x : TextBlob(x).sentiment.subjectivity)
+        
+        printmd("### Distribution of Subjectivity scores:<br>")
+        subjectivity_plot = sns.histplot(data=subjectivity_scores, bins=15);
+        plt.xlabel("Subjectivity scores in "+'"'+col+'"');
+        result.append(subjectivity_plot)
+        plt.show();
+        plt.close()
 
     # plot a bar chart of named entities
 

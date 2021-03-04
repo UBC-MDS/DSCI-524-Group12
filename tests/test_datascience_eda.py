@@ -112,3 +112,9 @@ def test_explore_text_columns(text_df):
     ref_loc_sentiment = currentdir + "/reference_plots/sentiment.png"
 
     assert((compare_images(test_loc_sentiment, ref_loc_sentiment, 0)) == None)
+
+    test_loc_subjectivity = currentdir + "/test_plots/subjectivity.png"
+    result[11].figure.savefig(test_loc_subjectivity)
+    ref_loc_subjectivity = currentdir + "/reference_plots/subjectivity.png"
+
+    assert((compare_images(test_loc_subjectivity, ref_loc_subjectivity, 0)) == None)
