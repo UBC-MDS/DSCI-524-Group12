@@ -31,6 +31,7 @@ from nltk.corpus import stopwords
 from IPython.display import Markdown, display
 from wordcloud import WordCloud
 from sklearn.feature_extraction.text import CountVectorizer
+from textblob import TextBlob
 # from wordcloud import WordCloud, STOPWORDS
 
 # endregion
@@ -296,6 +297,14 @@ def explore_text_columns(df, text_col=[], params=dict()):
         plt.close()
 
     # plot the distribution of polarity scores
+        polarity_scores=df[col].apply(lambda x : TextBlob(x).sentiment.polarity)
+        
+        printmd("### Distribution of Polarity scores:<br>")
+        plarity_scores_plot = sns.histplot(data=polarity_scores, bins=15);
+        plt.xlabel("Polarity scores in "+'"'+col+'"');
+        result.append(plarity_scores_plot)
+        plt.show();
+        plt.close()
 
     # plot the distribution of subjectivity scores
 

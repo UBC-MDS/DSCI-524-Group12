@@ -15,6 +15,7 @@ nltk = {git = "https://github.com/nltk/nltk.git", rev = "3.5"}
 seaborn = "^0.11.1"
 ipython = "^7.21.0"
 wordcloud = "^1.8.1"
+textblob = "^0.15.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.2"

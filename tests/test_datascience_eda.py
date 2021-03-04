@@ -100,3 +100,9 @@ def test_explore_text_columns(text_df):
     ref_loc_bi_gram = currentdir + "/reference_plots/bi_gram.png"
 
     assert((compare_images(test_loc_bi_gram, ref_loc_bi_gram, 0)) == None)
+
+    test_loc_polarity_scores = currentdir + "/test_plots/polarity_scores.png"
+    result[9].figure.savefig(test_loc_polarity_scores)
+    ref_loc_polarity_scores = currentdir + "/reference_plots/polarity_scores.png"
+
+    assert((compare_images(test_loc_polarity_scores, ref_loc_polarity_scores, 0)) == None)
