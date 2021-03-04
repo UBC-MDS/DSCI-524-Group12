@@ -106,3 +106,9 @@ def test_explore_text_columns(text_df):
     ref_loc_polarity_scores = currentdir + "/reference_plots/polarity_scores.png"
 
     assert((compare_images(test_loc_polarity_scores, ref_loc_polarity_scores, 0)) == None)
+
+    test_loc_sentiment = currentdir + "/test_plots/sentiment.png"
+    result[10].figure.savefig(test_loc_sentiment)
+    ref_loc_sentiment = currentdir + "/reference_plots/sentiment.png"
+
+    assert((compare_images(test_loc_sentiment, ref_loc_sentiment, 0)) == None)

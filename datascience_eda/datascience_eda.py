@@ -306,9 +306,18 @@ def explore_text_columns(df, text_col=[], params=dict()):
         plt.show();
         plt.close()
 
-    # plot the distribution of subjectivity scores
-
     # plot a bar chart of sentiments: Positive, Negative and Neutral
+        polarity=polarity_scores.apply(lambda x: 'Negative' if x<0 else ('Neutral' if x==0 else 'Positive'))
+        
+        printmd("### Bar chart of Sentiments:<br>")
+        sentiment_plot = sns.countplot(x="sms", data=pd.DataFrame(polarity), order= ["Negative", "Neutral", "Positive"]);
+        plt.ylabel("Count");
+        plt.xlabel("Sentiments");
+        result.append(sentiment_plot)
+        plt.show();
+        plt.close()
+
+    # plot the distribution of subjectivity scores
 
     # plot a bar chart of named entities
 
