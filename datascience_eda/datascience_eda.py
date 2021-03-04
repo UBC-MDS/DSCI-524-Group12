@@ -260,9 +260,21 @@ def explore_text_columns(df, text_col=[], params=dict()):
         plt.ylabel("Stop Words");
         plt.xlabel("Count");
         result.append(stopwords_plot)
-        plt.show()
+        plt.show();
+        plt.close()
 
     # plot a bar chart of words other than stopwords
+        left_joined = corpus.merge(pd.DataFrame(stop, columns=['words']), on="words", how="left", indicator=True)
+        non_stopwords = left_joined[left_joined['_merge'] == 'left_only']
+        top_non_stopwords = non_stopwords.sort_values(by="counts", ascending=False).head(10)
+        
+        printmd("### Bar Chart of the top non-stopwords:<br>")
+        non_stopwords_plot = sns.barplot(y="words", x="counts", data=top_non_stopwords);
+        plt.ylabel("Non Stop Words");
+        plt.xlabel("Count");
+        result.append(non_stopwords_plot)
+        plt.show();
+        plt.close()
 
     # plot a bar chart of top bigrams
 

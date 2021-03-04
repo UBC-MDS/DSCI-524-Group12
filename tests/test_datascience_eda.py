@@ -88,3 +88,9 @@ def test_explore_text_columns(text_df):
     ref_loc_stopword = currentdir + "/reference_plots/stopword.png"
 
     assert((compare_images(test_loc_stopword, ref_loc_stopword, 0)) == None)
+
+    test_loc_non_stopword = currentdir + "/test_plots/non_stopword.png"
+    result[7].figure.savefig(test_loc_non_stopword)
+    ref_loc_non_stopword = currentdir + "/reference_plots/non_stopword.png"
+
+    assert((compare_images(test_loc_non_stopword, ref_loc_non_stopword, 0)) == None)
