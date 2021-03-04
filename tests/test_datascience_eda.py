@@ -62,17 +62,11 @@ def test_explore_text_columns(text_df):
         eda.explore_text_columns(text_df.drop['sms'])
 
     assert(result[1]==[80.12, 61, 910, text_df['sms'][1084], 2, text_df['sms'][1924]])
-    result[2].figure.savefig(currentdir + "/test_plots/hist_char_length.png")
-    test_hist_char_length = mpimg.imread(currentdir + "/test_plots/hist_char_length.png")
-    ref_hist_char_length = mpimg.imread(currentdir + "/reference_plots/hist_char_length.png")
+    
+    test_loc_hist_char = currentdir + "/test_plots/hist_char_length.png"
+    result[2].figure.savefig(test_loc_hist_char)
+    ref_loc_hist_char = currentdir + "/reference_plots/hist_char_length.png"
 
-    assert((compare_images(currentdir + "/test_plots/hist_char_length.png", currentdir + "/reference_plots/hist_char_length.png", 1)) == None)
+    assert((compare_images(test_loc_hist_char, ref_loc_hist_char, 1)) == None)
 
-# @check_figures_equal()
-# def test_plot(fig_test, fig_ref):
-#     currentdir = os.path.dirname(
-#         os.path.abspath(inspect.getfile(inspect.currentframe()))
-#     )
-#     result = eda.explore_text_columns(text_df)
-#     fig_test = result[2]
-#     fig_ref = mpimg.imread(currentdir + "/test_plots/hist_char_length.png")
+    assert(result[3]==[15.49, 12, 171, text_df['sms'][1084]])

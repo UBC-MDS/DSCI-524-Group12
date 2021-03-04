@@ -158,17 +158,18 @@ def explore_text_columns(df, text_col=[], params=dict()):
     # show the shortest and longest text (number of characters)
     print("\n")
     for col in text_col:
-        mean_char_length = df[col].str.len().mean()
-        median_char_length = df[col].str.len().median()
-        longest_char_length = df[col].str.len().max()
-        longest_text = df[col][df[col].str.len() == df[col].str.len().max()].unique()
-        shortest_char_length = df[col].str.len().min()
-        shortest_text = df[col][df[col].str.len() == df[col].str.len().min()].unique()
 
         printmd("## Exploratory Data Analysis of \"" +col+ "\" column:<br>")
         
         printmd("### Character Length:<br>")
-        
+
+        mean_char_length = df[col].str.len().mean()
+        median_char_length = df[col].str.len().median()
+        longest_char_length = df[col].str.len().max()
+        longest_text = df[col][df[col].str.len() == longest_char_length].unique()
+        shortest_char_length = df[col].str.len().min()
+        shortest_text = df[col][df[col].str.len() == shortest_char_length].unique()
+
         printmd(f"- The average character length of text is {mean_char_length:.2f}")
         printmd(f"- The median character length of text is {median_char_length:.0f}")
 
@@ -196,8 +197,24 @@ def explore_text_columns(df, text_col=[], params=dict()):
         plt.show()
 
     # print average, minimum, maximum and median number of words
-
     # show text with least and most number of words
+        printmd("### Word Count:<br>")
+
+        mean_word_count = df[col].str.split().apply(len).mean()
+        median_word_count = df[col].str.split().apply(len).median()
+        highest_word_count = df[col].str.split().apply(len).max()
+        text_most_words = df[col][df[col].str.split().apply(len) == highest_word_count].unique()
+
+        printmd(f"- The average number of words in \"{col}\": {mean_word_count:.2f}")
+        printmd(f"- The median number of words in \"{col}\": {median_word_count:.0f}")
+
+        printmd(f"- The text(s) in \"{col}\" with most words ({highest_word_count:.0f} words):\n")
+
+        for text in text_most_words:
+            printmd("\"" + text + "\"")
+
+        result.append([round(mean_word_count, 2), median_word_count,
+                    highest_word_count, text_most_words])
 
     # plot a histogram of the number of words
 
