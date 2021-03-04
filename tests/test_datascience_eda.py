@@ -1,30 +1,12 @@
 from datascience_eda import __version__
 from datascience_eda import datascience_eda as eda
-
+import os, inspect
 import pytest
 from pytest import raises
 import pandas as pd
-
-import os, sys, inspect
-
-from sklearn.preprocessing import StandardScaler
-from sklearn.impute import SimpleImputer
-from sklearn.pipeline import Pipeline, make_pipeline
-from sklearn.compose import ColumnTransformer, make_column_transformer
-
-from yellowbrick.cluster import KElbowVisualizer, SilhouetteVisualizer
-
-# import seaborn as sns
-import matplotlib
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
+import matplotlib.figure
 from matplotlib.testing.compare import compare_images
-
-matplotlib.use("Agg")  # use non-ui backend to close the plots
-
-plt.ioff()  # disable interactive mode
-
-import matplotlib.figure as mf
+matplotlib.use("Agg")
 
 @pytest.fixture
 def text_df():
@@ -44,12 +26,18 @@ def text_df():
     return df
 
 def test_explore_text_columns(text_df):
-    """test explore_text_columns function
+    """tests explore_text_columns function and its exception handling
+
     Parameters
     ----------
     df : pandas.DataFrame
-        test data
+        test text data
+
+    Returns
+    -------
+    None
     """
+
     currentdir = os.path.dirname(
         os.path.abspath(inspect.getfile(inspect.currentframe()))
     )
