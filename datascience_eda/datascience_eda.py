@@ -28,6 +28,7 @@ import nltk
 import spacy
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from IPython.display import Markdown, display
+from wordcloud import WordCloud
 # from wordcloud import WordCloud, STOPWORDS
 
 # endregion
@@ -191,10 +192,12 @@ def explore_text_columns(df, text_col=[], params=dict()):
         printmd(f"#### Histogram of number of characters in \"{col}\":")
         sns.set_theme(style="whitegrid")
         plt.rcParams.update({'figure.figsize': (12,8)})
+#        plt.figure(1)
         char_length_plot = sns.histplot(data=df[col].str.len());
         plt.xlabel("Number of characters in "+'"'+col+'"');
         result.append(char_length_plot)
         plt.show()
+        plt.close()
 
     # print average, minimum, maximum and median number of words
     # show text with most number of words
@@ -218,13 +221,26 @@ def explore_text_columns(df, text_col=[], params=dict()):
 
     # plot a histogram of the number of words
         printmd(f"#### Histogram of number of words in \"{col}\":")
+#        plt.figure(2)
         word_count_plot = sns.histplot(data=df[col].str.split().apply(len));
         plt.xlabel("Number of words in "+'"'+col+'"');
-        plt.show()
         result.append(word_count_plot)
+        plt.show();
+        plt.close()
         printmd("<br>")
 
     # plot word cloud of text
+        printmd("### Word Cloud:<br>")
+        wordcloud = WordCloud(random_state=1).generate(' '.join(df[col]))
+#        plt.figure(3)
+        plt.rcParams.update({'figure.figsize': (12,8)})
+        wordcloud_plot = plt.imshow(wordcloud, interpolation="bilinear")
+        plt.axis("off")
+        result.append(wordcloud_plot)
+        plt.show()
+        
+        
+        printmd("<br>")
 
     # if target is specified, plot word cloud of text conditioned on target
 

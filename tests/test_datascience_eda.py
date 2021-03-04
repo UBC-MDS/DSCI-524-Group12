@@ -76,3 +76,9 @@ def test_explore_text_columns(text_df):
     ref_loc_hist_word = currentdir + "/reference_plots/hist_word_count.png"
 
     assert((compare_images(test_loc_hist_word, ref_loc_hist_word, 1)) == None)
+
+    test_loc_word_cloud = currentdir + "/test_plots/word_cloud.png"
+    result[5].figure.savefig(test_loc_word_cloud)
+    ref_loc_word_cloud = currentdir + "/reference_plots/word_cloud.png"
+
+    assert((compare_images(test_loc_word_cloud, ref_loc_word_cloud, 1)) == None)
