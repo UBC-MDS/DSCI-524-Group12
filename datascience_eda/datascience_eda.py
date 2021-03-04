@@ -95,7 +95,7 @@ def get_clustering_default_hyperparameters():
     Examples
     -------
     >>> hyper_dict = get_clustering_default_hyperparameters()
-    >>> hyper_dict["K-Means"]["n_clusters"] = range(1, 10)
+    >>> hyper_dict["KMeans"]["n_clusters"] = range(2, 10)
     >>> hyper_dict["DBSCAN"]["eps"] = [0.3]
     >>> hyper_dict["DBSCAN"]["min_samples"] = [3]
     >>> hyper_dict["DBSCAN"]["distance_metric"] = "cosine"
@@ -301,6 +301,8 @@ def explore_KMeans_clustering(
         _verify_numeric_cols(df, num_cols)
     x = df[num_cols]
     results = {}
+    if 1 in n_clusters:
+        raise Exception("n_cluster cannot be 1")
 
     print("------------------------")
     print("K-MEANS CLUSTERING")

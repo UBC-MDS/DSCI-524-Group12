@@ -102,35 +102,8 @@ def test_explore_clustering(df):
         the test dataset
 
     """
-    plots = eda.explore_clustering(df)
-    assert isinstance(plots, dict), "Invalid return type"
 
-    assert "KMeans" in plots, "Expecting KMeans plots, none is found."
-
-    assert "DBSCAN" in plots, "Expecting DBSCAN plots, none is found."
-
-    kmeans_plots = plots["KMeans"]
-
-    assert len(kmeans_plots) == 3, "Invalid number of KMeans plots"
-
-    # KMeans plot generation is tested under test_explore_KMeans_clustering
-
-    dbscan_plots = plots["DBSCAN"]
-
-    assert len(dbscan_plots) == 2, "Invalid number of DBSCAN plots"
-
-    # DBSCAN plot generation is tested under test_explore_DBSCAN_clustering
-
-
-def test_explore_clustering_input_types(df):
-    """test inputs for explore_clustering
-
-    Parameters
-    ----------
-    df : pandas.DataFrame
-        the dataset
-    """
-
+    # region test invalid inputs
     with raises(TypeError):
         eda.explore_clustering(1)
 
@@ -164,6 +137,63 @@ def test_explore_clustering_input_types(df):
     with raises(Exception):
         eda.explore_clustering(df, hyperparameter_dict=hyperparams)
 
+    # endregion
+
+    # region test default hyperparameters
+    plots = eda.explore_clustering(df)
+    verify_clustering_result(plots)
+
+    # endregion
+
+    # region test custom hyperparameters
+    hyperparams = eda.get_clustering_default_hyperparameters()
+    hyperparams["KMeans"]["n_clusters"] = range(2, 6)
+    hyperparams["DBSCAN"]["eps"] = [0.3]
+    hyperparams["DBSCAN"]["min_samples"] = [3]
+    hyperparams["DBSCAN"]["distance_metric"] = "cosine"
+    plots = eda.explore_clustering(df, hyperparameter_dict=hyperparams)
+    verify_clustering_result(plots)
+
+    # endregion
+
+    # region test custom hyperparameters witn n_clusters include 1
+    hyperparams["KMeans"]["n_clusters"] = range(1, 2)
+    with raises(Exception):
+        plots = eda.explore_clustering(df, hyperparameter_dict=hyperparams)
+    # endregion
+
+
+def verify_clustering_result(plots):
+    """verify the plots returned by explore_clustering
+
+    Parameters
+    ----------
+    plots : dict
+        a dictionary with key=clustering algorithm, value = dictionary of key = type of plot, value = list of plots
+
+    Raise
+    -------
+    AssertException
+        when there is description mistmatch
+    """
+    assert isinstance(plots, dict), "Invalid return type"
+
+    assert "KMeans" in plots, "Expecting KMeans plots, none is found."
+
+    assert "DBSCAN" in plots, "Expecting DBSCAN plots, none is found."
+
+    kmeans_plots = plots["KMeans"]
+
+    assert len(kmeans_plots) == 3, "Invalid number of KMeans plots"
+
+    # KMeans plot generation is tested under test_explore_KMeans_clustering
+
+    dbscan_plots = plots["DBSCAN"]
+
+    assert len(dbscan_plots) == 2, "Invalid number of DBSCAN plots"
+
+    # DBSCAN plot generation is tested under test_explore_DBSCAN_clustering
+
 
 def test_explore_KMeans_clustering(df):
     """test explore_KMeans_clustering function
@@ -175,7 +205,6 @@ def test_explore_KMeans_clustering(df):
     """
     # plt.ioff()
     n_clusters = range(2, 5)
-    metric = "euclidean"
 
     n_combs = len(n_clusters)
 
