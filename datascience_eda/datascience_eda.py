@@ -32,7 +32,8 @@ from IPython.display import Markdown, display
 from wordcloud import WordCloud
 from sklearn.feature_extraction.text import CountVectorizer
 from textblob import TextBlob
-# from wordcloud import WordCloud, STOPWORDS
+import en_core_web_md
+from collections import Counter
 
 # endregion
 
@@ -328,6 +329,22 @@ def explore_text_columns(df, text_col=[], params=dict()):
         plt.close()
 
     # plot a bar chart of named entities
+        nlp = en_core_web_md.load()
+        ent=df[col].apply(lambda x : [X.label_ for X in nlp(x).ents])
+        ent=[x for sub in ent for x in sub]
+        ent_counter=Counter(ent)
+        
+        ent_count_df = pd.DataFrame.from_dict(ent_counter, orient='index').reset_index()
+        ent_count_df.columns=['Entity', 'Count']
+        ent_count_df = ent_count_df.sort_values(by="Count", ascending=False)
+        
+        printmd("### Bar Chart of Named Entities:<br>")
+        entity_plot = sns.barplot(y='Entity', x='Count', data=ent_count_df);
+        plt.ylabel("Entity");
+        plt.xlabel("Count");
+        result.append(entity_plot)
+        plt.show();
+        plt.close()
 
     # plot a bar chart of most common tokens per entity
 

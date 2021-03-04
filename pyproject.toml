@@ -16,6 +16,7 @@ seaborn = "^0.11.1"
 ipython = "^7.21.0"
 wordcloud = "^1.8.1"
 textblob = "^0.15.3"
+en-core-web-md = {url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.0.0/en_core_web_md-3.0.0.tar.gz"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.2"
