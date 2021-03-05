@@ -36,7 +36,6 @@ np.random.seed(2021)
 @pytest.fixture
 def df():
     """create a test dataset
-
     Returns
     -------
     [pandas.DataFrame]
@@ -58,6 +57,23 @@ def df():
 
     return transformed_df
 
+@pytest.fixture
+def text_df():
+    """create a test dataset for text features
+    Returns
+    -------
+    [pandas.DataFrame]
+        a data set for testing text features
+    """
+    currentdir = os.path.dirname(
+        os.path.abspath(inspect.getfile(inspect.currentframe()))
+    )
+
+    df = pd.read_csv(currentdir + "/data/spam.csv", encoding="latin-1")
+    df = df.rename(columns={"v1": "target", "v2": "sms"})
+
+    return df
+
 
 def verify_plot(plot, plot_fname, tol):
     currentdir = os.path.dirname(
@@ -73,7 +89,6 @@ def verify_plot(plot, plot_fname, tol):
 
 def verify_PCA_plot(plot, plot_fname):
     """verify PCA plot use image regression
-
     Parameters
     ----------
     plot : matplotlib.figure
@@ -88,7 +103,6 @@ def verify_PCA_plot(plot, plot_fname):
 
 def verify_silhouette_plot(plot, model_name, n_rows, n_cluster, fname):
     """verify Silhoutte plot by checking the plot properties
-
     Parameters
     ----------
     plot : matplotlib.figure
@@ -113,7 +127,6 @@ def verify_silhouette_plot(plot, model_name, n_rows, n_cluster, fname):
 
 def verify_elbow_plot(plot):
     """verify elbow plot
-
     Parameters
     ----------
     plot : matplotlib.figure
@@ -134,12 +147,10 @@ def test_version():
 
 def test_explore_clustering(df):
     """test explore_clustering function
-
     Parameters
     ----------
     df : pandas.DataFrame
         the test dataset
-
     """
 
     # region test invalid inputs
@@ -206,12 +217,10 @@ def test_explore_clustering(df):
 
 def verify_clustering_result(plots):
     """verify the plots returned by explore_clustering
-
     Parameters
     ----------
     plots : dict
         a dictionary with key=clustering algorithm, value = dictionary of key = type of plot, value = list of plots
-
     Raise
     -------
     AssertException
@@ -238,7 +247,6 @@ def verify_clustering_result(plots):
 
 def test_explore_KMeans_clustering(df):
     """test explore_KMeans_clustering function
-
     Parameters
     ----------
     df : pandas.DataFrame
@@ -290,7 +298,6 @@ def test_explore_KMeans_clustering(df):
 
 def test_explore_DBSCAN_clustering(df):
     """test explore_DBSCAN_clustering function
-
     Parameters
     ----------
     df : pandas.DataFrame
@@ -332,3 +339,66 @@ def test_explore_DBSCAN_clustering(df):
 
     for i in range(n_combs):
         verify_PCA_plot(p_plots[i].figure, f"/DBSCAN_PCA_{n_clusters[i]}")
+
+def test_explore_text_columns(text_df):
+    """tests explore_text_columns function and its exception handling
+    Parameters
+    ----------
+    df : pandas.DataFrame
+        test text data
+    Returns
+    -------
+    None
+    """
+
+    currentdir = os.path.dirname(
+        os.path.abspath(inspect.getfile(inspect.currentframe()))
+    )
+
+    with raises(Exception):
+        eda.explore_text_columns(['test'])
+
+    with raises(Exception):
+        eda.explore_text_columns(text_df.drop['sms'])
+
+    with raises(Exception):
+        eda.explore_text_columns(text_df, 'sms')
+
+    with raises(Exception):
+        eda.explore_text_columns(text_df, ['some_col_name'])
+
+    result = eda.explore_text_columns(text_df)
+
+    assert(result[0]==['sms'])
+
+    assert(result[1]==[80.12, 61, 910, text_df['sms'][1084], 2, text_df['sms'][1924]])
+
+    verify_plot(result[2].figure, "hist_char_length", 0)
+
+    assert(result[3]==[15.49, 12, 171, text_df['sms'][1084]])
+
+    verify_plot(result[4].figure, "hist_word_count", 0)
+
+    verify_plot(result[5].figure, "word_cloud", 0)
+
+    verify_plot(result[6].figure, "stopword", 0)
+
+    verify_plot(result[7].figure, "non_stopword", 0)
+
+    verify_plot(result[8].figure, "bi_gram", 0)
+
+    verify_plot(result[9].figure, "polarity_scores", 0)
+
+    verify_plot(result[10].figure, "sentiment", 0)
+
+    verify_plot(result[11].figure, "subjectivity", 0)
+
+    verify_plot(result[12].figure, "entity", 0)
+
+    verify_plot(result[13].figure, "entity_token_1", 0)
+
+    verify_plot(result[14].figure, "entity_token_2", 0)
+
+    verify_plot(result[15].figure, "entity_token_3", 0)
+
+    verify_plot(result[16].figure, "pos_plot", 0)
