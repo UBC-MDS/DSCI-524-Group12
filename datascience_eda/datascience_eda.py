@@ -21,6 +21,7 @@ import matplotlib.pyplot as plt
 import nltk
 import spacy
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 from IPython.display import Markdown, display
 from wordcloud import WordCloud
@@ -486,6 +487,22 @@ def explore_clustering(
     return result
 
 def printmd(string):
+    """Displays the markdown representation of the
+    string passed to it
+
+    Parameters
+    ----------
+    string : str
+        the string to be displayed using markdown syntax
+    
+    Returns
+    -------
+    None
+
+    Examples
+    -------
+    >>> printmd("### I am Batman")
+    """
     display(Markdown(string))
 
 def explore_text_columns(df, text_col=None):
