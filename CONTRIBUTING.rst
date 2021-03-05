@@ -15,7 +15,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/lephanthuymai/datascience_eda/issues.
+Report bugs at https://github.com/UBC-MDS/datascience_eda/issues.
 
 If you are reporting a bug, please include:
 
@@ -45,7 +45,7 @@ articles, and such.
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/lephanthuymai/datascience_eda/issues.
+The best way to send feedback is to file an issue at https://github.com/UBC-MDS/datascience_eda/issues.
 
 If you are proposing a feature:
 
@@ -57,7 +57,11 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up `datascience_eda` for local development.
+The core development team of this project follows `Github flow <https://guides.github.com/introduction/flow>`_. For any new changes, we will work on a new branch, once it is ready, we will create a pull request, request approval from other team members and when things are ready, the pull request will be merged by one of the members.
+
+All other contributers can follow the steps below to contribute to the project.
+
+Here's how to set up `datascience_eda` for local development.
 
 1. Fork the `datascience_eda` repo on GitHub.
 2. Clone your fork locally::
