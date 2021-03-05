@@ -372,89 +372,33 @@ def test_explore_text_columns(text_df):
     assert(result[0]==['sms'])
 
     assert(result[1]==[80.12, 61, 910, text_df['sms'][1084], 2, text_df['sms'][1924]])
-    
-    test_loc_hist_char = currentdir + "/test_plots/hist_char_length.png"
-    result[2].figure.savefig(test_loc_hist_char)
-    ref_loc_hist_char = currentdir + "/reference_plots/hist_char_length.png"
 
-    assert((compare_images(test_loc_hist_char, ref_loc_hist_char, 0)) == None)
+    verify_plot(result[2].figure, "hist_char_length", 0)
 
     assert(result[3]==[15.49, 12, 171, text_df['sms'][1084]])
 
-    test_loc_hist_word = currentdir + "/test_plots/hist_word_count.png"
-    result[4].figure.savefig(test_loc_hist_word)
-    ref_loc_hist_word = currentdir + "/reference_plots/hist_word_count.png"
+    verify_plot(result[4].figure, "hist_word_count", 0)
 
-    assert((compare_images(test_loc_hist_word, ref_loc_hist_word, 0)) == None)
+    verify_plot(result[5].figure, "word_cloud", 0)
 
-    test_loc_word_cloud = currentdir + "/test_plots/word_cloud.png"
-    result[5].figure.savefig(test_loc_word_cloud)
-    ref_loc_word_cloud = currentdir + "/reference_plots/word_cloud.png"
+    verify_plot(result[6].figure, "stopword", 0)
 
-    assert((compare_images(test_loc_word_cloud, ref_loc_word_cloud, 0)) == None)
+    verify_plot(result[7].figure, "non_stopword", 0)
 
-    test_loc_stopword = currentdir + "/test_plots/stopword.png"
-    result[6].figure.savefig(test_loc_stopword)
-    ref_loc_stopword = currentdir + "/reference_plots/stopword.png"
+    verify_plot(result[8].figure, "bi_gram", 0)
 
-    assert((compare_images(test_loc_stopword, ref_loc_stopword, 0)) == None)
+    verify_plot(result[9].figure, "polarity_scores", 0)
 
-    test_loc_non_stopword = currentdir + "/test_plots/non_stopword.png"
-    result[7].figure.savefig(test_loc_non_stopword)
-    ref_loc_non_stopword = currentdir + "/reference_plots/non_stopword.png"
+    verify_plot(result[10].figure, "sentiment", 0)
 
-    assert((compare_images(test_loc_non_stopword, ref_loc_non_stopword, 0)) == None)
+    verify_plot(result[11].figure, "subjectivity", 0)
 
-    test_loc_bi_gram = currentdir + "/test_plots/bi_gram.png"
-    result[8].figure.savefig(test_loc_bi_gram)
-    ref_loc_bi_gram = currentdir + "/reference_plots/bi_gram.png"
+    verify_plot(result[12].figure, "entity", 0)
 
-    assert((compare_images(test_loc_bi_gram, ref_loc_bi_gram, 0)) == None)
+    verify_plot(result[13].figure, "entity_token_1", 0)
 
-    test_loc_polarity_scores = currentdir + "/test_plots/polarity_scores.png"
-    result[9].figure.savefig(test_loc_polarity_scores)
-    ref_loc_polarity_scores = currentdir + "/reference_plots/polarity_scores.png"
+    verify_plot(result[14].figure, "entity_token_2", 0)
 
-    assert((compare_images(test_loc_polarity_scores, ref_loc_polarity_scores, 0)) == None)
+    verify_plot(result[15].figure, "entity_token_3", 0)
 
-    test_loc_sentiment = currentdir + "/test_plots/sentiment.png"
-    result[10].figure.savefig(test_loc_sentiment)
-    ref_loc_sentiment = currentdir + "/reference_plots/sentiment.png"
-
-    assert((compare_images(test_loc_sentiment, ref_loc_sentiment, 0)) == None)
-
-    test_loc_subjectivity = currentdir + "/test_plots/subjectivity.png"
-    result[11].figure.savefig(test_loc_subjectivity)
-    ref_loc_subjectivity = currentdir + "/reference_plots/subjectivity.png"
-
-    assert((compare_images(test_loc_subjectivity, ref_loc_subjectivity, 0)) == None)
-
-    test_loc_entity = currentdir + "/test_plots/entity.png"
-    result[12].figure.savefig(test_loc_entity)
-    ref_loc_entity = currentdir + "/reference_plots/entity.png"
-
-    assert((compare_images(test_loc_entity, ref_loc_entity, 0)) == None)
-
-    test_loc_entity_token_1 = currentdir + "/test_plots/entity_token_1.png"
-    result[13].figure.savefig(test_loc_entity_token_1)
-    ref_loc_entity_token_1 = currentdir + "/reference_plots/entity_token_1.png"
-
-    assert((compare_images(test_loc_entity_token_1, ref_loc_entity_token_1, 0)) == None)
-
-    test_loc_entity_token_2 = currentdir + "/test_plots/entity_token_2.png"
-    result[14].figure.savefig(test_loc_entity_token_2)
-    ref_loc_entity_token_2 = currentdir + "/reference_plots/entity_token_2.png"
-
-    assert((compare_images(test_loc_entity_token_2, ref_loc_entity_token_2, 0)) == None)
-
-    test_loc_entity_token_3 = currentdir + "/test_plots/entity_token_3.png"
-    result[15].figure.savefig(test_loc_entity_token_3)
-    ref_loc_entity_token_3 = currentdir + "/reference_plots/entity_token_3.png"
-
-    assert((compare_images(test_loc_entity_token_3, ref_loc_entity_token_3, 0)) == None)
-
-    test_loc_pos_plot = currentdir + "/test_plots/pos_plot.png"
-    result[16].figure.savefig(test_loc_pos_plot)
-    ref_loc_pos_plot = currentdir + "/reference_plots/pos_plot.png"
-
-    assert((compare_images(test_loc_pos_plot, ref_loc_pos_plot, 0)) == None)
+    verify_plot(result[16].figure, "pos_plot", 0)
