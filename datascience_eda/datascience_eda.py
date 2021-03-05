@@ -102,7 +102,7 @@ def get_clustering_default_hyperparameters():
     >>> explore_clustering(X, hyperparameter_dict=hyper_dict)
     """
     clustering_default_hyperparameters = {
-        "KMeans": {"n_clusters": range(2, 9)},
+        "KMeans": {"n_clusters": range(2, 6)},
         "DBSCAN": {
             "eps": [0.5],
             "min_samples": [5],
@@ -138,7 +138,6 @@ def plot_pca_clusters(data, labels):
         x="pca1", y="pca2", hue="cluster", data=pca_df, palette="tab10"
     )
     plt.show()
-    plt.clf()
     plt.close()
 
     return fig
@@ -148,7 +147,10 @@ def plot_pca_clusters(data, labels):
 
 # region clustering functions
 def explore_clustering(
-    df, numeric_cols=None, hyperparameter_dict=get_clustering_default_hyperparameters()
+    df,
+    numeric_cols=None,
+    hyperparameter_dict=get_clustering_default_hyperparameters(),
+    random_state=None,
 ):
     """fit and plot K-Means, DBScan clustering algorithm on the dataset
 
@@ -156,10 +158,12 @@ def explore_clustering(
     ----------
     df : pandas.DataFrame
         the dataset (X), should already transformed with StandardScaler
-    numeric_cols: list, optional
+    numeric_cols : list, optional
         a list of numeric columns used for clustering, by default None, will be assigned with all numeric columns
     hyperparameter_dict : dict, optional
         the hyperparameters to be used in the clustering algorithms, by default get_clustering_default_hyperparameters()
+    random_state : int, optional
+        a number determines random number generation for centroid initialization, by default None
 
     Returns
     -------
@@ -229,6 +233,7 @@ def explore_clustering(
         df,
         num_cols=numeric_cols,
         n_clusters=kmeans_params["n_clusters"],
+        random_state=random_state,
     )
 
     dbscan_plots = explore_DBSCAN_clustering(
@@ -255,9 +260,10 @@ def explore_clustering(
 def explore_KMeans_clustering(
     df,
     num_cols=None,
-    n_clusters=range(2, 9),
+    n_clusters=range(3, 5),
     include_silhouette=True,
     include_PCA=True,
+    random_state=None,
 ):
     """create, fit and plot KMeans clustering on the dataset
 
@@ -275,6 +281,8 @@ def explore_KMeans_clustering(
         whether Silhouette plots should be generated, by default True
     include_PCA : bool, optional
         whether PCA plots should be generated, by default True
+    random_state : int, optional
+        a number determines random number generation for centroid initialization, by default None
 
     Returns
     -------
@@ -311,7 +319,7 @@ def explore_KMeans_clustering(
     if len(n_clusters) > 1:
         print("Generating KElbow plot for KMeans.")
         # visualize using KElbowVisualizer
-        kmeans = KMeans()
+        kmeans = KMeans(random_state=random_state)
         elbow_visualizer = KElbowVisualizer(kmeans, k=n_clusters)
         elbow_visualizer.fit(x)  # Fit the data to the visualizer
         elbow_visualizer.show()
@@ -328,15 +336,16 @@ def explore_KMeans_clustering(
     for k in n_clusters:
         print(f"Number of clusters: {k}")
 
-        kmeans = KMeans(k)
+        kmeans = KMeans(k, random_state=random_state)
 
         if include_silhouette:
             s_visualizer = SilhouetteVisualizer(kmeans, colors="yellowbrick")
             s_visualizer.fit(x)  # Fit the data to the visualizer
-            s_visualizer.show()
-            plt.clf()
-            plt.close()
             silhouette_plots.append(s_visualizer)
+            s_visualizer.show()
+            # plt.clf()
+            plt.close()
+
         else:
             silhouette_plots.append(None)
 
@@ -427,24 +436,24 @@ def explore_DBSCAN_clustering(
             dbscan.fit(x)
             k = len(set(dbscan.labels_)) - 1  # exclduing -1 labels
             n_clusters.append(k)
-
+            print(f"eps={e}, min_samples={ms}, n_cluster={k}")
             if include_silhouette and k > 0:
                 # generat Silhouette plot
                 dbscan.n_clusters = k
                 dbscan.predict = lambda x: dbscan.labels_
                 s_visualizer = SilhouetteVisualizer(dbscan, colors="yellowbrick")
+                s_plots.append(s_visualizer)
                 s_visualizer.fit(x)
                 s_visualizer.show()
-                plt.clf()
+                # plt.clf()
                 plt.close()
-
-                s_plots.append(s_visualizer)
             else:
                 s_plots.append(None)
 
             if include_PCA:
                 # genrate PCA plot
-                pca_plots.append(plot_pca_clusters(x, dbscan.labels_))
+                p_lot = plot_pca_clusters(x, dbscan.labels_)
+                pca_plots.append(p_lot)
             else:
                 pca_plots.append(None)
 

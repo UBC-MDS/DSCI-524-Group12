@@ -6,6 +6,10 @@ from pytest import raises
 import pandas as pd
 
 import os, sys, inspect
+import random
+from os import path
+
+random.seed(2021)
 
 from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
@@ -17,6 +21,8 @@ from yellowbrick.cluster import KElbowVisualizer, SilhouetteVisualizer
 import seaborn as sns
 import matplotlib
 import matplotlib.pyplot as plt
+import matplotlib.testing
+from matplotlib.testing.decorators import image_comparison
 
 matplotlib.use("Agg")  # use non-ui backend to close the plots
 
@@ -49,6 +55,17 @@ def df():
     )
 
     return transformed_df
+
+
+def get_output_folder():
+    """get output folder name to export images to"""
+    output_path = (
+        os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+        + "/output"
+    )
+    if not path.exists(output_path):
+        os.mkdir(output_path)
+    return output_path
 
 
 def verify_PCA_plot(p_plot):
@@ -147,11 +164,13 @@ def test_explore_clustering(df):
 
     # region test custom hyperparameters
     hyperparams = eda.get_clustering_default_hyperparameters()
-    hyperparams["KMeans"]["n_clusters"] = range(2, 6)
+    hyperparams["KMeans"]["n_clusters"] = range(3, 6)
     hyperparams["DBSCAN"]["eps"] = [0.3]
     hyperparams["DBSCAN"]["min_samples"] = [3]
     hyperparams["DBSCAN"]["distance_metric"] = "cosine"
-    plots = eda.explore_clustering(df, hyperparameter_dict=hyperparams)
+    plots = eda.explore_clustering(
+        df, hyperparameter_dict=hyperparams, random_state=2021
+    )
     verify_clustering_result(plots)
 
     # endregion
@@ -203,13 +222,17 @@ def test_explore_KMeans_clustering(df):
     df : pandas.DataFrame
         test data
     """
-    # plt.ioff()
-    n_clusters = range(2, 5)
+    n_clusters = range(3, 5)
 
     n_combs = len(n_clusters)
+    output_path = get_output_folder()
 
     plots = eda.explore_KMeans_clustering(
-        df, n_clusters=n_clusters, include_PCA=True, include_silhouette=True
+        df,
+        n_clusters=n_clusters,
+        include_PCA=True,
+        include_silhouette=True,
+        random_state=2021,
     )
 
     assert (
@@ -224,6 +247,7 @@ def test_explore_KMeans_clustering(df):
         assert (
             elbow_plot.elbow_value_ in n_clusters
         ), f"Invalid value for K: {elbow_plot.elbow_value_}"
+    elbow_plot.show(outpath=output_path + "/KMeans_ELbow.png")
 
     # verify Sihoutte Plots
     silhouette_plots = plots["Silhouette"]
@@ -234,6 +258,7 @@ def test_explore_KMeans_clustering(df):
     for i in range(len(silhouette_plots)):
         s_plot = silhouette_plots[i]
         if not (s_plot is None):
+            s_plot.show(outpath=output_path + f"/KMeans_SH_{n_clusters[i]}")
             verify_Silhouette_plot(s_plot, "KMeans", n_rows, n_clusters[i])
 
     # verify PCA Plots
@@ -243,7 +268,14 @@ def test_explore_KMeans_clustering(df):
     ), "Expecting one PCA plot for each value of n_clusters"
     for i in range(len(pca_plots)):
         p_plot = pca_plots[i]
+        p_plot.figure.savefig(output_path + f"/KMeans_PCA_{n_clusters[i]}")
         verify_PCA_plot(p_plot)
+
+
+# @image_comparison(baseline_images=["line_dashes"], extensions=["png"])
+# def test_create_line_chart():
+#     eda.create_line_chart()
+#     plt.savefig("line_dashes.png")
 
 
 def test_explore_DBSCAN_clustering(df):
@@ -260,6 +292,8 @@ def test_explore_DBSCAN_clustering(df):
     metric = "euclidean"
     n_combs = len(eps) * len(min_samples)
     n_rows = df.shape[0]
+
+    output_path = get_output_folder()
 
     n_clusters, plots = eda.explore_DBSCAN_clustering(
         df,
@@ -280,6 +314,7 @@ def test_explore_DBSCAN_clustering(df):
     ), "Expecting 1 Silhouette plot for each combination of hyperparams."
     for i in range(n_combs):
         if not (s_plots[i] is None):
+            s_plots[i].show(outpath=output_path + f"/DBSCAN_SH_{n_clusters[i]}.png")
             verify_Silhouette_plot(s_plots[i], "DBSCAN", n_rows, n_clusters[i])
 
     p_plots = plots["PCA"]
@@ -287,4 +322,5 @@ def test_explore_DBSCAN_clustering(df):
         len(p_plots) == n_combs
     ), "Expecting 1 PCA plot for each combination of hyperparams"
     for i in range(n_combs):
+        p_plots[i].figure.savefig(output_path + f"/DBSCAN_PCA_{n_clusters[i]}.png")
         verify_PCA_plot(p_plots[i])
