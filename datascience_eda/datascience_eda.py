@@ -63,7 +63,7 @@ def _verify_distance_metric(m):
 
 
 def _verify_numeric_cols(df, num_cols):
-    """check if numeric columns are valie
+    """check if numeric columns are valid
 
     Parameters
     ----------
