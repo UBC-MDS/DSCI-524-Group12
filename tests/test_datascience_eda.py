@@ -76,6 +76,16 @@ def text_df():
 
 
 def verify_plot(plot, plot_fname, tol):
+    """verify plot created using image regression
+    Parameters
+    ----------
+    plot : matplotlib.figure
+        plot generated
+    plot_fname : string
+        name of the filename to save the plot
+    tol : int
+        Tolerance value for compare_images function
+    """
     currentdir = os.path.dirname(
         os.path.abspath(inspect.getfile(inspect.currentframe()))
     )
@@ -431,6 +441,16 @@ def numeric_df():
 
 
 def test_explore_numeric_columns(numeric_df):
+    """tests explore_text_columns function and its exception handling
+    Parameters
+    ----------
+    numeric_df : pandas.DataFrame
+        test numeric data
+    Returns
+    -------
+    None
+    """
+
     # region test invalid inputs
     with raises(TypeError):
         eda.explore_numeric_columns(1)

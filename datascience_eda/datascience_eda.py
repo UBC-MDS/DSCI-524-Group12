@@ -859,14 +859,14 @@ def explore_numeric_columns(
     cols = data.select_dtypes(include=np.number).columns.tolist()
     if hist_cols==None: 
         for col in cols:
-            chart = alt.Chart(data).encode(alt.X(col),alt.Y('count()')).mark_bar()
+            chart = alt.Chart(data).encode(alt.X(col),alt.Y('count()')).mark_bar().properties(title='Histogram for '+col)
             plt.figure()
             print(chart)
             histograms.append(chart)
     else:
         _verify_numeric_cols(data, hist_cols)
         for col in hist_cols:
-            chart = alt.Chart(data).encode(alt.X(col),alt.Y('count()')).mark_bar()
+            chart = alt.Chart(data).encode(alt.X(col),alt.Y('count()')).mark_bar().properties(title='Histogram for '+col)
             plt.figure()
             print(chart)
             histograms.append(chart)
@@ -877,12 +877,14 @@ def explore_numeric_columns(
     # Create pairplots
     if pairplot_cols == None:
         chart = sns.pairplot(data)
+        chart.fig.suptitle("Pairplot between numeric features", y=1.08)
         plt.figure()
         print(chart)
         plots['pairplot'] = chart
     else:
         _verify_numeric_cols(data, pairplot_cols)  # Check that each column passed is numeric
         chart = sns.pairplot(data, vars=pairplot_cols)
+        chart.fig.suptitle("Pairplot between numeric features", y=1.08)
         plt.figure()
         print(chart)
         plots['pairplot'] = chart
@@ -892,6 +894,7 @@ def explore_numeric_columns(
     if corr_method not in [None, 'pearson', 'spearman', 'kendall']:
         raise ValueError(f"Value for input 'corr_method' should be either None, 'pearson', 'spearman' or 'kendall'. '{corr_method}' was provided.")
     chart = sns.heatmap(data.corr(method=corr_method), cmap='coolwarm', center=0)
+    plt.title("Heatmap showing correlation between numeric features")
     plt.figure()
     print(chart)
     plots['corr'] = chart
