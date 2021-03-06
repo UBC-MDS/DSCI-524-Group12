@@ -74,6 +74,21 @@ def text_df():
 
     return df
 
+@pytest.fixture
+def categorical_df():
+    """create a test dataset for categorical features
+    Returns
+    -------
+    [pandas.DataFrame]
+        a data set for testing categorical features
+    """
+    currentdir = os.path.dirname(
+        os.path.abspath(inspect.getfile(inspect.currentframe()))
+    )
+
+    ca_df = pd.read_csv(currentdir + "/data/cat_cols_data.csv")
+	
+    return ca_df
 
 def verify_plot(plot, plot_fname, tol):
     currentdir = os.path.dirname(
@@ -379,7 +394,7 @@ def test_explore_text_columns(text_df):
 
     verify_plot(result[4].figure, "hist_word_count", 0)
 
-    verify_plot(result[5].figure, "word_cloud", 0)
+    verify_plot(result[5].figure, "word_cloud", 5)
 
     verify_plot(result[6].figure, "stopword", 0)
 
@@ -402,3 +417,25 @@ def test_explore_text_columns(text_df):
     verify_plot(result[15].figure, "entity_token_3", 0)
 
     verify_plot(result[16].figure, "pos_plot", 0)
+
+def test_explore_categorical_columns(categorical_df):
+    # region test invalid inputs
+    with raises(TypeError):
+        eda.explore_categorical_columns(1)
+    with raises(Exception):
+        eda.explore_text_columns((categorical_df, 1))
+    
+    res, cat_plts = eda.explore_categorical_columns(categorical_df, list(categorical_df.columns))
+	
+	# Testing the output dataframe 
+    assert list(res.columns)[0] == 'unique_items', 'The first column in resultant categorical dataframe is not unique_items'
+    assert len(res.columns) == 3, 'Expected number of result columns in resultant categorical dataframe is not 3'
+    assert res.index.name == 'column_name', 'Index is not column name'
+    assert res.index[5] == 'Neighborhood', 'The sixth row does not belong to Neighborhood'
+    assert res.iloc[2].values[1] == 37, 'Inconsistency with values coming from no_of_nulls column'
+    assert res.iloc[0].values[2] == 2.6, 'Inconsistency with values coming from percentage_missing column'
+    assert list(res.iloc[8].values[0]) == ['Gd', 'TA', 'Ex', 'Fa'], 'Inconsistency with values coming from unique_items column'
+    
+    # Testing the output plots 
+    verify_plot(cat_plts[5].figure, "cat_plot1", 1)
+    verify_plot(cat_plts[6].figure, "cat_plot2", 1)

@@ -836,33 +836,72 @@ def explore_numeric_columns(
     )  # List will store plot objects created by this function to return to user
     return results
 
-
 def explore_categorical_columns(df, categorical_cols):
     """Performs EDA of categorical features.
     - Creates a dataframe containing column names and corresponding details about unique values, null values and most frequent category in the column
     - Plots countplots for given categorical columns
-
     Parameters
     ----------
     df : pandas.DataFrame
         the dataset (X)
     categorical_col : list
         name of categorical column(s)
-
     Returns
     -------
-    dataframe
+    cat_df: pandas.DataFrame
         A Dataframe with column names, corresponding unique categories, count of null values, percentage of null values and most frequent categories
-
+    
+    cat_plots: list
+        A list having countplots of given categorical columns
     Examples
     -------
     >>> explore_categorical_columns(X, ['col1', 'col2'])
     """
+    # exception if df is not a pandas dataframe
+    if type(df) != pd.core.frame.DataFrame:
+        raise Exception("df is not a Pandas Dataframe")
 
-    # Create dataframe with column names, unique categories, number of nulls, percentage of nulls and most frequent categories
+    # exception if categorical_cols is not passed as a list
+    if type(categorical_cols) is not list:
+        raise Exception("categorical_cols is not a list. Pass the categorical column(s) as a list")		
 
-    # Sort the dataframe using percentage of nulls (descending)
-
-    # plot countplots of provided categorical features
-
-    raise NotImplementedError()
+    # exception if categorical_cols is not in columns of dataframe
+    for col in categorical_cols:
+        if col not in df.columns.values:
+            raise Exception(f"{col} is not a column in the dataframe")
+    
+    cat_df = pd.DataFrame(columns = ['column_name', 'unique_items', 'no_of_nulls', 'percentage_missing'])
+    temp = pd.DataFrame()
+    
+    # Creating Dataframe
+    for col in categorical_cols:
+        temp['column_name'] = [col]
+        temp['unique_items'] = [df[col].unique()]
+        temp['no_of_nulls'] = df[col].isnull().sum()
+        temp['percentage_missing'] = (df[col].isnull().sum()/ len(df)).round(3)*100
+        cat_df = cat_df.append(temp)
+    
+    # Plotting 
+    #printmd('### Univariate Categorical Analysis')
+    sns.set(style='darkgrid')
+    sns.set(rc={'figure.figsize':(22,5)})
+    plt.rc('xtick',labelsize=12)
+    plt.rc('ytick',labelsize=12)
+    cat_plots = []
+    
+    for col in categorical_cols:
+        #printmd(f'##### Column Name: {col}')
+        ax = sns.countplot(x = col, data = df, order = df[col].value_counts().index)
+        ax.set_xlabel(col,fontsize=15)
+        ax.set_ylabel("Count",fontsize=15)
+        for p in ax.patches:
+            x=p.get_bbox().get_points()[:,0]
+            y=p.get_bbox().get_points()[1,1]
+            ax.annotate('{:.1f}%'.format(100.*y/df.shape[0]), (x.mean(), y), ha='center', va='bottom')
+#        plt.xticks(rotation=20)
+        cat_plots.append(ax)
+        plt.close()
+    #printmd('### Dataframe containing unique items in each column and corresponding percentage as well as number of nulls')
+    cat_df.set_index('column_name', inplace = True)
+    cat_df.sort_values(by = 'percentage_missing', inplace = True, ascending = False)
+    return pd.DataFrame(cat_df), cat_plots
