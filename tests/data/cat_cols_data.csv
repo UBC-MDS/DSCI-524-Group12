@@ -1,0 +1,1461 @@
+Neighborhood,Exterior1st,Exterior2nd,MasVnrType,ExterQual,ExterCond,Foundation,BsmtQual,BsmtCond,BsmtExposure,BsmtFinType1
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+Veenker,MetalSd,MetalSd,None,TA,TA,CBlock,Gd,TA,Gd,ALQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Mn,GLQ
+Crawfor,Wd Sdng,Wd Shng,None,TA,TA,BrkTil,TA,Gd,No,ALQ
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+Mitchel,VinylSd,VinylSd,None,TA,TA,Wood,Gd,TA,No,GLQ
+Somerst,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,Av,GLQ
+NWAmes,HdBoard,HdBoard,Stone,TA,TA,CBlock,Gd,TA,Mn,ALQ
+OldTown,BrkFace,Wd Shng,None,TA,TA,BrkTil,TA,TA,No,Unf
+BrkSide,MetalSd,MetalSd,None,TA,TA,BrkTil,TA,TA,No,GLQ
+Sawyer,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,Rec
+NridgHt,WdShing,Wd Shng,Stone,Ex,TA,PConc,Ex,TA,No,GLQ
+Sawyer,HdBoard,Plywood,None,TA,TA,CBlock,TA,TA,No,ALQ
+CollgCr,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Av,Unf
+NAmes,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+BrkSide,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,Unf
+NAmes,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,TA,TA,No,ALQ
+Sawyer,MetalSd,MetalSd,None,TA,TA,Slab,,,,
+SawyerW,VinylSd,VinylSd,None,TA,TA,PConc,TA,TA,No,GLQ
+NAmes,BrkFace,Plywood,None,TA,TA,CBlock,TA,TA,No,LwQ
+NridgHt,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Ex,TA,Av,Unf
+IDOTRR,Wd Sdng,Wd Sdng,None,TA,TA,PConc,TA,TA,No,Unf
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+MeadowV,CemntBd,CmentBd,None,TA,TA,PConc,Gd,TA,No,GLQ
+Sawyer,Plywood,Plywood,None,TA,Gd,CBlock,TA,TA,Mn,Rec
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,No,Unf
+NAmes,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,Mn,BLQ
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,No,GLQ
+NAmes,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,Gd,BLQ
+BrkSide,MetalSd,MetalSd,None,TA,TA,BrkTil,TA,TA,No,Unf
+IDOTRR,BrkFace,BrkFace,None,TA,Fa,BrkTil,TA,TA,No,Unf
+Sawyer,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,Unf
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Ex,TA,Av,Unf
+NAmes,BrkFace,BrkFace,None,TA,TA,CBlock,TA,TA,No,Rec
+NridgHt,MetalSd,MetalSd,BrkFace,Ex,TA,PConc,Ex,TA,No,GLQ
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,Av,Unf
+CollgCr,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,Unf
+NAmes,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+NAmes,VinylSd,VinylSd,None,TA,Gd,CBlock,TA,TA,No,GLQ
+Edwards,AsbShng,Plywood,None,TA,TA,PConc,,,,
+NAmes,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+Timber,VinylSd,VinylSd,None,TA,Gd,CBlock,TA,TA,Gd,BLQ
+SawyerW,HdBoard,HdBoard,None,TA,TA,CBlock,Gd,TA,Av,ALQ
+CollgCr,VinylSd,VinylSd,None,TA,TA,CBlock,Gd,TA,Av,LwQ
+NAmes,BrkFace,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,ALQ
+NridgHt,MetalSd,MetalSd,BrkFace,Ex,TA,PConc,Ex,TA,No,GLQ
+Mitchel,VinylSd,VinylSd,None,Gd,TA,PConc,Ex,TA,No,GLQ
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,GLQ
+OldTown,MetalSd,MetalSd,None,TA,TA,BrkTil,TA,TA,No,Unf
+Sawyer,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,BLQ
+Gilbert,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,Av,GLQ
+BrkSide,Wd Sdng,Wd Sdng,None,TA,TA,PConc,TA,TA,No,Unf
+IDOTRR,Wd Sdng,Wd Sdng,None,Fa,TA,CBlock,Gd,TA,Gd,LwQ
+Veenker,WdShing,Wd Shng,None,Gd,TA,CBlock,Ex,TA,Gd,GLQ
+NAmes,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,ALQ
+NAmes,HdBoard,Plywood,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+Somerst,MetalSd,MetalSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+StoneBr,VinylSd,VinylSd,BrkFace,Ex,TA,PConc,Ex,TA,Gd,Unf
+CollgCr,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,Av,ALQ
+SawyerW,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,ALQ
+IDOTRR,MetalSd,MetalSd,None,TA,TA,BrkTil,TA,Fa,No,Unf
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,Gd,Mn,GLQ
+OldTown,Stucco,Stucco,None,TA,TA,BrkTil,TA,TA,No,Unf
+CollgCr,VinylSd,VinylSd,BrkFace,TA,TA,PConc,Gd,TA,No,GLQ
+NridgHt,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Ex,TA,Av,Unf
+NAmes,Plywood,Plywood,BrkFace,TA,TA,CBlock,Gd,TA,Gd,GLQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+OldTown,MetalSd,MetalSd,None,TA,Gd,CBlock,TA,TA,No,Unf
+ClearCr,BrkFace,AsbShng,None,Gd,TA,CBlock,TA,TA,No,BLQ
+NAmes,Plywood,Plywood,BrkFace,TA,Gd,CBlock,Gd,TA,Gd,ALQ
+Mitchel,HdBoard,Plywood,None,TA,TA,CBlock,TA,TA,No,ALQ
+Gilbert,VinylSd,VinylSd,BrkFace,TA,TA,PConc,Gd,TA,No,Unf
+NAmes,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,TA,TA,No,ALQ
+OldTown,VinylSd,VinylSd,None,Gd,Gd,CBlock,Fa,TA,No,Unf
+MeadowV,CemntBd,CmentBd,None,TA,TA,CBlock,Gd,TA,Gd,GLQ
+NAmes,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,ALQ
+BrkSide,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,BLQ
+Sawyer,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,Unf
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,PConc,TA,TA,No,Unf
+NAmes,VinylSd,VinylSd,BrkFace,TA,Gd,CBlock,Gd,TA,No,Rec
+Mitchel,VinylSd,VinylSd,BrkFace,TA,Gd,PConc,Ex,Gd,No,GLQ
+Somerst,VinylSd,VinylSd,Stone,TA,TA,PConc,Gd,TA,No,GLQ
+NAmes,MetalSd,MetalSd,BrkCmn,TA,TA,CBlock,TA,TA,No,Unf
+Gilbert,HdBoard,HdBoard,BrkFace,TA,TA,PConc,Gd,TA,No,Unf
+NoRidge,HdBoard,HdBoard,BrkFace,Gd,TA,CBlock,Gd,TA,No,Unf
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,Unf
+Somerst,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Av,Unf
+IDOTRR,Plywood,Plywood,None,Fa,Fa,CBlock,TA,Fa,No,Unf
+CollgCr,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,GLQ
+NAmes,BrkFace,Wd Sdng,None,TA,TA,Slab,,,,
+NAmes,HdBoard,HdBoard,BrkCmn,TA,TA,CBlock,TA,TA,No,Rec
+Crawfor,Wd Sdng,Wd Sdng,None,TA,Gd,BrkTil,Gd,TA,No,ALQ
+OldTown,MetalSd,MetalSd,None,TA,TA,BrkTil,TA,Fa,Mn,Rec
+CollgCr,VinylSd,VinylSd,None,TA,Gd,PConc,Gd,TA,No,GLQ
+Gilbert,VinylSd,VinylSd,BrkFace,Ex,Gd,PConc,Gd,Gd,No,ALQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,ALQ
+Edwards,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+Edwards,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,ALQ
+NAmes,Plywood,Plywood,None,TA,TA,CBlock,TA,TA,No,ALQ
+NWAmes,Plywood,Plywood,BrkFace,TA,TA,PConc,TA,TA,Mn,ALQ
+SawyerW,HdBoard,HdBoard,BrkFace,Gd,TA,CBlock,Gd,TA,No,Unf
+SawyerW,HdBoard,HdBoard,None,TA,Fa,Slab,,,,
+CollgCr,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,Unf
+IDOTRR,Stucco,Stucco,BrkFace,TA,Fa,PConc,TA,TA,No,LwQ
+Somerst,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Ex,TA,No,Unf
+OldTown,VinylSd,VinylSd,None,TA,TA,BrkTil,Fa,TA,No,Unf
+OldTown,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,ALQ
+IDOTRR,CemntBd,CmentBd,None,TA,TA,CBlock,TA,TA,No,Unf
+NWAmes,Plywood,Plywood,BrkFace,TA,TA,CBlock,Gd,TA,No,BLQ
+Edwards,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,Fa,No,Rec
+Gilbert,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,GLQ
+CollgCr,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,Av,GLQ
+Crawfor,Wd Sdng,Wd Sdng,BrkFace,TA,Gd,CBlock,Gd,TA,Mn,ALQ
+Crawfor,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,ALQ
+Somerst,MetalSd,MetalSd,BrkFace,TA,TA,PConc,Gd,TA,No,GLQ
+Sawyer,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,TA,TA,No,LwQ
+Edwards,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,Unf
+SawyerW,Plywood,Plywood,None,TA,TA,PConc,Gd,TA,Mn,GLQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+ClearCr,Plywood,Plywood,None,TA,TA,CBlock,TA,TA,Gd,ALQ
+IDOTRR,AsbShng,AsbShng,None,TA,TA,PConc,TA,TA,No,Unf
+NAmes,MetalSd,MetalSd,BrkFace,TA,Gd,CBlock,TA,TA,No,BLQ
+SawyerW,Plywood,Plywood,None,Gd,TA,PConc,Gd,TA,No,GLQ
+NWAmes,HdBoard,HdBoard,None,TA,Gd,CBlock,Gd,Fa,No,Unf
+IDOTRR,Wd Sdng,Wd Sdng,None,TA,Fa,CBlock,TA,TA,Av,GLQ
+NPkVill,Plywood,Plywood,None,TA,TA,CBlock,Gd,TA,No,ALQ
+OldTown,WdShing,Wd Sdng,None,TA,Gd,BrkTil,TA,TA,No,LwQ
+NAmes,VinylSd,VinylSd,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+NAmes,Plywood,Plywood,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+NAmes,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+Gilbert,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+NAmes,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Rec
+Timber,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Ex,TA,No,GLQ
+Sawyer,Plywood,Plywood,None,TA,TA,CBlock,TA,TA,No,Rec
+NWAmes,Plywood,Plywood,BrkFace,TA,TA,PConc,TA,TA,No,Unf
+NAmes,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+Mitchel,VinylSd,VinylSd,BrkFace,TA,TA,CBlock,TA,TA,No,Unf
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Mn,GLQ
+CollgCr,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,GLQ
+NAmes,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,ALQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,GLQ
+NAmes,BrkFace,Wd Sdng,None,TA,Fa,CBlock,TA,TA,No,Rec
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Gd,GLQ
+Sawyer,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+Edwards,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,No,Unf
+BrkSide,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,BLQ
+Gilbert,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+SawyerW,VinylSd,VinylSd,BrkFace,TA,TA,PConc,Gd,TA,No,GLQ
+BrkSide,MetalSd,MetalSd,None,TA,TA,BrkTil,Gd,TA,No,Unf
+CollgCr,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,Av,BLQ
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,Gd,GLQ
+NWAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+ClearCr,BrkFace,Plywood,None,TA,TA,CBlock,Gd,TA,Gd,BLQ
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,Unf
+Edwards,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,Unf
+NAmes,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,,,,
+Timber,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Ex,TA,No,Unf
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+Gilbert,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Mn,GLQ
+Veenker,Plywood,Plywood,None,TA,TA,PConc,Gd,TA,No,BLQ
+NridgHt,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Ex,TA,Av,GLQ
+NridgHt,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Mn,BLQ
+OldTown,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Unf
+OldTown,MetalSd,MetalSd,None,TA,Gd,BrkTil,TA,TA,Mn,LwQ
+Edwards,Wd Sdng,Wd Sdng,None,TA,Gd,BrkTil,TA,TA,No,ALQ
+ClearCr,Wd Sdng,Wd Sdng,None,Gd,TA,CBlock,TA,TA,No,LwQ
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,No,GLQ
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+Timber,Plywood,Plywood,BrkFace,Gd,TA,CBlock,Gd,TA,No,Unf
+OldTown,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Rec
+NAmes,BrkFace,Plywood,Stone,TA,TA,CBlock,TA,Gd,Gd,BLQ
+StoneBr,HdBoard,HdBoard,None,Gd,Gd,PConc,Gd,Gd,No,GLQ
+NAmes,WdShing,Wd Shng,BrkCmn,TA,TA,CBlock,TA,TA,No,ALQ
+Timber,VinylSd,Plywood,Stone,TA,TA,CBlock,Gd,Fa,No,ALQ
+Edwards,WdShing,Wd Shng,None,TA,TA,CBlock,TA,Gd,Av,ALQ
+ClearCr,Plywood,Plywood,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+Sawyer,MetalSd,MetalSd,None,Gd,Gd,CBlock,TA,TA,No,ALQ
+StoneBr,VinylSd,VinylSd,Stone,Ex,TA,PConc,Ex,TA,No,GLQ
+OldTown,Wd Sdng,Wd Sdng,None,Gd,TA,CBlock,TA,TA,No,Unf
+Somerst,MetalSd,MetalSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+Crawfor,Stucco,Stucco,None,TA,TA,BrkTil,Fa,TA,No,LwQ
+Edwards,Wd Sdng,Wd Sdng,BrkFace,TA,TA,PConc,,,,
+OldTown,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,Unf
+BrkSide,AsbShng,Plywood,None,TA,TA,PConc,Fa,TA,No,Unf
+OldTown,Wd Sdng,Wd Sdng,None,Gd,Gd,BrkTil,TA,TA,Mn,Unf
+Mitchel,HdBoard,HdBoard,None,TA,TA,PConc,Gd,TA,Av,GLQ
+OldTown,HdBoard,HdBoard,None,TA,TA,CBlock,Fa,TA,No,Unf
+SawyerW,Plywood,Plywood,Stone,TA,TA,CBlock,Gd,TA,Av,GLQ
+StoneBr,CemntBd,CmentBd,None,Gd,TA,PConc,Ex,TA,Av,GLQ
+Crawfor,BrkFace,BrkFace,None,Gd,TA,CBlock,Gd,Gd,No,Rec
+NAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,ALQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,GLQ
+Edwards,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,No,Unf
+CollgCr,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,Av,ALQ
+NPkVill,Plywood,Brk Cmn,None,TA,TA,CBlock,Gd,TA,No,ALQ
+Somerst,CemntBd,CmentBd,Stone,Ex,TA,PConc,Ex,TA,No,GLQ
+NAmes,Stucco,Stucco,None,Gd,Gd,PConc,TA,TA,No,GLQ
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,Unf
+NridgHt,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Ex,TA,Av,GLQ
+Edwards,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,Unf
+Mitchel,Plywood,Plywood,None,TA,TA,CBlock,TA,TA,No,ALQ
+OldTown,MetalSd,MetalSd,None,TA,Gd,BrkTil,Fa,TA,No,LwQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+OldTown,AsbShng,AsbShng,None,TA,TA,CBlock,TA,TA,No,LwQ
+Gilbert,HdBoard,HdBoard,None,TA,TA,PConc,Gd,TA,No,Unf
+Sawyer,HdBoard,HdBoard,None,TA,Gd,CBlock,TA,TA,No,Unf
+NAmes,Wd Sdng,Wd Sdng,None,TA,TA,PConc,TA,TA,No,ALQ
+SawyerW,Plywood,Plywood,BrkFace,Gd,TA,CBlock,Gd,TA,Gd,GLQ
+NAmes,HdBoard,HdBoard,Stone,TA,TA,CBlock,Gd,TA,No,Rec
+Edwards,Stucco,Stucco,None,TA,TA,CBlock,TA,TA,No,Rec
+Edwards,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,Mn,GLQ
+Somerst,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,GLQ
+CollgCr,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,ALQ
+CollgCr,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,Gd,TA,No,GLQ
+NAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Mn,GLQ
+OldTown,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Unf
+Crawfor,VinylSd,VinylSd,BrkFace,Gd,Gd,CBlock,TA,TA,No,BLQ
+Blmngtn,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Mn,Unf
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+NWAmes,VinylSd,VinylSd,None,TA,TA,CBlock,Gd,TA,No,ALQ
+NAmes,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,ALQ
+NridgHt,VinylSd,VinylSd,BrkFace,Ex,TA,PConc,Ex,TA,Gd,GLQ
+BrDale,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,Unf
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+BrDale,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+Sawyer,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,ALQ
+Blmngtn,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+NAmes,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,TA,No,Unf
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+BrDale,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,Unf
+CollgCr,HdBoard,HdBoard,None,TA,TA,CBlock,TA,Gd,Av,LwQ
+Gilbert,VinylSd,VinylSd,,Gd,TA,PConc,Gd,TA,No,GLQ
+BrDale,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,ALQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+SawyerW,HdBoard,HdBoard,None,Gd,TA,PConc,Gd,TA,No,BLQ
+NridgHt,VinylSd,VinylSd,BrkFace,Ex,TA,PConc,Ex,TA,No,Unf
+Edwards,VinylSd,VinylSd,None,TA,TA,CBlock,TA,Fa,No,LwQ
+Somerst,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Av,GLQ
+OldTown,VinylSd,VinylSd,None,TA,Gd,CBlock,TA,TA,No,ALQ
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,Unf
+SawyerW,Plywood,Plywood,None,TA,TA,CBlock,Gd,TA,No,Unf
+SawyerW,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+NWAmes,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,Gd,TA,Av,GLQ
+OldTown,AsbShng,AsbShng,None,TA,Fa,Stone,Fa,TA,No,Unf
+NAmes,Wd Sdng,BrkFace,None,TA,TA,CBlock,TA,TA,No,Unf
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+ClearCr,Wd Sdng,HdBoard,BrkCmn,Gd,TA,CBlock,Gd,TA,Gd,Rec
+BrkSide,Wd Sdng,Plywood,None,TA,Po,CBlock,TA,TA,No,Unf
+Crawfor,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Gd,GLQ
+SawyerW,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+NAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,Gd,TA,Gd,LwQ
+NAmes,MetalSd,MetalSd,None,TA,Gd,CBlock,TA,TA,No,Rec
+Gilbert,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Rec
+CollgCr,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,No,GLQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+OldTown,BrkFace,BrkFace,None,TA,TA,PConc,,,,
+NAmes,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,TA,TA,Gd,Rec
+CollgCr,CemntBd,CmentBd,Stone,Gd,TA,PConc,Ex,TA,No,Unf
+Sawyer,HdBoard,Plywood,BrkFace,TA,TA,CBlock,Gd,Gd,Av,ALQ
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,LwQ
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,Fa,TA,No,Unf
+NWAmes,MetalSd,MetalSd,BrkFace,TA,Gd,CBlock,Gd,TA,No,GLQ
+Gilbert,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,Av,GLQ
+SWISU,Wd Sdng,Wd Sdng,None,TA,TA,PConc,TA,TA,No,LwQ
+IDOTRR,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,ALQ
+Edwards,HdBoard,HdBoard,BrkFace,TA,Gd,CBlock,TA,Gd,No,BLQ
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Mn,Unf
+ClearCr,Plywood,Plywood,None,TA,TA,CBlock,Gd,TA,Gd,LwQ
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+NAmes,Wd Sdng,Wd Sdng,BrkCmn,TA,TA,CBlock,TA,TA,No,Rec
+Mitchel,HdBoard,ImStucc,None,TA,TA,CBlock,TA,TA,Gd,ALQ
+BrkSide,Wd Sdng,Wd Sdng,None,Gd,Gd,BrkTil,TA,TA,No,Unf
+Mitchel,VinylSd,VinylSd,None,Gd,TA,PConc,Ex,TA,No,Unf
+Gilbert,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,LwQ
+NridgHt,CemntBd,CmentBd,BrkFace,Ex,TA,PConc,Ex,TA,Gd,Unf
+ClearCr,Plywood,Plywood,BrkFace,TA,TA,CBlock,Gd,TA,No,BLQ
+SawyerW,Plywood,Plywood,BrkFace,Gd,TA,CBlock,Gd,TA,Av,GLQ
+Somerst,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,No,GLQ
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,No,GLQ
+Somerst,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,No,Unf
+SawyerW,Plywood,ImStucc,None,Gd,TA,PConc,Gd,TA,No,GLQ
+Somerst,MetalSd,MetalSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+NAmes,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,Rec
+NAmes,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,BLQ
+Sawyer,MetalSd,MetalSd,BrkFace,TA,Gd,CBlock,TA,TA,No,BLQ
+BrkSide,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,Unf
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,Unf
+SWISU,VinylSd,VinylSd,None,TA,Fa,PConc,TA,Fa,No,Rec
+Edwards,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,LwQ
+NWAmes,Plywood,Plywood,BrkFace,TA,TA,CBlock,TA,TA,No,ALQ
+NAmes,HdBoard,HdBoard,Stone,TA,TA,CBlock,TA,TA,No,GLQ
+Mitchel,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,Av,GLQ
+IDOTRR,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,BLQ
+Somerst,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,BLQ
+NWAmes,HdBoard,AsphShn,BrkFace,Gd,TA,CBlock,TA,TA,No,ALQ
+Crawfor,HdBoard,HdBoard,None,TA,Gd,CBlock,TA,TA,No,Unf
+Crawfor,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,TA,Mn,BLQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+CollgCr,VinylSd,VinylSd,None,TA,TA,PConc,TA,TA,No,ALQ
+OldTown,CemntBd,CmentBd,None,TA,TA,BrkTil,TA,TA,No,Unf
+CollgCr,CemntBd,CmentBd,Stone,Gd,TA,PConc,Gd,TA,No,GLQ
+SawyerW,HdBoard,Plywood,BrkFace,Gd,TA,CBlock,Gd,TA,No,ALQ
+IDOTRR,MetalSd,MetalSd,None,TA,Fa,CBlock,TA,TA,No,Unf
+Edwards,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,BLQ
+NridgHt,VinylSd,VinylSd,None,Gd,TA,PConc,Ex,TA,Gd,GLQ
+Gilbert,HdBoard,HdBoard,BrkFace,TA,TA,PConc,Gd,TA,No,ALQ
+NAmes,VinylSd,VinylSd,None,TA,Gd,CBlock,TA,TA,No,ALQ
+OldTown,MetalSd,MetalSd,None,TA,TA,CBlock,Gd,TA,Mn,Rec
+Timber,BrkFace,BrkFace,None,TA,TA,CBlock,Gd,TA,Gd,ALQ
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,Gd,No,LwQ
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+NWAmes,CemntBd,CmentBd,BrkFace,Gd,TA,CBlock,Gd,TA,No,GLQ
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,Unf
+NoRidge,HdBoard,HdBoard,BrkFace,Gd,TA,PConc,Gd,TA,Gd,GLQ
+NWAmes,Plywood,Plywood,BrkFace,TA,TA,CBlock,Gd,TA,Av,GLQ
+NridgHt,VinylSd,VinylSd,Stone,TA,TA,PConc,Ex,Gd,Av,Unf
+NridgHt,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Ex,TA,Av,GLQ
+SawyerW,Plywood,Plywood,BrkFace,Gd,TA,CBlock,TA,TA,Gd,LwQ
+OldTown,VinylSd,VinylSd,None,TA,Gd,CBlock,TA,TA,No,ALQ
+NAmes,Wd Sdng,Wd Sdng,BrkFace,Gd,Gd,CBlock,Gd,TA,No,Unf
+IDOTRR,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,Av,BLQ
+Veenker,BrkFace,BrkFace,None,Gd,TA,PConc,Gd,TA,Gd,GLQ
+NAmes,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+BrkSide,Wd Sdng,Wd Shng,None,TA,TA,BrkTil,TA,TA,No,Unf
+IDOTRR,Wd Sdng,Wd Shng,None,TA,TA,PConc,TA,TA,Mn,Unf
+NAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,GLQ
+NAmes,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,Rec
+NridgHt,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Av,GLQ
+Gilbert,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,Gd,GLQ
+Timber,Plywood,Plywood,None,TA,TA,CBlock,TA,TA,Gd,ALQ
+StoneBr,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,Gd,GLQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+NWAmes,Wd Sdng,Wd Sdng,None,Gd,TA,CBlock,Gd,TA,Mn,ALQ
+NAmes,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,TA,Fa,No,Rec
+Timber,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+SawyerW,Wd Sdng,AsbShng,None,Fa,Fa,CBlock,TA,Fa,No,Unf
+NAmes,Stucco,Stucco,BrkFace,TA,TA,Slab,,,,
+NridgHt,MetalSd,MetalSd,BrkFace,Ex,TA,PConc,Ex,TA,No,GLQ
+MeadowV,CemntBd,CmentBd,None,TA,TA,CBlock,Gd,TA,No,Rec
+BrkSide,MetalSd,MetalSd,None,TA,TA,BrkTil,TA,TA,No,Unf
+NAmes,MetalSd,MetalSd,None,TA,Gd,CBlock,TA,TA,Mn,BLQ
+NAmes,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+NridgHt,VinylSd,Wd Shng,Stone,Gd,TA,PConc,Gd,TA,No,GLQ
+NridgHt,CemntBd,CmentBd,BrkFace,Ex,TA,PConc,Ex,TA,No,GLQ
+NridgHt,MetalSd,MetalSd,BrkFace,Ex,TA,PConc,Ex,TA,No,Unf
+ClearCr,Wd Sdng,Wd Sdng,None,TA,TA,PConc,Gd,TA,Gd,GLQ
+Edwards,VinylSd,VinylSd,None,TA,TA,CBlock,TA,Fa,Mn,LwQ
+OldTown,VinylSd,VinylSd,None,TA,Gd,BrkTil,TA,TA,No,Unf
+SWISU,Wd Sdng,MetalSd,None,TA,TA,CBlock,TA,TA,No,LwQ
+CollgCr,VinylSd,VinylSd,None,Gd,Gd,PConc,Gd,Gd,No,ALQ
+Gilbert,HdBoard,HdBoard,BrkFace,TA,TA,PConc,Gd,TA,No,GLQ
+MeadowV,CemntBd,CmentBd,None,TA,TA,PConc,Gd,TA,No,ALQ
+ClearCr,Wd Sdng,ImStucc,BrkFace,TA,TA,CBlock,TA,TA,Av,BLQ
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+Mitchel,VinylSd,VinylSd,None,TA,TA,CBlock,Gd,TA,Av,GLQ
+BrkSide,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Rec
+Edwards,HdBoard,HdBoard,BrkFace,Gd,TA,Slab,,,,
+BrDale,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,ALQ
+NWAmes,HdBoard,HdBoard,BrkFace,TA,TA,PConc,Gd,TA,Mn,GLQ
+IDOTRR,VinylSd,VinylSd,None,TA,Gd,CBlock,TA,Fa,No,Rec
+NAmes,Plywood,Plywood,BrkFace,TA,TA,CBlock,Gd,TA,No,BLQ
+NAmes,Plywood,Plywood,BrkFace,TA,TA,CBlock,Gd,TA,Gd,GLQ
+NAmes,HdBoard,HdBoard,BrkFace,TA,TA,PConc,TA,TA,No,LwQ
+NAmes,Wd Sdng,Wd Sdng,None,TA,Gd,CBlock,TA,TA,No,ALQ
+Gilbert,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,Unf
+ClearCr,WdShing,Plywood,None,TA,TA,CBlock,,,,
+SawyerW,Plywood,Plywood,None,TA,TA,CBlock,Gd,TA,No,ALQ
+NAmes,MetalSd,MetalSd,None,TA,TA,PConc,TA,TA,No,BLQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+Edwards,Wd Sdng,Wd Sdng,None,Fa,Fa,BrkTil,Fa,Po,Gd,BLQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,GLQ
+Somerst,CemntBd,CmentBd,None,Gd,TA,PConc,Gd,TA,No,Unf
+StoneBr,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,Av,GLQ
+Gilbert,VinylSd,VinylSd,BrkFace,TA,TA,PConc,Gd,TA,No,Unf
+SWISU,BrkFace,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,LwQ
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,Gd,No,Unf
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,Unf
+SawyerW,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,Fa,Fa,No,Unf
+ClearCr,HdBoard,HdBoard,None,Gd,TA,PConc,Gd,TA,Av,GLQ
+Blmngtn,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+Edwards,Wd Sdng,VinylSd,None,TA,Fa,PConc,TA,TA,No,Unf
+Edwards,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,TA,Av,ALQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+NridgHt,VinylSd,VinylSd,Stone,Ex,TA,PConc,Ex,TA,Av,GLQ
+Edwards,MetalSd,MetalSd,None,TA,TA,BrkTil,TA,Gd,No,Rec
+Mitchel,VinylSd,VinylSd,None,TA,TA,PConc,Ex,TA,No,ALQ
+NAmes,MetalSd,MetalSd,None,TA,TA,Slab,,,,
+BrkSide,WdShing,Wd Shng,None,TA,TA,CBlock,TA,TA,No,Rec
+OldTown,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Unf
+Edwards,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,Av,BLQ
+CollgCr,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,Av,Rec
+NAmes,VinylSd,VinylSd,BrkFace,TA,TA,CBlock,TA,TA,No,ALQ
+IDOTRR,MetalSd,MetalSd,None,TA,Fa,BrkTil,Fa,Po,No,Unf
+Somerst,CemntBd,CmentBd,Stone,Gd,TA,PConc,Gd,TA,No,GLQ
+Veenker,BrkFace,BrkFace,None,Gd,TA,PConc,Gd,TA,No,GLQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,GLQ
+Sawyer,Wd Sdng,Wd Sdng,None,TA,TA,PConc,TA,TA,No,Unf
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+Gilbert,MetalSd,MetalSd,None,TA,TA,PConc,Gd,TA,No,Unf
+Sawyer,Plywood,Plywood,None,TA,TA,CBlock,TA,TA,No,BLQ
+SWISU,MetalSd,MetalSd,None,TA,TA,BrkTil,TA,TA,No,Unf
+Crawfor,Wd Sdng,Plywood,None,TA,TA,BrkTil,Gd,TA,No,Unf
+NridgHt,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Ex,Gd,No,Unf
+Somerst,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,No,GLQ
+Edwards,BrkComm,Brk Cmn,None,TA,Fa,CBlock,TA,Fa,No,Unf
+Gilbert,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,Mn,Rec
+Somerst,MetalSd,MetalSd,Stone,Ex,TA,PConc,Ex,TA,Av,GLQ
+OldTown,WdShing,Wd Shng,None,TA,TA,CBlock,TA,TA,No,Unf
+SawyerW,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,BLQ
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,GLQ
+Sawyer,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,ALQ
+Crawfor,Wd Sdng,Stucco,None,TA,TA,BrkTil,Gd,TA,No,BLQ
+Edwards,MetalSd,MetalSd,None,TA,TA,BrkTil,TA,TA,No,ALQ
+NAmes,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,BLQ
+Mitchel,VinylSd,VinylSd,BrkFace,TA,Gd,PConc,Gd,Gd,Gd,GLQ
+NWAmes,CemntBd,CmentBd,Stone,Gd,TA,CBlock,Gd,TA,No,ALQ
+Mitchel,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,Unf
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+NAmes,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,Gd,TA,No,LwQ
+OldTown,HdBoard,HdBoard,None,TA,Gd,CBlock,TA,TA,No,Unf
+SawyerW,Wd Sdng,Wd Sdng,BrkFace,Gd,TA,PConc,Gd,TA,Gd,GLQ
+NAmes,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Rec
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+Timber,HdBoard,HdBoard,None,TA,TA,CBlock,Gd,TA,Mn,GLQ
+BrDale,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,ALQ
+OldTown,MetalSd,MetalSd,None,TA,TA,BrkTil,TA,TA,No,Unf
+BrDale,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,ALQ
+Gilbert,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,Unf
+MeadowV,CemntBd,CmentBd,None,TA,Gd,CBlock,Gd,TA,Av,ALQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,GLQ
+OldTown,Stucco,Stucco,None,TA,TA,BrkTil,Fa,TA,No,Unf
+BrkSide,Wd Sdng,Wd Sdng,None,Gd,TA,PConc,TA,TA,No,Unf
+Crawfor,WdShing,Stucco,None,TA,TA,PConc,TA,TA,No,LwQ
+Edwards,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,Fa,Mn,Unf
+NridgHt,VinylSd,VinylSd,Stone,Ex,TA,PConc,Ex,TA,Gd,GLQ
+Edwards,VinylSd,VinylSd,BrkFace,TA,TA,CBlock,TA,TA,No,ALQ
+BrkSide,MetalSd,MetalSd,None,TA,TA,PConc,TA,TA,No,Unf
+Blmngtn,WdShing,Wd Shng,BrkFace,Gd,TA,PConc,Ex,TA,Av,Unf
+CollgCr,VinylSd,VinylSd,None,Gd,Gd,PConc,Gd,TA,No,GLQ
+Edwards,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,Unf
+NAmes,BrkFace,Plywood,None,Gd,TA,CBlock,TA,TA,No,ALQ
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+IDOTRR,MetalSd,MetalSd,None,TA,TA,BrkTil,TA,TA,No,Unf
+OldTown,MetalSd,MetalSd,None,TA,Gd,CBlock,TA,TA,No,ALQ
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,Unf
+ClearCr,Plywood,Plywood,None,TA,TA,CBlock,Gd,TA,Gd,ALQ
+Timber,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Ex,TA,No,ALQ
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+Mitchel,Plywood,Plywood,None,TA,TA,CBlock,TA,TA,No,ALQ
+NWAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,ALQ
+OldTown,AsbShng,AsbShng,None,TA,TA,BrkTil,TA,TA,No,Unf
+ClearCr,Plywood,Plywood,None,TA,TA,CBlock,Gd,TA,Gd,BLQ
+OldTown,Stucco,Wd Shng,None,TA,Gd,PConc,TA,TA,No,Unf
+BrkSide,MetalSd,MetalSd,BrkCmn,TA,TA,CBlock,TA,TA,No,LwQ
+Somerst,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,No,GLQ
+SWISU,Wd Sdng,Wd Sdng,None,Gd,Gd,PConc,Gd,Gd,No,ALQ
+Sawyer,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Rec
+Crawfor,Stucco,Stucco,None,TA,TA,CBlock,TA,TA,No,LwQ
+CollgCr,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,Gd,TA,No,Rec
+Blmngtn,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+NAmes,Plywood,Plywood,None,TA,Gd,CBlock,TA,Gd,Gd,GLQ
+NAmes,MetalSd,MetalSd,Stone,TA,TA,CBlock,TA,TA,No,LwQ
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,No,Unf
+SawyerW,HdBoard,HdBoard,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+StoneBr,HdBoard,HdBoard,None,Gd,TA,PConc,Gd,TA,Av,GLQ
+NWAmes,WdShing,Plywood,None,TA,TA,CBlock,Gd,TA,No,Unf
+Edwards,VinylSd,VinylSd,BrkFace,TA,TA,PConc,Gd,TA,Gd,GLQ
+NridgHt,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Ex,TA,Gd,GLQ
+StoneBr,CemntBd,CmentBd,None,Gd,TA,PConc,Gd,TA,Av,GLQ
+Sawyer,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,GLQ
+CollgCr,VinylSd,VinylSd,BrkFace,TA,TA,PConc,Gd,TA,Gd,GLQ
+NridgHt,VinylSd,VinylSd,BrkFace,Ex,TA,PConc,Gd,TA,Av,Unf
+CollgCr,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,Gd,GLQ
+OldTown,Stucco,Stucco,BrkCmn,TA,TA,BrkTil,Fa,TA,No,Rec
+NridgHt,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Ex,TA,Gd,GLQ
+NridgHt,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Ex,TA,Gd,GLQ
+OldTown,Stucco,Stucco,None,Gd,TA,PConc,TA,TA,No,ALQ
+Mitchel,VinylSd,VinylSd,BrkFace,TA,TA,PConc,Ex,TA,No,GLQ
+Sawyer,HdBoard,Plywood,None,TA,Gd,CBlock,TA,TA,No,ALQ
+NAmes,MetalSd,MetalSd,None,Gd,TA,CBlock,TA,TA,No,ALQ
+NAmes,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,TA,No,ALQ
+NWAmes,Plywood,Plywood,None,TA,TA,CBlock,Gd,TA,Av,ALQ
+OldTown,Wd Sdng,Wd Sdng,None,TA,Fa,CBlock,TA,Fa,No,BLQ
+MeadowV,CemntBd,CmentBd,None,TA,Gd,CBlock,Gd,TA,Av,GLQ
+MeadowV,CemntBd,CmentBd,None,TA,TA,PConc,Gd,TA,Mn,Unf
+NAmes,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,BLQ
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+NAmes,BrkFace,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,BLQ
+OldTown,MetalSd,MetalSd,None,TA,TA,BrkTil,Fa,TA,No,Unf
+IDOTRR,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,Rec
+NoRidge,BrkFace,BrkFace,None,Gd,TA,PConc,Gd,TA,No,GLQ
+BrkSide,Wd Sdng,Wd Sdng,None,TA,Gd,PConc,TA,TA,No,Rec
+Sawyer,HdBoard,HdBoard,BrkFace,TA,TA,PConc,TA,TA,No,ALQ
+NAmes,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,BLQ
+BrDale,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+Edwards,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,ALQ
+Crawfor,BrkFace,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,ALQ
+NPkVill,Plywood,Brk Cmn,None,TA,TA,CBlock,TA,TA,No,ALQ
+OldTown,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,TA,TA,No,Unf
+SawyerW,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+OldTown,MetalSd,MetalSd,None,TA,Ex,BrkTil,TA,TA,No,Rec
+NAmes,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,TA,No,ALQ
+NAmes,Wd Sdng,Wd Sdng,BrkCmn,Gd,TA,CBlock,TA,TA,No,BLQ
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,No,Unf
+NAmes,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,BLQ
+Mitchel,VinylSd,VinylSd,None,TA,Gd,PConc,TA,TA,No,ALQ
+Crawfor,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,Unf
+NridgHt,CemntBd,CmentBd,BrkFace,Ex,TA,CBlock,Ex,TA,No,GLQ
+NWAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,Unf
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+CollgCr,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,Mn,GLQ
+Crawfor,MetalSd,MetalSd,None,Gd,TA,BrkTil,Gd,TA,No,Unf
+OldTown,MetalSd,MetalSd,None,TA,TA,BrkTil,,,,
+NAmes,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,Rec
+BrkSide,CemntBd,CmentBd,None,TA,Gd,CBlock,TA,TA,No,ALQ
+Edwards,CemntBd,CmentBd,Stone,Ex,TA,PConc,Ex,TA,Gd,GLQ
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+NAmes,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,Gd,TA,No,Rec
+NridgHt,VinylSd,VinylSd,Stone,Ex,TA,PConc,Ex,TA,Av,GLQ
+Edwards,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,Mn,ALQ
+Crawfor,Wd Sdng,Stone,,Gd,TA,PConc,TA,TA,No,Rec
+Timber,HdBoard,HdBoard,BrkFace,Gd,TA,CBlock,Gd,TA,Av,GLQ
+BrkSide,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,Fa,Fa,Mn,Unf
+NAmes,VinylSd,VinylSd,None,TA,TA,Slab,,,,
+BrkSide,VinylSd,VinylSd,None,Fa,Fa,Slab,,,,
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Ex,Gd,Av,Unf
+Edwards,MetalSd,MetalSd,None,TA,TA,CBlock,Gd,TA,Gd,GLQ
+CollgCr,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,Av,Unf
+NAmes,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,BLQ
+Sawyer,Plywood,Plywood,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+Timber,VinylSd,VinylSd,BrkFace,Ex,TA,PConc,Ex,TA,Av,GLQ
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+NWAmes,VinylSd,VinylSd,None,Gd,TA,PConc,Ex,TA,No,LwQ
+NAmes,MetalSd,MetalSd,BrkFace,TA,TA,PConc,Gd,TA,Av,GLQ
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,Gd,Av,GLQ
+NWAmes,HdBoard,HdBoard,BrkFace,Gd,Gd,PConc,Gd,Gd,No,GLQ
+BrkSide,BrkFace,Wd Sdng,None,TA,TA,BrkTil,Gd,TA,No,Rec
+Mitchel,VinylSd,VinylSd,None,TA,Gd,CBlock,Gd,TA,Av,ALQ
+OldTown,MetalSd,MetalSd,None,TA,Gd,CBlock,TA,TA,No,LwQ
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+NPkVill,Plywood,Plywood,None,TA,TA,CBlock,Gd,TA,No,ALQ
+OldTown,BrkFace,BrkFace,None,TA,TA,CBlock,TA,TA,No,Rec
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,Av,Unf
+Edwards,VinylSd,VinylSd,None,TA,TA,CBlock,,,,
+NridgHt,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+BrkSide,MetalSd,MetalSd,None,TA,TA,BrkTil,TA,Fa,No,Unf
+NAmes,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,Rec
+IDOTRR,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Rec
+Gilbert,HdBoard,HdBoard,None,TA,TA,PConc,Gd,TA,Gd,GLQ
+Blmngtn,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Gd,Unf
+Sawyer,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,Gd,TA,No,ALQ
+Mitchel,HdBoard,HdBoard,None,TA,TA,CBlock,Gd,TA,Av,ALQ
+Edwards,WdShing,Wd Shng,None,TA,TA,CBlock,TA,TA,No,BLQ
+Edwards,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,Gd,TA,Mn,Unf
+NoRidge,HdBoard,HdBoard,None,Gd,TA,PConc,Gd,TA,No,GLQ
+SWISU,Wd Sdng,Wd Sdng,None,TA,TA,PConc,Gd,TA,No,Unf
+StoneBr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,Gd,No,Unf
+NridgHt,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+SawyerW,Wd Sdng,Wd Sdng,None,Gd,TA,CBlock,Gd,TA,Gd,GLQ
+NAmes,MetalSd,MetalSd,None,TA,TA,CBlock,Gd,TA,Gd,GLQ
+NAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,LwQ
+NAmes,WdShing,Wd Shng,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+Timber,VinylSd,VinylSd,None,TA,TA,PConc,Ex,TA,Av,Unf
+Gilbert,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,Unf
+NAmes,MetalSd,AsphShn,BrkFace,TA,TA,CBlock,TA,TA,Av,ALQ
+NAmes,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Rec
+SWISU,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,Unf
+Sawyer,VinylSd,VinylSd,BrkFace,TA,TA,CBlock,TA,TA,Av,LwQ
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+OldTown,MetalSd,MetalSd,BrkFace,TA,TA,BrkTil,TA,TA,No,Unf
+NAmes,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+NridgHt,VinylSd,VinylSd,BrkFace,Ex,TA,PConc,Ex,TA,No,Unf
+Edwards,HdBoard,HdBoard,BrkFace,TA,Gd,CBlock,Gd,TA,Av,GLQ
+OldTown,Wd Sdng,Wd Sdng,None,Ex,Ex,BrkTil,TA,TA,No,Unf
+BrkSide,AsbShng,AsbShng,None,TA,TA,BrkTil,TA,TA,No,Unf
+Timber,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Ex,TA,Gd,GLQ
+BrkSide,Stucco,Wd Shng,None,TA,Gd,BrkTil,TA,Gd,Mn,Rec
+Sawyer,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,Av,ALQ
+ClearCr,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,Gd,GLQ
+BrkSide,VinylSd,VinylSd,None,TA,TA,BrkTil,TA,TA,No,Unf
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+NridgHt,CemntBd,CmentBd,Stone,Ex,TA,PConc,Ex,TA,Gd,GLQ
+Mitchel,HdBoard,HdBoard,None,TA,Gd,PConc,TA,Gd,No,GLQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+CollgCr,HdBoard,HdBoard,None,TA,TA,CBlock,Gd,TA,No,Unf
+StoneBr,VinylSd,Other,BrkFace,Gd,TA,PConc,Gd,TA,Gd,GLQ
+OldTown,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,Unf
+Blmngtn,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Ex,TA,Av,Unf
+Crawfor,Plywood,Plywood,BrkFace,TA,TA,CBlock,Gd,TA,Mn,ALQ
+Blueste,MetalSd,MetalSd,None,TA,Gd,CBlock,Gd,TA,No,LwQ
+NridgHt,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+IDOTRR,Wd Sdng,Wd Sdng,None,TA,Gd,PConc,TA,TA,No,Unf
+SawyerW,HdBoard,HdBoard,None,Gd,TA,PConc,Gd,TA,Mn,GLQ
+Somerst,MetalSd,MetalSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Mn,GLQ
+NAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+CollgCr,VinylSd,VinylSd,None,TA,Gd,PConc,Gd,TA,No,GLQ
+Edwards,MetalSd,MetalSd,None,TA,Gd,CBlock,TA,Gd,No,GLQ
+Crawfor,BrkFace,Wd Sdng,None,TA,TA,PConc,Gd,TA,Mn,BLQ
+Sawyer,VinylSd,VinylSd,BrkCmn,TA,Fa,CBlock,TA,TA,Mn,Rec
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Ex,TA,Mn,GLQ
+NWAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,Gd,TA,Av,ALQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+Mitchel,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,ALQ
+MeadowV,CemntBd,CmentBd,None,TA,TA,CBlock,Gd,TA,Av,LwQ
+NAmes,MetalSd,MetalSd,BrkFace,TA,Gd,PConc,TA,TA,Gd,GLQ
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+NAmes,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Unf
+NridgHt,CemntBd,CmentBd,BrkFace,Ex,TA,PConc,Ex,TA,Av,GLQ
+Timber,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Gd,GLQ
+Edwards,Stucco,Stucco,None,TA,TA,BrkTil,TA,TA,No,BLQ
+NWAmes,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,ALQ
+Sawyer,Plywood,Plywood,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+Somerst,MetalSd,MetalSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+NWAmes,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,Rec
+NAmes,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,TA,TA,No,Unf
+NAmes,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,Unf
+NAmes,AsbShng,AsbShng,BrkFace,TA,TA,CBlock,TA,TA,Av,BLQ
+NAmes,Plywood,Plywood,BrkFace,TA,TA,PConc,Gd,TA,Av,Rec
+NAmes,Plywood,Wd Sdng,BrkFace,TA,TA,CBlock,TA,TA,Gd,GLQ
+OldTown,VinylSd,VinylSd,None,TA,TA,BrkTil,Fa,Fa,No,Unf
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,Gd,Mn,GLQ
+NWAmes,Plywood,Plywood,BrkFace,TA,Gd,CBlock,TA,TA,No,ALQ
+NAmes,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,BLQ
+OldTown,Plywood,Plywood,None,TA,TA,CBlock,TA,TA,No,GLQ
+SWISU,VinylSd,VinylSd,None,Fa,TA,CBlock,TA,Fa,No,LwQ
+BrkSide,AsbShng,AsbShng,None,Fa,Fa,BrkTil,TA,Fa,No,Unf
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,Unf
+Edwards,MetalSd,Wd Sdng,None,TA,TA,CBlock,Fa,TA,No,Unf
+Blmngtn,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,Gd,Av,GLQ
+NridgHt,MetalSd,MetalSd,BrkFace,Ex,TA,PConc,Ex,TA,Gd,GLQ
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+NAmes,Plywood,Wd Sdng,None,Gd,TA,CBlock,Gd,TA,Gd,GLQ
+NWAmes,WdShing,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+Somerst,CemntBd,CmentBd,Stone,Ex,TA,PConc,Ex,TA,Mn,GLQ
+NAmes,Plywood,Plywood,None,TA,TA,CBlock,TA,TA,No,ALQ
+NAmes,MetalSd,MetalSd,None,TA,TA,CBlock,,,,
+Edwards,Wd Sdng,Wd Sdng,Stone,TA,TA,CBlock,TA,TA,Mn,Rec
+NAmes,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,TA,No,Unf
+MeadowV,CemntBd,CmentBd,None,TA,TA,CBlock,Gd,TA,Av,BLQ
+Somerst,CemntBd,CmentBd,,Gd,TA,PConc,Gd,TA,No,Unf
+Edwards,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,Mn,Unf
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+IDOTRR,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Unf
+NoRidge,MetalSd,MetalSd,BrkFace,Gd,Gd,PConc,Gd,TA,Gd,GLQ
+BrDale,HdBoard,ImStucc,BrkFace,TA,TA,CBlock,TA,TA,No,Unf
+NAmes,HdBoard,HdBoard,BrkFace,Gd,TA,CBlock,TA,TA,No,ALQ
+Crawfor,Stucco,Wd Shng,None,TA,Fa,BrkTil,Gd,TA,No,Unf
+NAmes,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,Unf
+Edwards,MetalSd,MetalSd,None,TA,Gd,PConc,TA,TA,No,BLQ
+NWAmes,Plywood,Plywood,BrkFace,TA,TA,CBlock,Gd,TA,No,Unf
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,Gd,No,GLQ
+NAmes,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,Fa,Fa,No,Unf
+Edwards,Plywood,Plywood,None,TA,TA,CBlock,Gd,TA,Av,BLQ
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Ex,TA,Mn,GLQ
+Gilbert,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+NAmes,Plywood,Plywood,BrkCmn,TA,Gd,CBlock,Gd,TA,No,LwQ
+SawyerW,HdBoard,HdBoard,BrkFace,TA,TA,PConc,Gd,TA,No,GLQ
+Sawyer,CemntBd,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,Rec
+Crawfor,MetalSd,MetalSd,None,TA,TA,BrkTil,Fa,TA,No,Unf
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+Edwards,Wd Sdng,Wd Sdng,None,TA,Gd,BrkTil,TA,TA,No,BLQ
+Veenker,Plywood,Plywood,None,Gd,TA,CBlock,Gd,TA,No,ALQ
+Crawfor,CemntBd,CmentBd,BrkFace,TA,TA,PConc,TA,TA,No,GLQ
+NAmes,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,Rec
+NPkVill,Plywood,Brk Cmn,None,TA,TA,CBlock,TA,TA,No,ALQ
+OldTown,AsbShng,Stucco,None,TA,TA,BrkTil,TA,Fa,No,Unf
+OldTown,VinylSd,VinylSd,None,Gd,TA,BrkTil,TA,TA,No,Unf
+StoneBr,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,Mn,Unf
+Sawyer,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+SawyerW,Plywood,Plywood,None,TA,TA,CBlock,Gd,TA,No,BLQ
+SWISU,VinylSd,Stucco,None,TA,TA,BrkTil,TA,TA,No,Rec
+ClearCr,Wd Sdng,Wd Sdng,None,TA,TA,PConc,Gd,TA,Mn,GLQ
+CollgCr,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Av,GLQ
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+StoneBr,HdBoard,HdBoard,None,Gd,TA,CBlock,Gd,TA,Mn,GLQ
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+Somerst,MetalSd,MetalSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+StoneBr,MetalSd,MetalSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Av,ALQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Gd,GLQ
+NoRidge,HdBoard,HdBoard,BrkFace,Ex,TA,PConc,Ex,TA,Gd,GLQ
+Timber,MetalSd,MetalSd,BrkFace,Gd,TA,PConc,Gd,TA,Gd,GLQ
+OldTown,MetalSd,MetalSd,None,TA,TA,BrkTil,TA,TA,No,Unf
+BrkSide,Wd Sdng,Wd Sdng,None,TA,Fa,BrkTil,TA,TA,No,Unf
+Timber,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,Gd,Gd,No,GLQ
+BrkSide,Wd Sdng,Wd Shng,None,TA,TA,CBlock,TA,TA,No,LwQ
+Edwards,Wd Sdng,Wd Sdng,None,TA,TA,PConc,Ex,Gd,Mn,LwQ
+Sawyer,MetalSd,MetalSd,None,TA,Gd,CBlock,TA,TA,No,GLQ
+Somerst,MetalSd,MetalSd,None,Gd,TA,PConc,Gd,TA,Mn,GLQ
+Timber,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Ex,TA,Gd,GLQ
+NWAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,Unf
+StoneBr,VinylSd,VinylSd,BrkFace,Ex,TA,PConc,Ex,Gd,No,Unf
+OldTown,Wd Sdng,Wd Sdng,None,TA,Gd,BrkTil,Gd,TA,No,Unf
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+IDOTRR,VinylSd,Wd Shng,None,Fa,Fa,Slab,,,,
+ClearCr,Plywood,Plywood,Stone,TA,TA,CBlock,Gd,TA,Gd,GLQ
+NridgHt,MetalSd,MetalSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,Unf
+Sawyer,HdBoard,HdBoard,BrkCmn,TA,TA,PConc,TA,TA,No,Unf
+BrkSide,VinylSd,VinylSd,None,Gd,TA,CBlock,TA,TA,No,Unf
+IDOTRR,MetalSd,MetalSd,None,TA,TA,Stone,TA,TA,Mn,Unf
+StoneBr,HdBoard,HdBoard,None,Gd,TA,PConc,Gd,TA,Mn,GLQ
+BrkSide,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,Av,ALQ
+Sawyer,HdBoard,Plywood,BrkFace,Gd,TA,CBlock,TA,TA,No,GLQ
+NWAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,Gd,TA,No,Unf
+OldTown,Wd Sdng,VinylSd,None,TA,Gd,BrkTil,TA,TA,No,Unf
+NWAmes,HdBoard,HdBoard,None,TA,TA,CBlock,Gd,TA,No,BLQ
+NoRidge,Wd Sdng,ImStucc,BrkFace,Gd,TA,PConc,Gd,TA,Gd,GLQ
+CollgCr,HdBoard,Plywood,None,TA,TA,CBlock,Gd,TA,Gd,ALQ
+StoneBr,HdBoard,HdBoard,None,Gd,TA,PConc,Gd,TA,Gd,GLQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+NAmes,MetalSd,MetalSd,None,TA,Gd,CBlock,TA,TA,No,ALQ
+Edwards,MetalSd,MetalSd,None,TA,TA,PConc,TA,TA,No,Unf
+Edwards,CemntBd,CmentBd,Stone,Ex,TA,PConc,Ex,TA,No,GLQ
+NAmes,HdBoard,Plywood,None,TA,TA,CBlock,TA,TA,No,ALQ
+Crawfor,Wd Sdng,Plywood,BrkFace,Gd,Gd,CBlock,Gd,TA,No,GLQ
+CollgCr,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Av,GLQ
+NAmes,VinylSd,VinylSd,BrkFace,TA,TA,CBlock,TA,TA,No,Unf
+IDOTRR,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,BLQ
+StoneBr,CemntBd,CmentBd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+Timber,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Ex,TA,Av,GLQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,ALQ
+Sawyer,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,BLQ
+Sawyer,Plywood,Plywood,None,TA,TA,PConc,TA,TA,No,Unf
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,Gd,TA,Mn,Rec
+NAmes,Stucco,Stone,None,TA,TA,CBlock,,,,
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+Edwards,Plywood,Plywood,None,TA,TA,CBlock,Gd,Gd,Gd,GLQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+OldTown,Wd Sdng,Wd Shng,None,TA,Gd,BrkTil,Fa,Fa,No,Unf
+Sawyer,HdBoard,HdBoard,None,TA,Gd,CBlock,TA,TA,Mn,GLQ
+SawyerW,VinylSd,VinylSd,BrkFace,TA,TA,PConc,Gd,TA,No,Unf
+Sawyer,HdBoard,HdBoard,None,TA,TA,CBlock,Gd,TA,Av,ALQ
+StoneBr,HdBoard,HdBoard,None,Gd,TA,PConc,Gd,TA,No,GLQ
+NWAmes,VinylSd,VinylSd,BrkFace,Ex,Gd,CBlock,TA,Gd,No,GLQ
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+OldTown,Stucco,Stucco,None,Gd,TA,Stone,TA,Fa,No,Unf
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+Edwards,WdShing,Wd Shng,None,TA,TA,Slab,,,,
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,Fa,No,Unf
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+CollgCr,VinylSd,VinylSd,None,TA,Gd,PConc,Gd,TA,Gd,GLQ
+NridgHt,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Mn,Unf
+NAmes,Plywood,Plywood,None,TA,TA,CBlock,TA,TA,No,GLQ
+Somerst,MetalSd,MetalSd,BrkFace,TA,TA,PConc,Gd,TA,No,GLQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,GLQ
+Sawyer,HdBoard,HdBoard,BrkCmn,TA,TA,CBlock,TA,TA,Mn,Rec
+Somerst,MetalSd,MetalSd,BrkFace,TA,TA,PConc,Gd,TA,No,ALQ
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,LwQ
+NAmes,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,Rec
+BrkSide,Wd Sdng,Wd Sdng,None,TA,TA,PConc,TA,TA,Mn,LwQ
+Somerst,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,Mn,GLQ
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Mn,GLQ
+Veenker,BrkFace,BrkFace,None,Gd,Gd,PConc,Gd,Gd,Av,LwQ
+Somerst,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,No,Unf
+NWAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,Gd,TA,No,GLQ
+Mitchel,VinylSd,VinylSd,None,TA,TA,CBlock,Gd,TA,Mn,ALQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+StoneBr,CemntBd,Wd Shng,BrkFace,Ex,TA,PConc,Gd,TA,Gd,ALQ
+Sawyer,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,Gd,TA,Av,GLQ
+Edwards,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,Fa,Fa,No,LwQ
+Edwards,Plywood,Plywood,None,TA,TA,CBlock,TA,TA,Av,ALQ
+NAmes,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,Rec
+NridgHt,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,Unf
+Mitchel,VinylSd,VinylSd,BrkFace,TA,TA,PConc,Ex,TA,No,GLQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+Sawyer,HdBoard,Plywood,None,TA,TA,CBlock,TA,TA,No,ALQ
+SawyerW,Plywood,Plywood,BrkFace,TA,TA,Slab,,,,
+Mitchel,Plywood,ImStucc,BrkFace,TA,TA,CBlock,Gd,TA,Gd,GLQ
+Gilbert,HdBoard,HdBoard,BrkFace,TA,TA,PConc,Gd,Gd,No,Unf
+SawyerW,VinylSd,VinylSd,None,Gd,Gd,PConc,Gd,TA,No,ALQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+Mitchel,Plywood,Plywood,BrkFace,TA,Gd,PConc,Gd,TA,Av,GLQ
+OldTown,Wd Sdng,Wd Shng,None,TA,TA,CBlock,TA,TA,No,Unf
+NWAmes,BrkFace,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,Rec
+OldTown,MetalSd,MetalSd,None,TA,Gd,PConc,Fa,TA,No,LwQ
+SawyerW,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+OldTown,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Unf
+ClearCr,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,Fa,Gd,LwQ
+Blmngtn,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+Mitchel,HdBoard,HdBoard,None,TA,TA,PConc,Gd,TA,Av,ALQ
+NoRidge,MetalSd,MetalSd,None,Gd,TA,PConc,Gd,TA,Av,GLQ
+Somerst,CemntBd,CmentBd,Stone,Gd,TA,PConc,Gd,TA,Av,Unf
+Gilbert,MetalSd,MetalSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+SawyerW,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,Gd,TA,No,Unf
+Sawyer,Plywood,Plywood,BrkFace,TA,TA,CBlock,TA,TA,No,Unf
+NAmes,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,BLQ
+NridgHt,VinylSd,VinylSd,Stone,Ex,TA,PConc,Ex,TA,No,Unf
+SWISU,Wd Sdng,Wd Sdng,BrkFace,TA,TA,BrkTil,Gd,TA,No,ALQ
+ClearCr,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,Gd,GLQ
+IDOTRR,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,LwQ
+CollgCr,WdShing,Wd Shng,None,Gd,TA,PConc,Gd,TA,Av,GLQ
+NridgHt,VinylSd,VinylSd,Stone,Ex,TA,PConc,Ex,TA,Gd,Unf
+NAmes,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,LwQ
+Somerst,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,No,Unf
+NAmes,VinylSd,VinylSd,None,TA,TA,PConc,TA,TA,Av,ALQ
+BrkSide,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,Gd,GLQ
+NAmes,VinylSd,VinylSd,BrkFace,TA,TA,CBlock,TA,TA,Av,ALQ
+OldTown,AsbShng,AsbShng,None,TA,TA,PConc,TA,TA,No,Unf
+NWAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,ALQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Gd,GLQ
+IDOTRR,Wd Sdng,Wd Sdng,None,Fa,TA,CBlock,TA,TA,Av,Unf
+NAmes,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+Edwards,Stucco,Stucco,None,TA,TA,BrkTil,TA,TA,No,Unf
+CollgCr,VinylSd,VinylSd,BrkFace,TA,TA,PConc,Gd,TA,No,Unf
+NAmes,BrkFace,BrkFace,None,TA,TA,CBlock,TA,TA,No,BLQ
+Mitchel,CemntBd,CmentBd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+ClearCr,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,Av,GLQ
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Mn,GLQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+OldTown,MetalSd,MetalSd,None,Fa,TA,CBlock,Fa,TA,No,Unf
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Gd,Unf
+SWISU,VinylSd,VinylSd,None,TA,TA,BrkTil,TA,TA,No,Unf
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,Gd,No,Unf
+NridgHt,CemntBd,CmentBd,BrkFace,Ex,TA,PConc,Ex,TA,Av,GLQ
+BrkSide,MetalSd,MetalSd,None,TA,TA,BrkTil,TA,TA,No,ALQ
+SawyerW,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+ClearCr,Plywood,Plywood,None,TA,TA,PConc,TA,Gd,Gd,LwQ
+Somerst,MetalSd,MetalSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+NAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+Somerst,MetalSd,MetalSd,None,TA,TA,PConc,Gd,TA,No,Unf
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+NAmes,HdBoard,Plywood,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+NAmes,VinylSd,VinylSd,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+Sawyer,VinylSd,HdBoard,None,TA,TA,CBlock,Gd,TA,No,BLQ
+OldTown,VinylSd,VinylSd,None,TA,TA,BrkTil,TA,TA,No,Rec
+BrDale,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+CollgCr,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,Unf
+Edwards,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,BLQ
+SWISU,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,BLQ
+OldTown,MetalSd,MetalSd,None,TA,TA,PConc,TA,TA,No,Unf
+NAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,Gd,Rec
+NAmes,BrkFace,BrkFace,None,TA,TA,CBlock,TA,TA,No,Unf
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,Mn,Unf
+Sawyer,HdBoard,HdBoard,None,TA,TA,CBlock,Gd,TA,Gd,ALQ
+SawyerW,HdBoard,HdBoard,BrkFace,Gd,TA,PConc,Gd,TA,No,ALQ
+CollgCr,HdBoard,Plywood,None,TA,TA,CBlock,TA,TA,Av,BLQ
+ClearCr,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,Unf
+Veenker,Plywood,Plywood,BrkFace,Gd,Gd,CBlock,TA,TA,No,Unf
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+Blmngtn,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Gd,Unf
+Crawfor,MetalSd,MetalSd,None,TA,Gd,CBlock,TA,TA,No,Rec
+NAmes,MetalSd,HdBoard,BrkFace,TA,Gd,CBlock,TA,TA,Gd,Rec
+Sawyer,Wd Sdng,Plywood,None,TA,TA,CBlock,TA,TA,Mn,ALQ
+Sawyer,HdBoard,HdBoard,None,TA,Gd,CBlock,TA,TA,No,ALQ
+CollgCr,Plywood,HdBoard,None,TA,TA,CBlock,Gd,Gd,Gd,GLQ
+Gilbert,HdBoard,HdBoard,None,TA,TA,PConc,Gd,TA,No,Unf
+NWAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,Gd,TA,No,Unf
+NWAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,Mn,BLQ
+Crawfor,Wd Sdng,Wd Sdng,None,Gd,TA,BrkTil,TA,TA,No,Unf
+Sawyer,Plywood,HdBoard,None,TA,TA,PConc,TA,TA,Mn,BLQ
+SawyerW,HdBoard,Plywood,None,TA,TA,PConc,Gd,TA,No,GLQ
+NAmes,BrkFace,Plywood,None,TA,TA,CBlock,TA,TA,No,BLQ
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Ex,TA,No,Unf
+NAmes,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+Timber,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Av,Unf
+Sawyer,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,ALQ
+Gilbert,Plywood,Plywood,None,TA,TA,Slab,,,,
+SawyerW,MetalSd,MetalSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+NAmes,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Unf
+CollgCr,VinylSd,VinylSd,BrkFace,TA,TA,PConc,Gd,TA,No,GLQ
+NAmes,WdShing,Wd Shng,None,Gd,TA,Stone,TA,TA,Av,Unf
+NAmes,HdBoard,HdBoard,None,Gd,TA,CBlock,TA,TA,No,Rec
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,Unf
+Somerst,CemntBd,CmentBd,None,Gd,TA,PConc,Gd,TA,Av,GLQ
+Mitchel,HdBoard,Plywood,None,TA,TA,PConc,TA,TA,Gd,ALQ
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,No,GLQ
+Sawyer,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,Av,ALQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,Gd,CBlock,TA,TA,No,ALQ
+Edwards,VinylSd,VinylSd,None,TA,TA,PConc,Ex,Gd,No,ALQ
+Timber,HdBoard,HdBoard,BrkFace,Gd,Gd,CBlock,Gd,TA,Mn,LwQ
+Gilbert,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,Unf
+SWISU,Wd Sdng,Wd Sdng,None,Gd,TA,PConc,TA,Fa,No,Unf
+NAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+Somerst,MetalSd,MetalSd,BrkFace,Gd,TA,PConc,Ex,TA,Av,GLQ
+NAmes,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,TA,No,LwQ
+Edwards,MetalSd,MetalSd,None,TA,Gd,PConc,TA,TA,No,Unf
+NAmes,Wd Sdng,Wd Sdng,None,Gd,Gd,PConc,TA,Gd,Gd,ALQ
+NAmes,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+NAmes,MetalSd,MetalSd,None,TA,Gd,CBlock,TA,TA,Mn,Unf
+Sawyer,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,LwQ
+Sawyer,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,GLQ
+Sawyer,Wd Sdng,Plywood,None,TA,TA,PConc,Gd,TA,Mn,BLQ
+SawyerW,Plywood,Plywood,None,TA,TA,Slab,,,,
+NAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+IDOTRR,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,ALQ
+SawyerW,Plywood,Plywood,None,TA,TA,Slab,,,,
+NridgHt,VinylSd,VinylSd,Stone,Ex,TA,PConc,Ex,TA,Gd,GLQ
+Sawyer,HdBoard,Plywood,None,TA,TA,CBlock,TA,TA,No,BLQ
+NAmes,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,ALQ
+NAmes,MetalSd,MetalSd,None,TA,Gd,CBlock,TA,TA,Mn,BLQ
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+Gilbert,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+Sawyer,HdBoard,Wd Sdng,BrkFace,TA,TA,CBlock,TA,TA,No,GLQ
+NAmes,HdBoard,HdBoard,Stone,TA,TA,CBlock,TA,TA,No,Rec
+Somerst,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,No,GLQ
+Crawfor,BrkFace,BrkFace,None,Gd,TA,CBlock,Gd,TA,No,Rec
+Mitchel,HdBoard,HdBoard,None,TA,TA,CBlock,Gd,TA,Av,BLQ
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+NAmes,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+CollgCr,HdBoard,Plywood,None,TA,TA,CBlock,Gd,Gd,Av,ALQ
+BrkSide,MetalSd,MetalSd,None,TA,TA,BrkTil,TA,TA,No,Rec
+Crawfor,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,BLQ
+Somerst,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Av,GLQ
+MeadowV,CemntBd,CmentBd,BrkFace,TA,TA,CBlock,TA,TA,No,Unf
+IDOTRR,AsbShng,AsbShng,None,TA,TA,CBlock,TA,TA,Av,BLQ
+Edwards,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,ALQ
+SawyerW,HdBoard,HdBoard,None,Gd,TA,PConc,Ex,TA,Mn,BLQ
+NAmes,MetalSd,MetalSd,None,Ex,TA,CBlock,Gd,TA,No,ALQ
+SawyerW,HdBoard,HdBoard,BrkFace,Gd,Gd,PConc,Gd,Gd,No,GLQ
+Edwards,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,ALQ
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+SawyerW,Plywood,Plywood,None,Gd,TA,PConc,Gd,TA,No,LwQ
+NWAmes,Plywood,Plywood,BrkFace,TA,Gd,CBlock,Gd,TA,No,BLQ
+NWAmes,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,Av,ALQ
+NridgHt,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+NWAmes,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,Unf
+Gilbert,HdBoard,HdBoard,BrkFace,TA,TA,PConc,Gd,TA,No,Unf
+Timber,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,GLQ
+NAmes,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,BLQ
+Somerst,VinylSd,ImStucc,Stone,Ex,TA,PConc,Ex,Gd,No,Unf
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+NAmes,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,Gd,TA,Gd,GLQ
+BrkSide,MetalSd,MetalSd,BrkFace,TA,Gd,PConc,Fa,TA,Mn,Unf
+SawyerW,VinylSd,VinylSd,,Gd,TA,PConc,Gd,TA,No,GLQ
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Mn,GLQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,Gd,Mn,GLQ
+ClearCr,MetalSd,MetalSd,None,TA,Gd,CBlock,TA,TA,Mn,Unf
+Mitchel,Plywood,Plywood,None,TA,TA,CBlock,TA,TA,Gd,Rec
+Gilbert,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,ALQ
+Edwards,MetalSd,MetalSd,None,TA,TA,PConc,Gd,TA,Gd,GLQ
+Mitchel,HdBoard,Plywood,None,TA,TA,CBlock,TA,TA,Av,Unf
+Timber,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,GLQ
+OldTown,VinylSd,VinylSd,None,TA,TA,BrkTil,TA,TA,No,LwQ
+NAmes,HdBoard,HdBoard,BrkFace,TA,Gd,CBlock,TA,TA,Av,ALQ
+Timber,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,,Unf
+NWAmes,Plywood,Plywood,None,TA,TA,CBlock,TA,TA,No,ALQ
+NAmes,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,ALQ
+SawyerW,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,BLQ
+CollgCr,WdShing,HdBoard,None,TA,Gd,CBlock,Gd,TA,Av,GLQ
+Mitchel,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,Av,ALQ
+Edwards,WdShing,Plywood,BrkFace,TA,TA,CBlock,Gd,Gd,Gd,GLQ
+Crawfor,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,Gd,TA,No,Rec
+Blueste,MetalSd,MetalSd,None,TA,TA,CBlock,Gd,TA,No,ALQ
+Sawyer,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Rec
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Mn,GLQ
+Somerst,MetalSd,MetalSd,None,Gd,TA,PConc,Gd,TA,No,ALQ
+BrkSide,Wd Sdng,Plywood,None,TA,Gd,CBlock,TA,TA,Gd,BLQ
+NWAmes,HdBoard,HdBoard,BrkFace,TA,Gd,CBlock,Gd,Gd,No,ALQ
+NPkVill,Plywood,Brk Cmn,None,TA,TA,CBlock,Gd,TA,No,ALQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Ex,TA,No,Unf
+Timber,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+Crawfor,MetalSd,MetalSd,None,Gd,Gd,BrkTil,TA,Fa,No,Rec
+NAmes,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,TA,TA,No,ALQ
+OldTown,VinylSd,VinylSd,None,TA,TA,BrkTil,TA,TA,No,Unf
+NAmes,HdBoard,HdBoard,BrkFace,TA,Fa,CBlock,TA,TA,Gd,ALQ
+NAmes,AsbShng,AsbShng,None,TA,TA,CBlock,TA,TA,No,Unf
+NridgHt,VinylSd,Wd Shng,Stone,Gd,TA,PConc,Gd,TA,No,GLQ
+SawyerW,Plywood,Plywood,None,TA,TA,CBlock,Gd,TA,No,Unf
+Somerst,CemntBd,CmentBd,,Gd,TA,PConc,Gd,TA,No,Unf
+BrkSide,HdBoard,HdBoard,None,TA,Gd,BrkTil,Gd,TA,No,Unf
+Somerst,MetalSd,MetalSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+BrkSide,Wd Sdng,Wd Sdng,None,TA,TA,PConc,Gd,TA,No,Unf
+Somerst,VinylSd,VinylSd,,Gd,TA,PConc,Gd,TA,No,GLQ
+Edwards,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,LwQ
+Sawyer,VinylSd,VinylSd,None,TA,TA,PConc,TA,TA,No,Rec
+NAmes,CemntBd,CmentBd,Stone,Ex,TA,CBlock,TA,TA,Av,ALQ
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+Blmngtn,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,Unf
+CollgCr,CemntBd,CmentBd,None,Gd,TA,PConc,Gd,TA,Mn,Unf
+Mitchel,Plywood,Plywood,None,TA,TA,CBlock,,,,
+Edwards,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,ALQ
+OldTown,VinylSd,VinylSd,None,TA,Gd,CBlock,TA,Fa,No,Unf
+NridgHt,VinylSd,VinylSd,Stone,Ex,TA,PConc,Ex,TA,Av,GLQ
+NWAmes,Plywood,Plywood,BrkFace,TA,TA,CBlock,TA,TA,No,LwQ
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,Gd,No,Unf
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+OldTown,Wd Sdng,Wd Sdng,None,Gd,Gd,BrkTil,TA,TA,No,BLQ
+NAmes,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,TA,TA,Gd,BLQ
+CollgCr,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,Unf
+NridgHt,CemntBd,CmentBd,Stone,Ex,TA,PConc,Ex,TA,Gd,GLQ
+BrkSide,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,ALQ
+NAmes,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,Rec
+NWAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,Unf
+IDOTRR,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,Fa,No,Unf
+CollgCr,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Av,GLQ
+Edwards,BrkComm,Brk Cmn,None,TA,TA,Slab,,,,
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,Fa,TA,No,Unf
+Somerst,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+NWAmes,VinylSd,VinylSd,BrkFace,TA,TA,CBlock,TA,TA,No,Unf
+Blmngtn,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+CollgCr,HdBoard,HdBoard,BrkFace,Gd,TA,CBlock,Gd,Gd,Av,GLQ
+NAmes,Plywood,Plywood,None,TA,TA,CBlock,Gd,TA,No,LwQ
+MeadowV,CemntBd,CmentBd,None,TA,TA,CBlock,TA,TA,No,BLQ
+Mitchel,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,Mn,Unf
+SWISU,Wd Sdng,Wd Sdng,None,TA,Fa,BrkTil,TA,TA,No,Unf
+Sawyer,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,Unf
+Edwards,AsphShn,AsphShn,None,TA,TA,CBlock,,,,
+Crawfor,Wd Sdng,Wd Sdng,None,TA,Gd,PConc,TA,Fa,No,Unf
+OldTown,MetalSd,Stucco,None,TA,TA,BrkTil,TA,TA,No,ALQ
+NAmes,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,Fa,No,BLQ
+NWAmes,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Gd,GLQ
+StoneBr,HdBoard,HdBoard,None,Gd,TA,CBlock,Gd,TA,Av,GLQ
+Gilbert,HdBoard,HdBoard,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+Blmngtn,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Gd,GLQ
+Edwards,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,GLQ
+CollgCr,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Av,GLQ
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,LwQ
+Blmngtn,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,Gd,No,GLQ
+Timber,Stone,HdBoard,None,Gd,TA,CBlock,Gd,TA,Av,ALQ
+CollgCr,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,LwQ
+NAmes,MetalSd,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+Timber,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Gd,GLQ
+NAmes,WdShing,Wd Shng,None,TA,TA,CBlock,TA,TA,No,Rec
+BrDale,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+SWISU,VinylSd,VinylSd,None,TA,TA,PConc,TA,TA,Mn,Unf
+SWISU,Wd Sdng,Plywood,None,TA,TA,BrkTil,TA,TA,No,GLQ
+NoRidge,MetalSd,MetalSd,None,Gd,Gd,PConc,Gd,Gd,No,GLQ
+CollgCr,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,No,GLQ
+Crawfor,MetalSd,MetalSd,None,TA,Gd,PConc,Fa,Fa,No,Unf
+Edwards,Wd Sdng,Wd Sdng,None,TA,Gd,Slab,,,,
+Timber,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,Gd,GLQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+MeadowV,CemntBd,CmentBd,None,TA,TA,CBlock,TA,TA,No,Unf
+MeadowV,CemntBd,CmentBd,None,TA,TA,CBlock,Gd,TA,Av,GLQ
+Sawyer,Wd Sdng,Wd Sdng,BrkCmn,TA,TA,CBlock,TA,TA,No,Rec
+NWAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,GLQ
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Av,ALQ
+SawyerW,HdBoard,HdBoard,BrkFace,TA,TA,PConc,Gd,TA,No,GLQ
+NWAmes,BrkFace,BrkFace,None,Gd,TA,PConc,Gd,TA,No,ALQ
+Edwards,BrkFace,Wd Sdng,None,TA,TA,Slab,,,,
+StoneBr,CemntBd,CmentBd,Stone,Gd,TA,PConc,Ex,TA,Av,GLQ
+CollgCr,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,GLQ
+Mitchel,HdBoard,HdBoard,BrkFace,TA,Fa,Slab,,,,
+Edwards,MetalSd,MetalSd,None,TA,TA,CBlock,,,,
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,Unf
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,Unf
+NAmes,VinylSd,VinylSd,BrkCmn,TA,TA,CBlock,TA,TA,No,Rec
+Edwards,HdBoard,HdBoard,Stone,TA,TA,CBlock,TA,TA,Av,Rec
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Mn,GLQ
+NWAmes,Plywood,Plywood,BrkFace,TA,TA,CBlock,Gd,TA,No,ALQ
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Av,GLQ
+NoRidge,HdBoard,HdBoard,None,Gd,TA,PConc,Gd,TA,No,GLQ
+NridgHt,VinylSd,VinylSd,Stone,Ex,TA,PConc,Ex,TA,Av,GLQ
+Crawfor,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,TA,Mn,Rec
+StoneBr,CemntBd,CmentBd,None,Gd,TA,PConc,Gd,TA,Mn,GLQ
+IDOTRR,MetalSd,MetalSd,None,Fa,TA,CBlock,TA,TA,No,Unf
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,Unf
+OldTown,MetalSd,MetalSd,None,TA,Gd,BrkTil,TA,TA,No,BLQ
+NAmes,Plywood,Plywood,BrkFace,TA,TA,CBlock,TA,TA,Mn,BLQ
+ClearCr,Wd Sdng,Wd Sdng,None,Gd,TA,PConc,Ex,TA,Gd,GLQ
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+NAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,Gd,GLQ
+MeadowV,CemntBd,CmentBd,None,TA,TA,CBlock,Gd,TA,No,ALQ
+NAmes,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,ALQ
+NAmes,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+NWAmes,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Rec
+Edwards,MetalSd,MetalSd,None,TA,TA,CBlock,Fa,Fa,Mn,Unf
+Edwards,HdBoard,Plywood,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,Unf
+Crawfor,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,BLQ
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,Fa,TA,No,ALQ
+NAmes,VinylSd,Plywood,None,TA,TA,CBlock,TA,TA,Mn,BLQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Mn,GLQ
+CollgCr,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,GLQ
+NWAmes,VinylSd,VinylSd,BrkFace,Gd,Gd,CBlock,TA,TA,No,ALQ
+Sawyer,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,ALQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+NAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+Gilbert,HdBoard,HdBoard,None,TA,TA,PConc,Gd,TA,No,ALQ
+SawyerW,HdBoard,HdBoard,None,TA,TA,PConc,Gd,TA,Av,GLQ
+MeadowV,CemntBd,CmentBd,None,TA,TA,CBlock,TA,TA,No,BLQ
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Mn,Unf
+Edwards,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,No,Unf
+Somerst,MetalSd,MetalSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+NAmes,BrkFace,BrkFace,None,TA,TA,Slab,,,,
+Somerst,MetalSd,MetalSd,BrkFace,Gd,TA,PConc,Gd,TA,No,BLQ
+SWISU,MetalSd,MetalSd,None,TA,TA,PConc,TA,TA,No,Rec
+NAmes,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,TA,Mn,GLQ
+NAmes,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,BLQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+IDOTRR,Wd Sdng,Wd Sdng,None,TA,TA,PConc,TA,TA,No,Unf
+StoneBr,HdBoard,HdBoard,None,Gd,TA,CBlock,Gd,TA,No,Unf
+BrkSide,MetalSd,MetalSd,None,TA,TA,BrkTil,TA,TA,No,BLQ
+NWAmes,Plywood,Plywood,BrkFace,TA,TA,CBlock,Gd,TA,No,ALQ
+SWISU,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,Fa,No,Rec
+NAmes,HdBoard,MetalSd,None,TA,TA,CBlock,TA,TA,No,BLQ
+NAmes,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+NAmes,BrkFace,BrkFace,None,TA,TA,CBlock,TA,TA,Mn,ALQ
+BrDale,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,Unf
+NoRidge,HdBoard,HdBoard,BrkFace,Gd,TA,PConc,Ex,TA,Av,GLQ
+SawyerW,HdBoard,HdBoard,None,Gd,TA,PConc,Gd,TA,Mn,GLQ
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Ex,Gd,No,Unf
+Gilbert,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,Unf
+NridgHt,MetalSd,MetalSd,Stone,Gd,TA,PConc,Ex,TA,Mn,GLQ
+Gilbert,HdBoard,HdBoard,None,TA,TA,PConc,Gd,TA,No,GLQ
+NWAmes,Plywood,Plywood,BrkFace,TA,TA,CBlock,TA,TA,No,ALQ
+NAmes,WdShing,Wd Shng,None,TA,TA,CBlock,TA,TA,No,GLQ
+NAmes,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,BLQ
+OldTown,MetalSd,MetalSd,None,TA,Gd,CBlock,TA,TA,No,Rec
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,No,GLQ
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+Sawyer,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,BLQ
+Sawyer,MetalSd,MetalSd,None,TA,Gd,CBlock,TA,TA,No,Unf
+NAmes,BrkFace,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,LwQ
+IDOTRR,BrkFace,BrkFace,None,TA,TA,BrkTil,TA,TA,No,Unf
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+Edwards,AsbShng,AsbShng,None,TA,TA,CBlock,TA,TA,No,Unf
+Edwards,VinylSd,VinylSd,None,TA,Ex,CBlock,TA,TA,No,Unf
+Gilbert,HdBoard,HdBoard,BrkFace,TA,TA,PConc,Gd,TA,No,Unf
+NAmes,Plywood,Plywood,None,TA,TA,CBlock,TA,TA,No,Unf
+Blmngtn,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,GLQ
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,Unf
+OldTown,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,Gd,TA,Gd,GLQ
+SWISU,WdShing,Plywood,None,TA,TA,BrkTil,TA,TA,No,BLQ
+Mitchel,HdBoard,HdBoard,None,TA,TA,PConc,Gd,TA,Mn,BLQ
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,Mn,Unf
+SawyerW,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+Gilbert,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,Av,Unf
+BrkSide,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,Unf
+NAmes,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,BLQ
+Sawyer,VinylSd,VinylSd,None,TA,Gd,CBlock,TA,TA,No,Unf
+Mitchel,Plywood,ImStucc,None,TA,TA,PConc,TA,TA,Gd,ALQ
+BrkSide,Stucco,Stucco,None,TA,Fa,BrkTil,TA,TA,No,BLQ
+NAmes,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,Mn,ALQ
+NWAmes,Plywood,Plywood,BrkFace,TA,Gd,CBlock,TA,TA,No,ALQ
+CollgCr,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,Gd,GLQ
+Sawyer,Wd Sdng,Plywood,None,TA,TA,CBlock,TA,TA,No,GLQ
+Edwards,MetalSd,MetalSd,None,TA,Fa,BrkTil,Gd,TA,No,BLQ
+BrkSide,MetalSd,MetalSd,None,TA,TA,BrkTil,TA,TA,No,Unf
+SawyerW,Wd Sdng,Wd Shng,BrkFace,Gd,TA,CBlock,Gd,TA,No,GLQ
+Crawfor,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Rec
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,PConc,TA,TA,No,Unf
+OldTown,VinylSd,VinylSd,None,TA,Gd,PConc,TA,TA,No,ALQ
+NAmes,BrkFace,BrkFace,None,TA,TA,CBlock,TA,TA,No,Unf
+Edwards,HdBoard,Plywood,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+Crawfor,Stone,Stone,None,TA,TA,PConc,TA,TA,No,ALQ
+IDOTRR,Wd Sdng,Wd Sdng,None,Gd,Gd,BrkTil,TA,TA,Av,ALQ
+NAmes,VinylSd,VinylSd,Stone,TA,TA,CBlock,TA,TA,Gd,ALQ
+Veenker,Plywood,Plywood,None,Gd,Gd,CBlock,Gd,TA,Gd,ALQ
+NAmes,BrkFace,BrkFace,None,TA,Gd,PConc,TA,TA,Gd,ALQ
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,No,GLQ
+Somerst,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,No,Unf
+NWAmes,HdBoard,HdBoard,BrkFace,Gd,TA,CBlock,TA,TA,No,ALQ
+NPkVill,Plywood,Brk Cmn,None,TA,TA,CBlock,Gd,TA,No,ALQ
+Crawfor,HdBoard,HdBoard,BrkFace,Gd,TA,CBlock,TA,TA,No,BLQ
+Sawyer,VinylSd,VinylSd,None,TA,TA,CBlock,Gd,TA,No,BLQ
+Sawyer,Plywood,Plywood,None,TA,TA,CBlock,Gd,TA,Av,GLQ
+Veenker,Plywood,Plywood,None,TA,TA,PConc,Gd,TA,Gd,ALQ
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,No,Unf
+CollgCr,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Av,Unf
+Gilbert,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,GLQ
+Edwards,Stucco,Stucco,None,TA,TA,CBlock,TA,TA,No,Rec
+NoRidge,HdBoard,HdBoard,BrkFace,Gd,Gd,PConc,Ex,TA,Gd,GLQ
+Mitchel,Plywood,Plywood,None,TA,TA,CBlock,TA,TA,Av,ALQ
+NAmes,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,ALQ
+Somerst,MetalSd,MetalSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+ClearCr,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Rec
+Crawfor,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,Gd,TA,No,Rec
+NoRidge,HdBoard,HdBoard,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+Mitchel,HdBoard,Plywood,None,TA,TA,CBlock,TA,TA,No,ALQ
+OldTown,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Rec
+Crawfor,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,Unf
+Edwards,Wd Sdng,Wd Sdng,None,TA,TA,Slab,,,,
+Timber,MetalSd,MetalSd,None,TA,TA,Wood,Gd,TA,No,LwQ
+Crawfor,CemntBd,CmentBd,Stone,Ex,TA,PConc,Ex,TA,Gd,GLQ
+NoRidge,Wd Sdng,ImStucc,None,Gd,TA,PConc,Ex,TA,Av,GLQ
+OldTown,Stucco,Stucco,None,TA,TA,BrkTil,TA,TA,No,Rec
+Timber,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,TA,Gd,Rec
+Edwards,AsbShng,AsbShng,None,TA,Gd,BrkTil,TA,TA,No,BLQ
+OldTown,HdBoard,HdBoard,None,TA,TA,CBlock,Fa,TA,Mn,BLQ
+NoRidge,ImStucc,ImStucc,None,Gd,TA,PConc,Gd,TA,No,GLQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+Gilbert,VinylSd,VinylSd,None,TA,TA,PConc,TA,TA,No,Unf
+Mitchel,MetalSd,MetalSd,Stone,TA,Gd,CBlock,TA,TA,Av,BLQ
+Somerst,MetalSd,MetalSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+OldTown,VinylSd,VinylSd,None,TA,TA,PConc,TA,TA,Mn,Unf
+Mitchel,VinylSd,VinylSd,BrkFace,TA,TA,PConc,Ex,TA,No,GLQ
+Sawyer,HdBoard,HdBoard,Stone,TA,TA,CBlock,TA,TA,No,ALQ
+Gilbert,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,Unf
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,Unf
+OldTown,MetalSd,MetalSd,None,TA,TA,BrkTil,TA,TA,No,Unf
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+Sawyer,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+NAmes,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Unf
+CollgCr,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,Av,Unf
+BrkSide,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,Unf
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+NWAmes,HdBoard,HdBoard,None,TA,TA,CBlock,Gd,TA,No,ALQ
+SawyerW,HdBoard,HdBoard,BrkFace,Gd,TA,CBlock,Gd,TA,Mn,ALQ
+SawyerW,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,Rec
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+NAmes,MetalSd,MetalSd,None,TA,Gd,CBlock,TA,TA,No,Rec
+Somerst,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,Mn,GLQ
+SawyerW,Wd Sdng,Wd Sdng,None,Gd,TA,PConc,Gd,TA,No,Unf
+Gilbert,Wd Sdng,Wd Sdng,None,Gd,TA,Wood,Gd,TA,Av,GLQ
+Edwards,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Rec
+Sawyer,VinylSd,VinylSd,None,TA,Gd,CBlock,TA,Gd,Av,GLQ
+NAmes,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,Av,BLQ
+Sawyer,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,Rec
+Sawyer,VinylSd,VinylSd,None,TA,TA,Slab,,,,
+Somerst,CemntBd,CmentBd,Stone,Gd,TA,PConc,Gd,TA,Mn,GLQ
+BrkSide,AsbShng,AsbShng,None,TA,TA,Slab,,,,
+BrDale,CemntBd,CmentBd,BrkFace,TA,TA,CBlock,TA,TA,No,Unf
+NAmes,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,Rec
+Sawyer,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,BLQ
+NAmes,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,TA,TA,Mn,Rec
+NAmes,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,TA,Fa,No,LwQ
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Av,GLQ
+NAmes,VinylSd,VinylSd,BrkFace,TA,Gd,CBlock,TA,TA,Av,GLQ
+Somerst,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Mn,Unf
+NAmes,VinylSd,VinylSd,BrkFace,TA,TA,CBlock,TA,TA,No,ALQ
+NridgHt,MetalSd,MetalSd,BrkFace,Ex,TA,PConc,Ex,TA,No,GLQ
+NAmes,BrkFace,HdBoard,None,TA,TA,CBlock,TA,TA,No,ALQ
+Sawyer,Plywood,Plywood,None,TA,TA,CBlock,Gd,TA,No,GLQ
+NAmes,Wd Sdng,Wd Sdng,BrkFace,TA,TA,CBlock,TA,TA,Av,ALQ
+NAmes,HdBoard,HdBoard,None,TA,TA,Slab,,,,
+NAmes,Plywood,Plywood,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+SWISU,MetalSd,MetalSd,None,TA,TA,PConc,TA,TA,Av,Unf
+Crawfor,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,Gd,TA,Mn,Unf
+NridgHt,VinylSd,Wd Shng,Stone,Gd,TA,PConc,Gd,TA,No,Unf
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+SawyerW,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+Timber,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+Somerst,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Av,Unf
+NWAmes,Plywood,Plywood,BrkFace,TA,TA,CBlock,Gd,TA,Gd,GLQ
+NridgHt,VinylSd,VinylSd,,Ex,TA,PConc,Ex,Gd,Gd,GLQ
+Crawfor,BrkFace,Stucco,None,TA,TA,PConc,Gd,TA,No,Unf
+NWAmes,VinylSd,VinylSd,BrkFace,TA,TA,CBlock,Gd,TA,No,Unf
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+Mitchel,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,Av,GLQ
+OldTown,AsbShng,AsbShng,None,TA,TA,BrkTil,Gd,TA,No,Rec
+NAmes,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,BLQ
+NAmes,BrkFace,BrkFace,None,Gd,TA,CBlock,TA,TA,No,ALQ
+NridgHt,VinylSd,Wd Shng,Stone,Gd,TA,PConc,Gd,TA,No,Unf
+Mitchel,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,BLQ
+Veenker,Wd Sdng,Wd Sdng,None,Gd,TA,CBlock,TA,TA,Gd,LwQ
+Edwards,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,No,Unf
+BrkSide,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,Fa,No,LwQ
+NoRidge,HdBoard,HdBoard,BrkFace,Gd,TA,PConc,Gd,TA,Gd,GLQ
+Edwards,Wd Sdng,Wd Sdng,None,TA,TA,PConc,Fa,TA,No,Unf
+Gilbert,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Gd,GLQ
+NAmes,HdBoard,HdBoard,None,TA,TA,CBlock,Gd,TA,No,ALQ
+Gilbert,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,Unf
+NAmes,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Rec
+ClearCr,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,Av,Unf
+BrkSide,Wd Sdng,Wd Sdng,None,TA,TA,PConc,TA,TA,No,Unf
+NAmes,MetalSd,MetalSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+Somerst,MetalSd,MetalSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+OldTown,Wd Sdng,Wd Sdng,None,Fa,TA,CBlock,TA,TA,No,Unf
+Timber,Stucco,CmentBd,None,Ex,TA,PConc,Ex,TA,Gd,Unf
+Crawfor,Stucco,Stucco,BrkFace,TA,Gd,CBlock,TA,TA,Mn,Rec
+NAmes,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+ClearCr,Plywood,Plywood,None,Gd,TA,PConc,Gd,TA,Gd,GLQ
+NWAmes,BrkFace,BrkFace,None,TA,TA,CBlock,TA,TA,No,Unf
+Sawyer,HdBoard,Plywood,BrkFace,TA,TA,CBlock,TA,TA,No,BLQ
+Edwards,Plywood,Plywood,BrkFace,TA,TA,CBlock,TA,TA,Av,ALQ
+Crawfor,Wd Sdng,Wd Shng,None,TA,TA,PConc,TA,TA,No,Unf
+NAmes,AsbShng,AsbShng,Stone,TA,TA,CBlock,TA,TA,No,Rec
+NWAmes,HdBoard,Plywood,None,TA,TA,CBlock,TA,Gd,No,BLQ
+NWAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,Gd,TA,Av,ALQ
+CollgCr,VinylSd,VinylSd,,Gd,TA,PConc,Gd,TA,No,GLQ
+IDOTRR,MetalSd,MetalSd,None,TA,Gd,CBlock,TA,TA,No,Unf
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+Timber,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,Gd,TA,No,ALQ
+CollgCr,HdBoard,HdBoard,None,TA,TA,CBlock,Gd,TA,Mn,LwQ
+Mitchel,MetalSd,Wd Shng,None,TA,TA,CBlock,TA,TA,Av,Unf
+SWISU,Wd Sdng,Wd Shng,None,TA,TA,PConc,TA,TA,No,Unf
+BrkSide,MetalSd,MetalSd,None,TA,Fa,CBlock,TA,TA,No,Unf
+NWAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,ALQ
+ClearCr,Wd Sdng,Wd Sdng,BrkCmn,TA,Gd,CBlock,TA,TA,Av,Rec
+StoneBr,CemntBd,CmentBd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Mn,Unf
+NAmes,Wd Sdng,HdBoard,BrkFace,TA,TA,PConc,TA,TA,Av,GLQ
+BrDale,CemntBd,CmentBd,BrkFace,TA,TA,CBlock,TA,TA,No,ALQ
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,Stone,TA,TA,No,Unf
+NWAmes,HdBoard,HdBoard,None,TA,TA,PConc,Gd,TA,No,GLQ
+Edwards,WdShing,Plywood,None,TA,TA,CBlock,TA,TA,No,Rec
+NAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,Av,BLQ
+NAmes,MetalSd,MetalSd,BrkFace,TA,Gd,CBlock,TA,TA,Mn,ALQ
+Edwards,VinylSd,VinylSd,BrkFace,TA,TA,PConc,Gd,TA,Gd,GLQ
+Edwards,Stucco,Stucco,Stone,Ex,TA,PConc,Ex,TA,Gd,GLQ
+NAmes,BrkFace,BrkFace,None,TA,TA,CBlock,TA,TA,No,LwQ
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+Crawfor,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,BLQ
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+Somerst,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,Unf
+Edwards,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,No,Unf
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,No,GLQ
+NridgHt,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,No,Unf
+CollgCr,VinylSd,VinylSd,None,TA,Gd,PConc,Gd,Gd,No,ALQ
+OldTown,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,GLQ
+SawyerW,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,Gd,TA,No,GLQ
+Crawfor,BrkFace,HdBoard,None,Gd,Gd,PConc,Gd,TA,Av,GLQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+NoRidge,Wd Sdng,Wd Sdng,BrkFace,Gd,TA,PConc,Ex,TA,No,GLQ
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+Edwards,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,Rec
+NAmes,HdBoard,HdBoard,None,TA,TA,CBlock,Fa,TA,Mn,ALQ
+CollgCr,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,Gd,Unf
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Ex,Gd,No,Unf
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Gd,Unf
+Edwards,Wd Sdng,Wd Sdng,BrkFace,TA,TA,PConc,TA,TA,No,ALQ
+NAmes,BrkFace,BrkFace,None,TA,TA,CBlock,TA,TA,No,ALQ
+BrkSide,VinylSd,VinylSd,None,TA,TA,CBlock,,,,
+NoRidge,HdBoard,HdBoard,None,Gd,TA,PConc,Gd,TA,No,GLQ
+BrkSide,VinylSd,VinylSd,None,Fa,TA,CBlock,TA,TA,No,LwQ
+Somerst,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Ex,TA,Av,Unf
+IDOTRR,AsbShng,AsbShng,None,TA,TA,BrkTil,TA,Fa,No,Unf
+Edwards,MetalSd,MetalSd,None,TA,TA,BrkTil,TA,TA,No,Rec
+Mitchel,VinylSd,VinylSd,None,Gd,Gd,CBlock,TA,TA,No,ALQ
+OldTown,BrkFace,Wd Sdng,None,Gd,Gd,BrkTil,Gd,TA,No,LwQ
+Gilbert,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,Unf
+Somerst,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,Gd,Av,Unf
+CollgCr,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,Av,ALQ
+Edwards,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,Mn,ALQ
+IDOTRR,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,Unf
+BrDale,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,LwQ
+NWAmes,Plywood,Plywood,BrkFace,TA,TA,CBlock,Gd,TA,No,ALQ
+NWAmes,Plywood,Plywood,BrkFace,TA,TA,CBlock,TA,TA,No,Unf
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,Unf
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+CollgCr,MetalSd,MetalSd,None,TA,Gd,CBlock,TA,TA,Mn,Rec
+NAmes,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,Unf
+SawyerW,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,GLQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,Unf
+Crawfor,BrkFace,Stone,None,TA,TA,BrkTil,TA,TA,No,Unf
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+OldTown,MetalSd,MetalSd,None,TA,TA,PConc,TA,TA,No,ALQ
+NWAmes,BrkFace,HdBoard,None,TA,TA,CBlock,TA,TA,No,BLQ
+Timber,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,Gd,GLQ
+SawyerW,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,Gd,GLQ
+OldTown,MetalSd,MetalSd,None,TA,Gd,BrkTil,TA,Fa,No,LwQ
+NAmes,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,TA,No,LwQ
+NAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+BrkSide,MetalSd,MetalSd,None,Gd,TA,BrkTil,TA,TA,No,Unf
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+NWAmes,MetalSd,MetalSd,BrkFace,TA,TA,CBlock,TA,TA,No,Unf
+NAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+NAmes,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,No,GLQ
+Somerst,MetalSd,MetalSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+NridgHt,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Ex,TA,Av,GLQ
+SWISU,MetalSd,Wd Sdng,None,TA,TA,BrkTil,TA,Fa,No,Unf
+StoneBr,VinylSd,VinylSd,Stone,Gd,TA,PConc,Ex,TA,Av,ALQ
+NAmes,VinylSd,VinylSd,None,TA,Gd,BrkTil,TA,Fa,No,Unf
+Gilbert,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,Unf
+Somerst,MetalSd,MetalSd,None,Gd,TA,PConc,Gd,TA,No,Unf
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+MeadowV,CemntBd,CmentBd,None,TA,TA,PConc,TA,TA,No,ALQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,BLQ
+OldTown,CBlock,CBlock,None,Fa,TA,PConc,TA,TA,No,ALQ
+NAmes,AsbShng,AsbShng,None,TA,TA,CBlock,TA,TA,Av,BLQ
+CollgCr,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,Av,GLQ
+NoRidge,VinylSd,VinylSd,BrkFace,Ex,TA,PConc,Ex,TA,Gd,GLQ
+Somerst,CemntBd,CmentBd,None,Gd,TA,PConc,Gd,TA,No,Unf
+Timber,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Gd,Unf
+SWISU,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,Gd,TA,Mn,Rec
+Edwards,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,LwQ
+BrDale,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,Fa,No,BLQ
+Timber,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,Unf
+Edwards,Stucco,Stucco,None,TA,Fa,BrkTil,TA,Fa,No,Rec
+NAmes,BrkFace,Plywood,None,TA,TA,CBlock,TA,TA,Mn,BLQ
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,Fa,TA,No,Unf
+Sawyer,Wd Sdng,Wd Sdng,None,TA,Gd,BrkTil,TA,TA,No,Unf
+Edwards,WdShing,Wd Shng,None,TA,TA,BrkTil,TA,TA,Mn,Rec
+IDOTRR,VinylSd,VinylSd,None,TA,Gd,BrkTil,TA,TA,No,BLQ
+NWAmes,Plywood,Plywood,BrkFace,TA,TA,CBlock,Gd,TA,No,BLQ
+OldTown,Stucco,Stucco,None,TA,Gd,BrkTil,TA,TA,No,Rec
+Gilbert,VinylSd,VinylSd,Stone,Ex,TA,PConc,Ex,TA,Gd,GLQ
+BrkSide,Wd Sdng,Wd Sdng,None,TA,Gd,BrkTil,TA,Gd,No,ALQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+NAmes,Plywood,Plywood,None,TA,TA,CBlock,TA,TA,No,Unf
+NAmes,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,Av,ALQ
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,Fa,TA,No,Unf
+Blmngtn,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+Timber,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,Gd,Gd,Unf
+Timber,Wd Sdng,Wd Sdng,None,TA,TA,CBlock,TA,TA,Av,BLQ
+BrkSide,MetalSd,MetalSd,None,TA,TA,BrkTil,TA,TA,Mn,Unf
+NAmes,VinylSd,Wd Sdng,None,TA,TA,CBlock,TA,TA,No,Rec
+SWISU,WdShing,Wd Shng,None,TA,TA,BrkTil,TA,TA,No,BLQ
+BrkSide,WdShing,Wd Shng,None,TA,TA,BrkTil,TA,TA,No,Unf
+Gilbert,VinylSd,VinylSd,None,TA,TA,PConc,TA,TA,No,GLQ
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,Gd,Av,Unf
+Somerst,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,TA,Gd,GLQ
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,PConc,TA,TA,No,Unf
+Crawfor,CemntBd,CmentBd,Stone,Gd,TA,PConc,Ex,TA,Gd,GLQ
+CollgCr,HdBoard,Wd Shng,None,TA,TA,CBlock,Gd,TA,Av,GLQ
+Mitchel,HdBoard,Plywood,None,TA,TA,CBlock,TA,TA,No,ALQ
+OldTown,VinylSd,VinylSd,None,TA,TA,CBlock,Fa,TA,No,Unf
+NWAmes,Plywood,Plywood,BrkFace,TA,Gd,CBlock,Gd,TA,No,Unf
+CollgCr,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+NAmes,VinylSd,VinylSd,None,TA,Gd,CBlock,TA,TA,No,BLQ
+NAmes,BrkFace,Stone,None,TA,TA,Slab,,,,
+SawyerW,VinylSd,VinylSd,Stone,Gd,TA,PConc,Gd,Gd,No,GLQ
+BrkSide,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,Unf
+Blmngtn,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,ALQ
+OldTown,VinylSd,AsbShng,None,TA,TA,PConc,TA,TA,No,Unf
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Mn,GLQ
+NAmes,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,BLQ
+Crawfor,Plywood,Plywood,BrkFace,Gd,Gd,CBlock,TA,TA,Av,Rec
+NWAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,ALQ
+NPkVill,Plywood,Plywood,None,TA,TA,CBlock,Gd,TA,No,ALQ
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+Edwards,Plywood,Plywood,None,Gd,Gd,CBlock,Gd,TA,Av,Unf
+NAmes,HdBoard,HdBoard,None,TA,TA,CBlock,TA,TA,No,ALQ
+NAmes,HdBoard,HdBoard,Stone,Gd,TA,CBlock,TA,TA,No,Unf
+NoRidge,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+NAmes,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,BLQ
+OldTown,MetalSd,MetalSd,Stone,TA,Gd,CBlock,TA,TA,No,BLQ
+NWAmes,MetalSd,MetalSd,BrkFace,Gd,Gd,CBlock,Gd,TA,No,BLQ
+Gilbert,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,Gd,Av,Unf
+NPkVill,Plywood,Plywood,None,TA,TA,CBlock,Gd,TA,No,LwQ
+OldTown,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,Unf
+Gilbert,VinylSd,VinylSd,BrkFace,TA,TA,PConc,Gd,TA,No,Unf
+Mitchel,BrkFace,BrkFace,None,TA,TA,CBlock,TA,TA,No,ALQ
+NAmes,Wd Sdng,Wd Sdng,BrkFace,Gd,Gd,CBlock,TA,TA,No,Unf
+NAmes,HdBoard,HdBoard,None,TA,TA,PConc,TA,TA,No,ALQ
+NridgHt,VinylSd,VinylSd,Stone,Ex,TA,PConc,Ex,TA,Av,GLQ
+OldTown,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,No,GLQ
+NWAmes,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,GLQ
+Crawfor,MetalSd,MetalSd,None,TA,TA,BrkTil,Ex,TA,No,Unf
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,GLQ
+Somerst,VinylSd,VinylSd,Stone,Ex,TA,PConc,Ex,TA,Av,GLQ
+BrkSide,Wd Sdng,Wd Sdng,None,TA,TA,BrkTil,TA,TA,No,Unf
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,Av,Unf
+Sawyer,VinylSd,VinylSd,None,TA,TA,CBlock,TA,TA,Gd,LwQ
+Mitchel,HdBoard,HdBoard,BrkFace,TA,TA,CBlock,TA,TA,No,Rec
+CollgCr,VinylSd,VinylSd,BrkFace,Gd,TA,PConc,Gd,TA,No,GLQ
+Edwards,MetalSd,HdBoard,None,TA,TA,CBlock,Fa,TA,No,Unf
+MeadowV,CemntBd,CmentBd,None,TA,TA,CBlock,Gd,TA,Av,GLQ
+NAmes,VinylSd,VinylSd,None,TA,TA,CBlock,Gd,TA,No,Unf
+Somerst,CemntBd,CmentBd,Stone,Gd,TA,PConc,Gd,TA,No,Unf
+Edwards,VinylSd,VinylSd,BrkFace,TA,TA,PConc,Gd,TA,Gd,GLQ
+Mitchel,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,Unf
+Somerst,VinylSd,VinylSd,None,Gd,TA,PConc,Gd,TA,No,GLQ
+Gilbert,VinylSd,VinylSd,None,TA,TA,PConc,Gd,TA,No,Unf
+NWAmes,Plywood,Plywood,Stone,TA,TA,CBlock,Gd,TA,No,ALQ
+Crawfor,CemntBd,CmentBd,None,Ex,Gd,Stone,TA,Gd,No,GLQ
+NAmes,MetalSd,MetalSd,None,TA,TA,CBlock,TA,TA,Mn,GLQ
+Edwards,HdBoard,HdBoard,None,Gd,TA,CBlock,TA,TA,No,BLQ
