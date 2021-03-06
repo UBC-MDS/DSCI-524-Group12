@@ -340,68 +340,68 @@ def test_explore_DBSCAN_clustering(df):
     for i in range(n_combs):
         verify_PCA_plot(p_plots[i].figure, f"/DBSCAN_PCA_{n_clusters[i]}")
 
-# def test_explore_text_columns(text_df):
-#     """tests explore_text_columns function and its exception handling
-#     Parameters
-#     ----------
-#     df : pandas.DataFrame
-#         test text data
-#     Returns
-#     -------
-#     None
-#     """
+def test_explore_text_columns(text_df):
+    """tests explore_text_columns function and its exception handling
+    Parameters
+    ----------
+    df : pandas.DataFrame
+        test text data
+    Returns
+    -------
+    None
+    """
 
-#     currentdir = os.path.dirname(
-#         os.path.abspath(inspect.getfile(inspect.currentframe()))
-#     )
+    currentdir = os.path.dirname(
+        os.path.abspath(inspect.getfile(inspect.currentframe()))
+    )
 
-#     with raises(Exception):
-#         eda.explore_text_columns(['test'])
+    with raises(Exception):
+        eda.explore_text_columns(['test'])
 
-#     with raises(Exception):
-#         eda.explore_text_columns(text_df.drop['sms'])
+    with raises(Exception):
+        eda.explore_text_columns(text_df.drop['sms'])
 
-#     with raises(Exception):
-#         eda.explore_text_columns(text_df, 'sms')
+    with raises(Exception):
+        eda.explore_text_columns(text_df, 'sms')
 
-#     with raises(Exception):
-#         eda.explore_text_columns(text_df, ['some_col_name'])
+    with raises(Exception):
+        eda.explore_text_columns(text_df, ['some_col_name'])
 
-#     result = eda.explore_text_columns(text_df)
+    result = eda.explore_text_columns(text_df)
 
-#     assert(result[0]==['sms'])
+    assert(result[0]==['sms'])
 
-#     assert(result[1]==[80.12, 61, 910, text_df['sms'][1084], 2, text_df['sms'][1924]])
+    assert(result[1]==[80.12, 61, 910, text_df['sms'][1084], 2, text_df['sms'][1924]])
 
-#     verify_plot(result[2].figure, "hist_char_length", 0)
+    verify_plot(result[2].figure, "hist_char_length", 0)
 
-#     assert(result[3]==[15.49, 12, 171, text_df['sms'][1084]])
+    assert(result[3]==[15.49, 12, 171, text_df['sms'][1084]])
 
-#     verify_plot(result[4].figure, "hist_word_count", 0)
+    verify_plot(result[4].figure, "hist_word_count", 0)
 
-#     verify_plot(result[5].figure, "word_cloud", 0)
+    verify_plot(result[5].figure, "word_cloud", 0)
 
-#     verify_plot(result[6].figure, "stopword", 0)
+    verify_plot(result[6].figure, "stopword", 0)
 
-#     verify_plot(result[7].figure, "non_stopword", 0)
+    verify_plot(result[7].figure, "non_stopword", 0)
 
-#     verify_plot(result[8].figure, "bi_gram", 0)
+    verify_plot(result[8].figure, "bi_gram", 0)
 
-#     verify_plot(result[9].figure, "polarity_scores", 0)
+    verify_plot(result[9].figure, "polarity_scores", 0)
 
-#     verify_plot(result[10].figure, "sentiment", 0)
+    verify_plot(result[10].figure, "sentiment", 0)
 
-#     verify_plot(result[11].figure, "subjectivity", 0)
+    verify_plot(result[11].figure, "subjectivity", 0)
 
-#     verify_plot(result[12].figure, "entity", 0)
+    verify_plot(result[12].figure, "entity", 0)
 
-#     verify_plot(result[13].figure, "entity_token_1", 0)
+    verify_plot(result[13].figure, "entity_token_1", 0)
 
-#     verify_plot(result[14].figure, "entity_token_2", 0)
+    verify_plot(result[14].figure, "entity_token_2", 0)
 
-#     verify_plot(result[15].figure, "entity_token_3", 0)
+    verify_plot(result[15].figure, "entity_token_3", 0)
 
-#     verify_plot(result[16].figure, "pos_plot", 0)
+    verify_plot(result[16].figure, "pos_plot", 0)
 
 @pytest.fixture
 def numeric_df():
