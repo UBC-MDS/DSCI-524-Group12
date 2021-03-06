@@ -340,65 +340,139 @@ def test_explore_DBSCAN_clustering(df):
     for i in range(n_combs):
         verify_PCA_plot(p_plots[i].figure, f"/DBSCAN_PCA_{n_clusters[i]}")
 
-def test_explore_text_columns(text_df):
-    """tests explore_text_columns function and its exception handling
-    Parameters
-    ----------
-    df : pandas.DataFrame
-        test text data
+# def test_explore_text_columns(text_df):
+#     """tests explore_text_columns function and its exception handling
+#     Parameters
+#     ----------
+#     df : pandas.DataFrame
+#         test text data
+#     Returns
+#     -------
+#     None
+#     """
+
+#     currentdir = os.path.dirname(
+#         os.path.abspath(inspect.getfile(inspect.currentframe()))
+#     )
+
+#     with raises(Exception):
+#         eda.explore_text_columns(['test'])
+
+#     with raises(Exception):
+#         eda.explore_text_columns(text_df.drop['sms'])
+
+#     with raises(Exception):
+#         eda.explore_text_columns(text_df, 'sms')
+
+#     with raises(Exception):
+#         eda.explore_text_columns(text_df, ['some_col_name'])
+
+#     result = eda.explore_text_columns(text_df)
+
+#     assert(result[0]==['sms'])
+
+#     assert(result[1]==[80.12, 61, 910, text_df['sms'][1084], 2, text_df['sms'][1924]])
+
+#     verify_plot(result[2].figure, "hist_char_length", 0)
+
+#     assert(result[3]==[15.49, 12, 171, text_df['sms'][1084]])
+
+#     verify_plot(result[4].figure, "hist_word_count", 0)
+
+#     verify_plot(result[5].figure, "word_cloud", 0)
+
+#     verify_plot(result[6].figure, "stopword", 0)
+
+#     verify_plot(result[7].figure, "non_stopword", 0)
+
+#     verify_plot(result[8].figure, "bi_gram", 0)
+
+#     verify_plot(result[9].figure, "polarity_scores", 0)
+
+#     verify_plot(result[10].figure, "sentiment", 0)
+
+#     verify_plot(result[11].figure, "subjectivity", 0)
+
+#     verify_plot(result[12].figure, "entity", 0)
+
+#     verify_plot(result[13].figure, "entity_token_1", 0)
+
+#     verify_plot(result[14].figure, "entity_token_2", 0)
+
+#     verify_plot(result[15].figure, "entity_token_3", 0)
+
+#     verify_plot(result[16].figure, "pos_plot", 0)
+
+@pytest.fixture
+def numeric_df():
+    """create a test dataset for testing functions for numeric columns
+
     Returns
     -------
-    None
+    [pandas.DataFrame]
+        a data set used for testing explore_numeric_columns
     """
-
     currentdir = os.path.dirname(
         os.path.abspath(inspect.getfile(inspect.currentframe()))
     )
+    original_df = pd.read_csv(currentdir + "/data/menu_subset.csv")
+    numeric_features = eda.get_numeric_columns(original_df)
+    drop_features = []
+    numeric_transformer = make_pipeline(SimpleImputer(), StandardScaler())
+    preprocessor = make_column_transformer(
+        (numeric_transformer, numeric_features), ("drop", drop_features)
+    )
+    transformed_df = pd.DataFrame(
+        data=preprocessor.fit_transform(original_df), columns=numeric_features
+    )
 
-    with raises(Exception):
-        eda.explore_text_columns(['test'])
+    return transformed_df
 
-    with raises(Exception):
-        eda.explore_text_columns(text_df.drop['sms'])
 
-    with raises(Exception):
-        eda.explore_text_columns(text_df, 'sms')
 
-    with raises(Exception):
-        eda.explore_text_columns(text_df, ['some_col_name'])
+def test_explore_numeric_columns(numeric_df):
+    # region test invalid inputs
+    with raises(TypeError):
+        eda.explore_numeric_columns(1)
 
-    result = eda.explore_text_columns(text_df)
+    with raises(TypeError):
+        eda.explore_numeric_columns(numeric_df, hist_cols=1)
 
-    assert(result[0]==['sms'])
+    with raises(TypeError):
+        eda.explore_numeric_columns(numeric_df, pairplot_cols=1)
 
-    assert(result[1]==[80.12, 61, 910, text_df['sms'][1084], 2, text_df['sms'][1924]])
+    with raises(TypeError):
+        eda.explore_numeric_columns(numeric_df, corr_method=1)
 
-    verify_plot(result[2].figure, "hist_char_length", 0)
+    with raises(ValueError):
+        eda.explore_numeric_columns(numeric_df, corr_method='abc')
+    # End region
 
-    assert(result[3]==[15.49, 12, 171, text_df['sms'][1084]])
+    # Check if explore_numeric_columns with default hyper-parameters
+    plots = eda.explore_numeric_columns(numeric_df)
 
-    verify_plot(result[4].figure, "hist_word_count", 0)
+    assert plots['hist'][0].encoding.x.shorthand == 'Calories', 'Calories should be mapped to the x axis'
+    assert plots['hist'][0].encoding.y.shorthand == 'count()' , 'Y axis should contain count of records'
+    assert plots['hist'][0].mark == 'bar' , 'The plots generated should have a Bar mark.'  # Test if Correct plots generated for histograms
+    assert type(plots['pairplot']) == sns.axisgrid.PairGrid, 'Type of pairplot object should be seaborn.axisgrid.PairGrid'  # Test if Correct plot generated for pairplot
+    assert type(plots['corr'].get_figure()) == matplotlib.figure.Figure, 'Type of pairplot object should be matplotlib.figure.Figure'  # Test if correct plot generated for correlation heatmap
+    assert len(plots) == 3, 'Number of items in the plots dictionary should be 3'  # check if results dictionary has 3 items
+    assert "hist" in plots.keys(), "There should be a key 'hist' in the plots dictionary"   # Check if results dictionary has the key values `hist`
+    assert "pairplot" in plots.keys(), "There should be a key 'pairplot' in the plots dictionary" # Check if results dictionary has the key values `pairplot`
+    assert "corr" in plots.keys(), "There should be a key 'corr' in the plots dictionary" # Check if results dictionary has the key values `corr`
 
-    verify_plot(result[5].figure, "word_cloud", 0)
+    # Check if function works with user provided hyper-parameters
+    plots_args = eda.explore_numeric_columns(numeric_df, hist_cols=['Calories','Cholesterol'], pairplot_cols=['Calories','Cholesterol'], corr_method="spearman")
+    
+    assert plots_args['hist'][0].encoding.x.shorthand == 'Calories', 'Calories should be mapped to the x axis'
+    assert plots_args['hist'][1].encoding.x.shorthand == 'Cholesterol', 'Cholesterol should be mapped to the x axis'
+    assert plots_args['hist'][0].encoding.y.shorthand == 'count()' , 'Y axis should contain count of records'
+    assert plots_args['hist'][1].encoding.y.shorthand == 'count()' , 'Y axis should contain count of records'
+    assert plots_args['hist'][0].mark == 'bar' , 'The plots generated should have a Bar mark.'  # Test if Correct plots generated for histograms
+    assert type(plots_args['pairplot']) == sns.axisgrid.PairGrid, 'Type of pairplot object should be seaborn.axisgrid.PairGrid'  # Test if Correct plot generated for pairplot
+    assert type(plots_args['corr'].get_figure()) == matplotlib.figure.Figure, 'Type of pairplot object should be matplotlib.figure.Figure'  # Test if correct plot generated for correlation heatmap
+    assert len(plots_args) == 3, 'Number of items in the plots dictionary should be 3'  # check if results dictionary has 3 items
+    assert "hist" in plots_args.keys(), "There should be a key 'hist' in the plots dictionary"   # Check if results dictionary has the key values `hist`
+    assert "pairplot" in plots_args.keys(), "There should be a key 'pairplot' in the plots dictionary" # Check if results dictionary has the key values `pairplot`
+    assert "corr" in plots_args.keys(), "There should be a key 'corr' in the plots dictionary" # Check if results dictionary has the key values `corr`
 
-    verify_plot(result[6].figure, "stopword", 0)
-
-    verify_plot(result[7].figure, "non_stopword", 0)
-
-    verify_plot(result[8].figure, "bi_gram", 0)
-
-    verify_plot(result[9].figure, "polarity_scores", 0)
-
-    verify_plot(result[10].figure, "sentiment", 0)
-
-    verify_plot(result[11].figure, "subjectivity", 0)
-
-    verify_plot(result[12].figure, "entity", 0)
-
-    verify_plot(result[13].figure, "entity_token_1", 0)
-
-    verify_plot(result[14].figure, "entity_token_2", 0)
-
-    verify_plot(result[15].figure, "entity_token_3", 0)
-
-    verify_plot(result[16].figure, "pos_plot", 0)
