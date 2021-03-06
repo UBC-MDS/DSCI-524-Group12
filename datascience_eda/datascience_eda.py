@@ -32,6 +32,9 @@ from collections import Counter
 
 # endregion
 
+# region import libraries for eda of numeric features
+import numpy as np
+import altair as alt
 # region support functions
 
 
@@ -831,10 +834,73 @@ def explore_numeric_columns(
 
     # Generate plots
 
-    results = (
-        []
-    )  # List will store plot objects created by this function to return to user
-    return results
+    if not (type(data) == pd.DataFrame):
+        raise TypeError("data must be passed as a DataFrame.")
+
+    if type(hist_cols)!=list and hist_cols!=None:
+        raise TypeError("hist_cols must be passed as a list.")
+
+    if type(pairplot_cols)!=list and pairplot_cols!=None:
+        raise TypeError("pairplot_cols must be passed as a list.")
+
+    if type(corr_method)!=str and corr_method!=None:
+        raise TypeError('corr_method must be passed as a str.')
+
+
+    cols = get_numeric_columns(data)
+
+
+    # Generate plots
+
+    plots = {} # Dictionary with results
+  
+    # Create histograms
+    histograms = []
+    cols = data.select_dtypes(include=np.number).columns.tolist()
+    if hist_cols==None: 
+        for col in cols:
+            chart = alt.Chart(data).encode(alt.X(col),alt.Y('count()')).mark_bar().properties(title='Histogram for '+col)
+            plt.figure()
+            print(chart)
+            histograms.append(chart)
+    else:
+        _verify_numeric_cols(data, hist_cols)
+        for col in hist_cols:
+            chart = alt.Chart(data).encode(alt.X(col),alt.Y('count()')).mark_bar().properties(title='Histogram for '+col)
+            plt.figure()
+            print(chart)
+            histograms.append(chart)
+    
+    plots['hist'] = histograms
+    
+    
+    # Create pairplots
+    if pairplot_cols == None:
+        chart = sns.pairplot(data)
+        chart.fig.suptitle("Pairplot between numeric features", y=1.08)
+        plt.figure()
+        print(chart)
+        plots['pairplot'] = chart
+    else:
+        _verify_numeric_cols(data, pairplot_cols)  # Check that each column passed is numeric
+        chart = sns.pairplot(data, vars=pairplot_cols)
+        chart.fig.suptitle("Pairplot between numeric features", y=1.08)
+        plt.figure()
+        print(chart)
+        plots['pairplot'] = chart
+        
+        
+    # Show heatmap with correlation coefficient
+    if corr_method not in [None, 'pearson', 'spearman', 'kendall']:
+        raise ValueError(f"Value for input 'corr_method' should be either None, 'pearson', 'spearman' or 'kendall'. '{corr_method}' was provided.")
+    chart = sns.heatmap(data.corr(method=corr_method), cmap='coolwarm', center=0)
+    plt.title("Heatmap showing correlation between numeric features")
+    plt.figure()
+    print(chart)
+    plots['corr'] = chart
+    
+    return plots
+
 
 def explore_categorical_columns(df, categorical_cols):
     """Performs EDA of categorical features.

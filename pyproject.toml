@@ -19,6 +19,7 @@ en-core-web-md = {url = "https://github.com/explosion/spacy-models/releases/down
 pytest = "^6.2.2"
 wordcloud = "^1.8.1"
 jupyter = "^1.0.0"
+altair = "^4.1.0"
 
 [tool.poetry.dev-dependencies]
 pytest-cov = "^2.11.1"
