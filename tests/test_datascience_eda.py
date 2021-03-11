@@ -1,34 +1,34 @@
+from sklearn.preprocessing import StandardScaler
+from sklearn.impute import SimpleImputer
+from sklearn.pipeline import make_pipeline
+from sklearn.compose import make_column_transformer
+
+
+import matplotlib.pyplot as plt
+from matplotlib.testing.compare import compare_images
 from datascience_eda import __version__
 from datascience_eda import datascience_eda as eda
+
+import seaborn as sns
+import matplotlib
 
 import pytest
 from pytest import raises
 import pandas as pd
 
-import os, sys, inspect
+import os
+import inspect
 import random
-from os import path
+
+import numpy as np
 
 random.seed(2021)
 
-from sklearn.preprocessing import StandardScaler
-from sklearn.impute import SimpleImputer
-from sklearn.pipeline import Pipeline, make_pipeline
-from sklearn.compose import ColumnTransformer, make_column_transformer
-
-from yellowbrick.cluster import KElbowVisualizer, SilhouetteVisualizer
-
-import seaborn as sns
-import matplotlib
-import matplotlib.pyplot as plt
-from matplotlib.testing.compare import compare_images
 
 matplotlib.use("Agg")  # use non-ui backend to close the plots
 
 plt.ioff()  # disable interactive mode
 
-import matplotlib.figure as mf
-import numpy as np
 
 np.random.seed(2021)
 
@@ -57,6 +57,7 @@ def df():
 
     return transformed_df
 
+
 @pytest.fixture
 def text_df():
     """create a test dataset for text features
@@ -74,6 +75,7 @@ def text_df():
 
     return df
 
+
 @pytest.fixture
 def categorical_df():
     """create a test dataset for categorical features
@@ -87,8 +89,9 @@ def categorical_df():
     )
 
     ca_df = pd.read_csv(currentdir + "/data/cat_cols_data.csv")
-	
+
     return ca_df
+
 
 def verify_plot(plot, plot_fname, tol):
     """verify plot created using image regression
@@ -108,7 +111,7 @@ def verify_plot(plot, plot_fname, tol):
     plot.savefig(test_image_file)
     baseline_image = currentdir + "/reference_plots/" + plot_fname + ".png"
     assert (
-        compare_images(baseline_image, test_image_file, tol) == None
+        compare_images(baseline_image, test_image_file, tol) is None
     ), f"Plot {plot_fname} is different from its baseline."
 
 
@@ -139,10 +142,8 @@ def verify_silhouette_plot(plot, model_name, n_rows, n_cluster, fname):
     n_cluster : int
         number of clusters
     """
-    assert (
-        plot.axes[0].get_title()
-        == f"Silhouette Plot of {model_name} Clustering for {n_rows} Samples in {n_cluster} Centers"
-    )
+    title = f"Silhouette Plot of {model_name} Clustering for {n_rows} Samples in {n_cluster} Centers"
+    assert plot.axes[0].get_title() == title
     assert plot.axes[0].xaxis.get_label().get_text() == "silhouette coefficient values"
     assert plot.axes[0].yaxis.get_label().get_text() == "cluster label"
 
@@ -365,6 +366,7 @@ def test_explore_DBSCAN_clustering(df):
     for i in range(n_combs):
         verify_PCA_plot(p_plots[i].figure, f"/DBSCAN_PCA_{n_clusters[i]}")
 
+
 def test_explore_text_columns(text_df):
     """tests explore_text_columns function and its exception handling
     Parameters
@@ -376,31 +378,27 @@ def test_explore_text_columns(text_df):
     None
     """
 
-    currentdir = os.path.dirname(
-        os.path.abspath(inspect.getfile(inspect.currentframe()))
-    )
+    with raises(Exception):
+        eda.explore_text_columns(["test"])
 
     with raises(Exception):
-        eda.explore_text_columns(['test'])
+        eda.explore_text_columns(text_df.drop["sms"])
 
     with raises(Exception):
-        eda.explore_text_columns(text_df.drop['sms'])
+        eda.explore_text_columns(text_df, "sms")
 
     with raises(Exception):
-        eda.explore_text_columns(text_df, 'sms')
-
-    with raises(Exception):
-        eda.explore_text_columns(text_df, ['some_col_name'])
+        eda.explore_text_columns(text_df, ["some_col_name"])
 
     result = eda.explore_text_columns(text_df)
 
-    assert(result[0]==['sms'])
+    assert result[0] == ["sms"]
 
-    assert(result[1]==[80.12, 61, 910, text_df['sms'][1084], 2, text_df['sms'][1924]])
+    assert result[1] == [80.12, 61, 910, text_df["sms"][1084], 2, text_df["sms"][1924]]
 
     verify_plot(result[2].figure, "hist_char_length", 0)
 
-    assert(result[3]==[15.49, 12, 171, text_df['sms'][1084]])
+    assert result[3] == [15.49, 12, 171, text_df["sms"][1084]]
 
     verify_plot(result[4].figure, "hist_word_count", 0)
 
@@ -428,27 +426,46 @@ def test_explore_text_columns(text_df):
 
     verify_plot(result[16].figure, "pos_plot", 0)
 
+
 def test_explore_categorical_columns(categorical_df):
     # region test invalid inputs
     with raises(TypeError):
         eda.explore_categorical_columns(1)
     with raises(Exception):
         eda.explore_text_columns((categorical_df, 1))
-    
-    res, cat_plts = eda.explore_categorical_columns(categorical_df, list(categorical_df.columns))
-	
-	# Testing the output dataframe 
-    assert list(res.columns)[0] == 'unique_items', 'The first column in resultant categorical dataframe is not unique_items'
-    assert len(res.columns) == 3, 'Expected number of result columns in resultant categorical dataframe is not 3'
-    assert res.index.name == 'column_name', 'Index is not column name'
-    assert res.index[5] == 'Neighborhood', 'The sixth row does not belong to Neighborhood'
-    assert res.iloc[2].values[1] == 37, 'Inconsistency with values coming from no_of_nulls column'
-    assert res.iloc[0].values[2] == 2.6, 'Inconsistency with values coming from percentage_missing column'
-    assert list(res.iloc[8].values[0]) == ['Gd', 'TA', 'Ex', 'Fa'], 'Inconsistency with values coming from unique_items column'
-    
-    # Testing the output plots 
+
+    res, cat_plts = eda.explore_categorical_columns(
+        categorical_df, list(categorical_df.columns)
+    )
+
+    # Testing the output dataframe
+    assert (
+        list(res.columns)[0] == "unique_items"
+    ), "The first column in resultant categorical dataframe is not unique_items"
+    assert (
+        len(res.columns) == 3
+    ), "Expected number of result columns in resultant categorical dataframe is not 3"
+    assert res.index.name == "column_name", "Index is not column name"
+    assert (
+        res.index[5] == "Neighborhood"
+    ), "The sixth row does not belong to Neighborhood"
+    assert (
+        res.iloc[2].values[1] == 37
+    ), "Inconsistency with values coming from no_of_nulls column"
+    assert (
+        res.iloc[0].values[2] == 2.6
+    ), "Inconsistency with values coming from percentage_missing column"
+    assert list(res.iloc[8].values[0]) == [
+        "Gd",
+        "TA",
+        "Ex",
+        "Fa",
+    ], "Inconsistency with values coming from unique_items column"
+
+    # Testing the output plots
     verify_plot(cat_plts[5].figure, "cat_plot1", 1)
     verify_plot(cat_plts[6].figure, "cat_plot2", 1)
+
 
 @pytest.fixture
 def numeric_df():
@@ -476,7 +493,6 @@ def numeric_df():
     return transformed_df
 
 
-
 def test_explore_numeric_columns(numeric_df):
     """tests explore_text_columns function and its exception handling
     Parameters
@@ -502,33 +518,78 @@ def test_explore_numeric_columns(numeric_df):
         eda.explore_numeric_columns(numeric_df, corr_method=1)
 
     with raises(ValueError):
-        eda.explore_numeric_columns(numeric_df, corr_method='abc')
+        eda.explore_numeric_columns(numeric_df, corr_method="abc")
     # End region
 
     # Check if explore_numeric_columns with default hyper-parameters
     plots = eda.explore_numeric_columns(numeric_df)
 
-    assert plots['hist'][0].encoding.x.shorthand == 'Calories', 'Calories should be mapped to the x axis'
-    assert plots['hist'][0].encoding.y.shorthand == 'count()' , 'Y axis should contain count of records'
-    assert plots['hist'][0].mark == 'bar' , 'The plots generated should have a Bar mark.'  # Test if Correct plots generated for histograms
-    assert type(plots['pairplot']) == sns.axisgrid.PairGrid, 'Type of pairplot object should be seaborn.axisgrid.PairGrid'  # Test if Correct plot generated for pairplot
-    assert type(plots['corr'].get_figure()) == matplotlib.figure.Figure, 'Type of pairplot object should be matplotlib.figure.Figure'  # Test if correct plot generated for correlation heatmap
-    assert len(plots) == 3, 'Number of items in the plots dictionary should be 3'  # check if results dictionary has 3 items
-    assert "hist" in plots.keys(), "There should be a key 'hist' in the plots dictionary"   # Check if results dictionary has the key values `hist`
-    assert "pairplot" in plots.keys(), "There should be a key 'pairplot' in the plots dictionary" # Check if results dictionary has the key values `pairplot`
-    assert "corr" in plots.keys(), "There should be a key 'corr' in the plots dictionary" # Check if results dictionary has the key values `corr`
+    assert (
+        plots["hist"][0].encoding.x.shorthand == "Calories"
+    ), "Calories should be mapped to the x axis"
+    assert (
+        plots["hist"][0].encoding.y.shorthand == "count()"
+    ), "Y axis should contain count of records"
+    assert (
+        plots["hist"][0].mark == "bar"
+    ), "The plots generated should have a Bar mark."  # Test if Correct plots generated for histograms
+    assert (
+        type(plots["pairplot"]) == sns.axisgrid.PairGrid
+    ), "Type of pairplot object should be seaborn.axisgrid.PairGrid"  # Test if Correct plot generated for pairplot
+    assert (
+        type(plots["corr"].get_figure()) == matplotlib.figure.Figure
+    ), "Type of pairplot object should be matplotlib.figure.Figure"  # Test if correct plot generated for correlation heatmap
+    assert (
+        len(plots) == 3
+    ), "Number of items in the plots dictionary should be 3"  # check if results dictionary has 3 items
+    assert (
+        "hist" in plots.keys()
+    ), "There should be a key 'hist' in the plots dictionary"  # Check if results dictionary has the key values `hist`
+    assert (
+        "pairplot" in plots.keys()
+    ), "There should be a key 'pairplot' in the plots dictionary"  # Check if results dictionary has the key values `pairplot`
+    assert (
+        "corr" in plots.keys()
+    ), "There should be a key 'corr' in the plots dictionary"  # Check if results dictionary has the key values `corr`
 
     # Check if function works with user provided hyper-parameters
-    plots_args = eda.explore_numeric_columns(numeric_df, hist_cols=['Calories','Cholesterol'], pairplot_cols=['Calories','Cholesterol'], corr_method="spearman")
-    
-    assert plots_args['hist'][0].encoding.x.shorthand == 'Calories', 'Calories should be mapped to the x axis'
-    assert plots_args['hist'][1].encoding.x.shorthand == 'Cholesterol', 'Cholesterol should be mapped to the x axis'
-    assert plots_args['hist'][0].encoding.y.shorthand == 'count()' , 'Y axis should contain count of records'
-    assert plots_args['hist'][1].encoding.y.shorthand == 'count()' , 'Y axis should contain count of records'
-    assert plots_args['hist'][0].mark == 'bar' , 'The plots generated should have a Bar mark.'  # Test if Correct plots generated for histograms
-    assert type(plots_args['pairplot']) == sns.axisgrid.PairGrid, 'Type of pairplot object should be seaborn.axisgrid.PairGrid'  # Test if Correct plot generated for pairplot
-    assert type(plots_args['corr'].get_figure()) == matplotlib.figure.Figure, 'Type of pairplot object should be matplotlib.figure.Figure'  # Test if correct plot generated for correlation heatmap
-    assert len(plots_args) == 3, 'Number of items in the plots dictionary should be 3'  # check if results dictionary has 3 items
-    assert "hist" in plots_args.keys(), "There should be a key 'hist' in the plots dictionary"   # Check if results dictionary has the key values `hist`
-    assert "pairplot" in plots_args.keys(), "There should be a key 'pairplot' in the plots dictionary" # Check if results dictionary has the key values `pairplot`
-    assert "corr" in plots_args.keys(), "There should be a key 'corr' in the plots dictionary" # Check if results dictionary has the key values `corr`
+    plots_args = eda.explore_numeric_columns(
+        numeric_df,
+        hist_cols=["Calories", "Cholesterol"],
+        pairplot_cols=["Calories", "Cholesterol"],
+        corr_method="spearman",
+    )
+
+    assert (
+        plots_args["hist"][0].encoding.x.shorthand == "Calories"
+    ), "Calories should be mapped to the x axis"
+    assert (
+        plots_args["hist"][1].encoding.x.shorthand == "Cholesterol"
+    ), "Cholesterol should be mapped to the x axis"
+    assert (
+        plots_args["hist"][0].encoding.y.shorthand == "count()"
+    ), "Y axis should contain count of records"
+    assert (
+        plots_args["hist"][1].encoding.y.shorthand == "count()"
+    ), "Y axis should contain count of records"
+    assert (
+        plots_args["hist"][0].mark == "bar"
+    ), "The plots generated should have a Bar mark."  # Test if Correct plots generated for histograms
+    assert (
+        type(plots_args["pairplot"]) == sns.axisgrid.PairGrid
+    ), "Type of pairplot object should be seaborn.axisgrid.PairGrid"  # Test if Correct plot generated for pairplot
+    assert (
+        type(plots_args["corr"].get_figure()) == matplotlib.figure.Figure
+    ), "Type of pairplot object should be matplotlib.figure.Figure"  # Test if correct plot generated for correlation heatmap
+    assert (
+        len(plots_args) == 3
+    ), "Number of items in the plots dictionary should be 3"  # check if results dictionary has 3 items
+    assert (
+        "hist" in plots_args.keys()
+    ), "There should be a key 'hist' in the plots dictionary"  # Check if results dictionary has the key values `hist`
+    assert (
+        "pairplot" in plots_args.keys()
+    ), "There should be a key 'pairplot' in the plots dictionary"  # Check if results dictionary has the key values `pairplot`
+    assert (
+        "corr" in plots_args.keys()
+    ), "There should be a key 'corr' in the plots dictionary"  # Check if results dictionary has the key values `corr`

@@ -1,27 +1,3 @@
-import pandas as pd
-
-# region import libraries for clustering
-from sklearn import cluster, datasets, metrics
-from sklearn.cluster import DBSCAN, AgglomerativeClustering, KMeans
-from sklearn.datasets import make_blobs
-from sklearn.decomposition import PCA
-from sklearn.metrics.pairwise import euclidean_distances
-from sklearn.preprocessing import StandardScaler
-from sklearn.impute import SimpleImputer
-from sklearn.pipeline import Pipeline, make_pipeline
-
-from yellowbrick.cluster import KElbowVisualizer, SilhouetteVisualizer
-
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-# endregion
-
-# region import libraries for eda of text features
-import nltk
-import spacy
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
-nltk.download('stopwords')
 from nltk.corpus import stopwords
 from IPython.display import Markdown, display
 from wordcloud import WordCloud
@@ -29,12 +5,23 @@ from sklearn.feature_extraction.text import CountVectorizer
 from textblob import TextBlob
 import en_core_web_md
 from collections import Counter
+from sklearn.cluster import DBSCAN, KMeans
+from sklearn.decomposition import PCA
+from yellowbrick.cluster import KElbowVisualizer, SilhouetteVisualizer
 
-# endregion
-
-# region import libraries for eda of numeric features
 import numpy as np
 import altair as alt
+
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+
+import nltk
+
+nltk.download("stopwords")
+
+
 # region support functions
 
 
@@ -68,7 +55,7 @@ def _verify_distance_metric(m):
     Exception
         throw an exception if the metric is invalid
     """
-    if not m in ["cityblock", "cosine", "euclidean", "l1", "l2", "manhattan"]:
+    if m not in ["cityblock", "cosine", "euclidean", "l1", "l2", "manhattan"]:
         raise Exception(f"Invalid distance metric: {m}")
 
 
@@ -489,6 +476,7 @@ def explore_clustering(
 
     return result
 
+
 def printmd(string):
     """Displays the markdown representation of the
     string passed to it
@@ -497,7 +485,7 @@ def printmd(string):
     ----------
     string : str
         the string to be displayed using markdown syntax
-    
+
     Returns
     -------
     None
@@ -507,6 +495,7 @@ def printmd(string):
     >>> printmd("### I am Batman")
     """
     display(Markdown(string))
+
 
 def explore_text_columns(df, text_col=None):
     """Performs EDA of text features.
@@ -544,25 +533,27 @@ def explore_text_columns(df, text_col=None):
         raise Exception("df is not a Pandas Dataframe")
 
     # identify text columns if not specified by user
-    if text_col == None:
+    if text_col is None:
         text_col = []
         non_num = df.columns[df.dtypes == ("object" or "string")]
         for col in non_num:
-            if df[col].unique().shape[0]/df.shape[0] > 0.75:
+            if df[col].unique().shape[0] / df.shape[0] > 0.75:
                 if df[col].str.split().apply(len).median() > 5:
                     text_col.append(col)
 
-    # exception if text column cannot be identified
+        # exception if text column cannot be identified
         if not text_col:
-            raise Exception("Could not identify any text column. Please pass the text column(s) when calling the function")
+            raise Exception(
+                "Could not identify any text column. Please pass the text column(s) when calling the function"
+            )
         else:
             print("Identified the following as text columns:", text_col)
             result.append(text_col)
-    
+
     # exception if text_col is not passed as a list
     elif type(text_col) is not list:
         raise Exception("text_col is not a list. Pass the text column(s) as a list")
-    
+
     # exception if a column passes in text_col is not in df
     else:
         for col in text_col:
@@ -574,8 +565,8 @@ def explore_text_columns(df, text_col=None):
     print("\n")
     for col in text_col:
 
-        printmd("## Exploratory Data Analysis of \"" +col+ "\" column:<br>")
-        
+        printmd('## Exploratory Data Analysis of "' + col + '" column:<br>')
+
         printmd("### Character Length:<br>")
 
         mean_char_length = df[col].str.len().mean()
@@ -589,210 +580,254 @@ def explore_text_columns(df, text_col=None):
         printmd(f"- The median character length of text is {median_char_length:.0f}")
 
         printmd(f"- The longest text(s) has {longest_char_length:.0f} characters:\n")
-        
+
         for text in longest_text:
-            printmd("\"" + text + "\"")
+            printmd('"' + text + '"')
 
         printmd(f"- The shortest text(s) has {shortest_char_length:.0f} characters:\n")
-        
-        for text in shortest_text:
-            printmd("\"" + text + "\"<br><br>")
-        
-        result.append([round(mean_char_length, 2), median_char_length,
-                    longest_char_length, longest_text[0],
-                    shortest_char_length, shortest_text[0]])
 
-    # plot a histogram of the length of text (number of characters)
-        printmd(f"#### Histogram of number of characters in \"{col}\":")
+        for text in shortest_text:
+            printmd('"' + text + '"<br><br>')
+
+        result.append(
+            [
+                round(mean_char_length, 2),
+                median_char_length,
+                longest_char_length,
+                longest_text[0],
+                shortest_char_length,
+                shortest_text[0],
+            ]
+        )
+
+        # plot a histogram of the length of text (number of characters)
+        printmd(f'#### Histogram of number of characters in "{col}":')
         sns.set_theme(style="whitegrid")
-        plt.rcParams.update({'figure.figsize': (12,8)})
-        char_length_plot = sns.histplot(data=df[col].str.len());
-        plt.xlabel("Number of characters in "+'"'+col+'"');
+        plt.rcParams.update({"figure.figsize": (12, 8)})
+        char_length_plot = sns.histplot(data=df[col].str.len())
+        plt.xlabel("Number of characters in " + '"' + col + '"')
         result.append(char_length_plot)
         plt.show()
         plt.close()
 
-    # print average, minimum, maximum and median number of words
-    # show text with most number of words
+        # print average, minimum, maximum and median number of words
+        # show text with most number of words
         printmd("### Word Count:<br>")
 
         mean_word_count = df[col].str.split().apply(len).mean()
         median_word_count = df[col].str.split().apply(len).median()
         highest_word_count = df[col].str.split().apply(len).max()
-        text_most_words = df[col][df[col].str.split().apply(len) == highest_word_count].unique()
+        text_most_words = df[col][
+            df[col].str.split().apply(len) == highest_word_count
+        ].unique()
 
-        printmd(f"- The average number of words in \"{col}\": {mean_word_count:.2f}")
-        printmd(f"- The median number of words in \"{col}\": {median_word_count:.0f}")
+        printmd(f'- The average number of words in "{col}": {mean_word_count:.2f}')
+        printmd(f'- The median number of words in "{col}": {median_word_count:.0f}')
 
-        printmd(f"- The text(s) in \"{col}\" with most words ({highest_word_count:.0f} words):\n")
+        printmd(
+            f'- The text(s) in "{col}" with most words ({highest_word_count:.0f} words):\n'
+        )
 
         for text in text_most_words:
-            printmd("\"" + text + "\"")
+            printmd('"' + text + '"')
 
-        result.append([round(mean_word_count, 2), median_word_count,
-                    highest_word_count, text_most_words])
+        result.append(
+            [
+                round(mean_word_count, 2),
+                median_word_count,
+                highest_word_count,
+                text_most_words,
+            ]
+        )
 
-    # plot a histogram of the number of words
-        printmd(f"#### Histogram of number of words in \"{col}\":")
-        word_count_plot = sns.histplot(data=df[col].str.split().apply(len));
-        plt.xlabel("Number of words in "+'"'+col+'"');
+        # plot a histogram of the number of words
+        printmd(f'#### Histogram of number of words in "{col}":')
+        word_count_plot = sns.histplot(data=df[col].str.split().apply(len))
+        plt.xlabel("Number of words in " + '"' + col + '"')
         result.append(word_count_plot)
-        plt.show();
+        plt.show()
         plt.close()
         printmd("<br>")
 
-    # plot word cloud of text
+        # plot word cloud of text
         printmd("### Word Cloud:<br>")
-        wordcloud = WordCloud(random_state=1).generate(' '.join(df[col]))
-        plt.rcParams.update({'figure.figsize': (12,8)})
+        wordcloud = WordCloud(random_state=1).generate(" ".join(df[col]))
+        plt.rcParams.update({"figure.figsize": (12, 8)})
         wordcloud_plot = plt.imshow(wordcloud, interpolation="bilinear")
         plt.axis("off")
         result.append(wordcloud_plot)
-        plt.show();
-        plt.close()        
-        
+        plt.show()
+        plt.close()
+
         printmd("<br>")
 
-    # plot a bar chart of the top stopwords
-        stop=set(stopwords.words('english'))
-        all_words=df[col].str.split()
-        all_words=all_words.values.tolist()
-        corpus=[word for i in all_words for word in i]
-        corpus=(pd.DataFrame(pd.DataFrame(corpus, columns=["counts"])
-                            .counts.value_counts())
-                            .reset_index())
-        corpus.columns=['words', 'counts']
-        
-        all_stopwords = corpus.merge(pd.DataFrame(stop, columns=['words']), on="words", how="right")
-        
+        # plot a bar chart of the top stopwords
+        stop = set(stopwords.words("english"))
+        all_words = df[col].str.split()
+        all_words = all_words.values.tolist()
+        corpus = [word for i in all_words for word in i]
+        corpus = pd.DataFrame(
+            pd.DataFrame(corpus, columns=["counts"]).counts.value_counts()
+        ).reset_index()
+        corpus.columns = ["words", "counts"]
+
+        all_stopwords = corpus.merge(
+            pd.DataFrame(stop, columns=["words"]), on="words", how="right"
+        )
+
         printmd("### Bar Chart of the top stopwords:<br>")
-        stopwords_plot = sns.barplot(y="words", x="counts", data=all_stopwords.sort_values(by="counts", ascending=False).head(10));
-        plt.ylabel("Stop Words");
-        plt.xlabel("Count");
+        stopwords_plot = sns.barplot(
+            y="words",
+            x="counts",
+            data=all_stopwords.sort_values(by="counts", ascending=False).head(10),
+        )
+        plt.ylabel("Stop Words")
+        plt.xlabel("Count")
         result.append(stopwords_plot)
-        plt.show();
+        plt.show()
         plt.close()
 
-    # plot a bar chart of words other than stopwords
-        left_joined = corpus.merge(pd.DataFrame(stop, columns=['words']), on="words", how="left", indicator=True)
-        non_stopwords = left_joined[left_joined['_merge'] == 'left_only']
-        top_non_stopwords = non_stopwords.sort_values(by="counts", ascending=False).head(10)
-        
+        # plot a bar chart of words other than stopwords
+        left_joined = corpus.merge(
+            pd.DataFrame(stop, columns=["words"]),
+            on="words",
+            how="left",
+            indicator=True,
+        )
+        non_stopwords = left_joined[left_joined["_merge"] == "left_only"]
+        top_non_stopwords = non_stopwords.sort_values(
+            by="counts", ascending=False
+        ).head(10)
+
         printmd("### Bar Chart of the top non-stopwords:<br>")
-        non_stopwords_plot = sns.barplot(y="words", x="counts", data=top_non_stopwords);
-        plt.ylabel("Non Stop Words");
-        plt.xlabel("Count");
+        non_stopwords_plot = sns.barplot(y="words", x="counts", data=top_non_stopwords)
+        plt.ylabel("Non Stop Words")
+        plt.xlabel("Count")
         result.append(non_stopwords_plot)
-        plt.show();
+        plt.show()
         plt.close()
 
-    # plot a bar chart of top bigrams
+        # plot a bar chart of top bigrams
         vec = CountVectorizer(ngram_range=(2, 2)).fit(df[col])
         bag_of_words = vec.transform(df[col])
-        sum_words = bag_of_words.sum(axis=0) 
-        words_freq = [(word, sum_words[0, idx]) 
-            for word, idx in vec.vocabulary_.items()]
-        words_freq = sorted(words_freq, key = lambda x: x[1], reverse=True)
-        top_bi_grams=words_freq[:10]
-        x,y=map(list,zip(*top_bi_grams))
-        
+        sum_words = bag_of_words.sum(axis=0)
+        words_freq = [
+            (word, sum_words[0, idx]) for word, idx in vec.vocabulary_.items()
+        ]
+        words_freq = sorted(words_freq, key=lambda x: x[1], reverse=True)
+        top_bi_grams = words_freq[:10]
+        x, y = map(list, zip(*top_bi_grams))
+
         printmd("### Bar Chart of the top Bi-grams:<br>")
-        bi_gram_plot = sns.barplot(x=y,y=x);
-        plt.ylabel("Bi-grams");
-        plt.xlabel("Count");
+        bi_gram_plot = sns.barplot(x=y, y=x)
+        plt.ylabel("Bi-grams")
+        plt.xlabel("Count")
         result.append(bi_gram_plot)
-        plt.show();
+        plt.show()
         plt.close()
 
-    # plot the distribution of polarity scores
-        polarity_scores=df[col].apply(lambda x : TextBlob(x).sentiment.polarity)
-        
+        # plot the distribution of polarity scores
+        polarity_scores = df[col].apply(lambda x: TextBlob(x).sentiment.polarity)
+
         printmd("### Distribution of Polarity scores:<br>")
-        plarity_scores_plot = sns.histplot(data=polarity_scores, bins=15);
-        plt.xlabel("Polarity scores in "+'"'+col+'"');
+        plarity_scores_plot = sns.histplot(data=polarity_scores, bins=15)
+        plt.xlabel("Polarity scores in " + '"' + col + '"')
         result.append(plarity_scores_plot)
-        plt.show();
+        plt.show()
         plt.close()
 
-    # plot a bar chart of sentiments: Positive, Negative and Neutral
-        polarity=polarity_scores.apply(lambda x: 'Negative' if x<0 else ('Neutral' if x==0 else 'Positive'))
-        
+        # plot a bar chart of sentiments: Positive, Negative and Neutral
+        polarity = polarity_scores.apply(
+            lambda x: "Negative" if x < 0 else ("Neutral" if x == 0 else "Positive")
+        )
+
         printmd("### Bar chart of Sentiments:<br>")
-        sentiment_plot = sns.countplot(x="sms", data=pd.DataFrame(polarity), order= ["Negative", "Neutral", "Positive"]);
-        plt.ylabel("Count");
-        plt.xlabel("Sentiments");
+        sentiment_plot = sns.countplot(
+            x="sms",
+            data=pd.DataFrame(polarity),
+            order=["Negative", "Neutral", "Positive"],
+        )
+        plt.ylabel("Count")
+        plt.xlabel("Sentiments")
         result.append(sentiment_plot)
-        plt.show();
+        plt.show()
         plt.close()
 
-    # plot the distribution of subjectivity scores
-        subjectivity_scores=df[col].apply(lambda x : TextBlob(x).sentiment.subjectivity)
-        
+        # plot the distribution of subjectivity scores
+        subjectivity_scores = df[col].apply(
+            lambda x: TextBlob(x).sentiment.subjectivity
+        )
+
         printmd("### Distribution of Subjectivity scores:<br>")
-        subjectivity_plot = sns.histplot(data=subjectivity_scores, bins=15);
-        plt.xlabel("Subjectivity scores in "+'"'+col+'"');
+        subjectivity_plot = sns.histplot(data=subjectivity_scores, bins=15)
+        plt.xlabel("Subjectivity scores in " + '"' + col + '"')
         result.append(subjectivity_plot)
-        plt.show();
+        plt.show()
         plt.close()
 
-    # plot a bar chart of named entities
+        # plot a bar chart of named entities
         nlp = en_core_web_md.load()
-        ent=df[col].apply(lambda x : [X.label_ for X in nlp(x).ents])
-        ent=[x for sub in ent for x in sub]
-        ent_counter=Counter(ent)
-        
-        ent_count_df = pd.DataFrame.from_dict(ent_counter, orient='index').reset_index()
-        ent_count_df.columns=['Entity', 'Count']
+        ent = df[col].apply(lambda x: [X.label_ for X in nlp(x).ents])
+        ent = [x for sub in ent for x in sub]
+        ent_counter = Counter(ent)
+
+        ent_count_df = pd.DataFrame.from_dict(ent_counter, orient="index").reset_index()
+        ent_count_df.columns = ["Entity", "Count"]
         ent_count_df = ent_count_df.sort_values(by="Count", ascending=False)
-        
+
         printmd("### Bar Chart of Named Entities:<br>")
-        entity_plot = sns.barplot(y='Entity', x='Count', data=ent_count_df);
-        plt.ylabel("Entity");
-        plt.xlabel("Count");
+        entity_plot = sns.barplot(y="Entity", x="Count", data=ent_count_df)
+        plt.ylabel("Entity")
+        plt.xlabel("Count")
         result.append(entity_plot)
-        plt.show();
+        plt.show()
         plt.close()
 
-    # plot a bar chart of most common tokens per entity
+        # plot a bar chart of most common tokens per entity
         tokens = ["PERSON", "GPE", "ORG"]
         c = 0
         entity_token = [None] * len(tokens)
         for token in tokens:
-            
-            token_list=df[col].apply(lambda x: [X.text for X in nlp(x).ents if X.label_ == token])
-            token_list=[i for x in token_list for i in x]
-            token_counter=Counter(token_list)
 
-            token_count_df = pd.DataFrame.from_dict(token_counter, orient='index').reset_index()
-            token_count_df.columns=[token, 'Count']
+            token_list = df[col].apply(
+                lambda x: [X.text for X in nlp(x).ents if X.label_ == token]
+            )
+            token_list = [i for x in token_list for i in x]
+            token_counter = Counter(token_list)
+
+            token_count_df = pd.DataFrame.from_dict(
+                token_counter, orient="index"
+            ).reset_index()
+            token_count_df.columns = [token, "Count"]
             token_count_df = token_count_df.sort_values(by="Count", ascending=False)
-            
-            printmd("### Bar Chart of the token- "+'"'+token+'"'+":<br>")
-            entity_token[c] = sns.barplot(y=token, x='Count', data=token_count_df.head(10));
-            plt.ylabel(token);
-            plt.xlabel("Count");
-            result.append(entity_token[c])
-            plt.show(); 
-            plt.close()
-            c=c+1
 
-    # plot a bar chart of Part-of-speech tags
-        tags=df[col].apply(lambda x : [tags.pos_ for tags in nlp(x)])
-        tags=[x for sub in tags for x in sub]
-        tag_counter=Counter(tags)
-        
-        tag_count_df = pd.DataFrame.from_dict(tag_counter, orient='index').reset_index()
-        tag_count_df.columns=['Tags', 'Count']
+            printmd("### Bar Chart of the token- " + '"' + token + '"' + ":<br>")
+            entity_token[c] = sns.barplot(
+                y=token, x="Count", data=token_count_df.head(10)
+            )
+            plt.ylabel(token)
+            plt.xlabel("Count")
+            result.append(entity_token[c])
+            plt.show()
+            plt.close()
+            c = c + 1
+
+        # plot a bar chart of Part-of-speech tags
+        tags = df[col].apply(lambda x: [tags.pos_ for tags in nlp(x)])
+        tags = [x for sub in tags for x in sub]
+        tag_counter = Counter(tags)
+
+        tag_count_df = pd.DataFrame.from_dict(tag_counter, orient="index").reset_index()
+        tag_count_df.columns = ["Tags", "Count"]
         tag_count_df = tag_count_df.sort_values(by="Count", ascending=False)
 
         printmd("### Bar Chart of Part of Speech Tags:<br>")
-        pos_plot = sns.barplot(y='Tags', x='Count', data=tag_count_df);
-        plt.ylabel("Part of Speech Tags");
-        plt.xlabel("Count");
+        pos_plot = sns.barplot(y="Tags", x="Count", data=tag_count_df)
+        plt.ylabel("Part of Speech Tags")
+        plt.xlabel("Count")
         result.append(pos_plot)
-        plt.show();
+        plt.show()
         plt.close()
-
 
     return result
 
@@ -837,68 +872,78 @@ def explore_numeric_columns(
     if not (type(data) == pd.DataFrame):
         raise TypeError("data must be passed as a DataFrame.")
 
-    if type(hist_cols)!=list and hist_cols!=None:
+    if type(hist_cols) != list and hist_cols is not None:
         raise TypeError("hist_cols must be passed as a list.")
 
-    if type(pairplot_cols)!=list and pairplot_cols!=None:
+    if type(pairplot_cols) != list and pairplot_cols is not None:
         raise TypeError("pairplot_cols must be passed as a list.")
 
-    if type(corr_method)!=str and corr_method!=None:
-        raise TypeError('corr_method must be passed as a str.')
-
+    if type(corr_method) != str and corr_method is not None:
+        raise TypeError("corr_method must be passed as a str.")
 
     cols = get_numeric_columns(data)
 
-
     # Generate plots
 
-    plots = {} # Dictionary with results
-  
+    plots = {}  # Dictionary with results
+
     # Create histograms
     histograms = []
     cols = data.select_dtypes(include=np.number).columns.tolist()
-    if hist_cols==None: 
+    if hist_cols is None:
         for col in cols:
-            chart = alt.Chart(data).encode(alt.X(col),alt.Y('count()')).mark_bar().properties(title='Histogram for '+col)
+            chart = (
+                alt.Chart(data)
+                .encode(alt.X(col), alt.Y("count()"))
+                .mark_bar()
+                .properties(title="Histogram for " + col)
+            )
             plt.figure()
             print(chart)
             histograms.append(chart)
     else:
         _verify_numeric_cols(data, hist_cols)
         for col in hist_cols:
-            chart = alt.Chart(data).encode(alt.X(col),alt.Y('count()')).mark_bar().properties(title='Histogram for '+col)
+            chart = (
+                alt.Chart(data)
+                .encode(alt.X(col), alt.Y("count()"))
+                .mark_bar()
+                .properties(title="Histogram for " + col)
+            )
             plt.figure()
             print(chart)
             histograms.append(chart)
-    
-    plots['hist'] = histograms
-    
-    
+
+    plots["hist"] = histograms
+
     # Create pairplots
-    if pairplot_cols == None:
+    if pairplot_cols is None:
         chart = sns.pairplot(data)
         chart.fig.suptitle("Pairplot between numeric features", y=1.08)
         plt.figure()
         print(chart)
-        plots['pairplot'] = chart
+        plots["pairplot"] = chart
     else:
-        _verify_numeric_cols(data, pairplot_cols)  # Check that each column passed is numeric
+        _verify_numeric_cols(
+            data, pairplot_cols
+        )  # Check that each column passed is numeric
         chart = sns.pairplot(data, vars=pairplot_cols)
         chart.fig.suptitle("Pairplot between numeric features", y=1.08)
         plt.figure()
         print(chart)
-        plots['pairplot'] = chart
-        
-        
+        plots["pairplot"] = chart
+
     # Show heatmap with correlation coefficient
-    if corr_method not in [None, 'pearson', 'spearman', 'kendall']:
-        raise ValueError(f"Value for input 'corr_method' should be either None, 'pearson', 'spearman' or 'kendall'. '{corr_method}' was provided.")
-    chart = sns.heatmap(data.corr(method=corr_method), cmap='coolwarm', center=0)
+    if corr_method not in [None, "pearson", "spearman", "kendall"]:
+        raise ValueError(
+            f"Value for input 'corr_method' should be either None, 'pearson', 'spearman' or 'kendall'. '{corr_method}' was provided."
+        )
+    chart = sns.heatmap(data.corr(method=corr_method), cmap="coolwarm", center=0)
     plt.title("Heatmap showing correlation between numeric features")
     plt.figure()
     print(chart)
-    plots['corr'] = chart
-    
+    plots["corr"] = chart
+
     return plots
 
 
@@ -916,7 +961,7 @@ def explore_categorical_columns(df, categorical_cols):
     -------
     cat_df: pandas.DataFrame
         A Dataframe with column names, corresponding unique categories, count of null values, percentage of null values and most frequent categories
-    
+
     cat_plots: list
         A list having countplots of given categorical columns
     Examples
@@ -929,45 +974,54 @@ def explore_categorical_columns(df, categorical_cols):
 
     # exception if categorical_cols is not passed as a list
     if type(categorical_cols) is not list:
-        raise Exception("categorical_cols is not a list. Pass the categorical column(s) as a list")		
+        raise Exception(
+            "categorical_cols is not a list. Pass the categorical column(s) as a list"
+        )
 
     # exception if categorical_cols is not in columns of dataframe
     for col in categorical_cols:
         if col not in df.columns.values:
             raise Exception(f"{col} is not a column in the dataframe")
-    
-    cat_df = pd.DataFrame(columns = ['column_name', 'unique_items', 'no_of_nulls', 'percentage_missing'])
+
+    cat_df = pd.DataFrame(
+        columns=["column_name", "unique_items", "no_of_nulls", "percentage_missing"]
+    )
     temp = pd.DataFrame()
-    
+
     # Creating Dataframe
     for col in categorical_cols:
-        temp['column_name'] = [col]
-        temp['unique_items'] = [df[col].unique()]
-        temp['no_of_nulls'] = df[col].isnull().sum()
-        temp['percentage_missing'] = (df[col].isnull().sum()/ len(df)).round(3)*100
+        temp["column_name"] = [col]
+        temp["unique_items"] = [df[col].unique()]
+        temp["no_of_nulls"] = df[col].isnull().sum()
+        temp["percentage_missing"] = (df[col].isnull().sum() / len(df)).round(3) * 100
         cat_df = cat_df.append(temp)
-    
-    # Plotting 
-    #printmd('### Univariate Categorical Analysis')
-    sns.set(style='darkgrid')
-    sns.set(rc={'figure.figsize':(22,5)})
-    plt.rc('xtick',labelsize=12)
-    plt.rc('ytick',labelsize=12)
+
+    # Plotting
+    # printmd('### Univariate Categorical Analysis')
+    sns.set(style="darkgrid")
+    sns.set(rc={"figure.figsize": (22, 5)})
+    plt.rc("xtick", labelsize=12)
+    plt.rc("ytick", labelsize=12)
     cat_plots = []
-    
+
     for col in categorical_cols:
-        #printmd(f'##### Column Name: {col}')
-        ax = sns.countplot(x = col, data = df, order = df[col].value_counts().index)
-        ax.set_xlabel(col,fontsize=15)
-        ax.set_ylabel("Count",fontsize=15)
+        # printmd(f'##### Column Name: {col}')
+        ax = sns.countplot(x=col, data=df, order=df[col].value_counts().index)
+        ax.set_xlabel(col, fontsize=15)
+        ax.set_ylabel("Count", fontsize=15)
         for p in ax.patches:
-            x=p.get_bbox().get_points()[:,0]
-            y=p.get_bbox().get_points()[1,1]
-            ax.annotate('{:.1f}%'.format(100.*y/df.shape[0]), (x.mean(), y), ha='center', va='bottom')
-#        plt.xticks(rotation=20)
+            x = p.get_bbox().get_points()[:, 0]
+            y = p.get_bbox().get_points()[1, 1]
+            ax.annotate(
+                "{:.1f}%".format(100.0 * y / df.shape[0]),
+                (x.mean(), y),
+                ha="center",
+                va="bottom",
+            )
+        #        plt.xticks(rotation=20)
         cat_plots.append(ax)
         plt.close()
-    #printmd('### Dataframe containing unique items in each column and corresponding percentage as well as number of nulls')
-    cat_df.set_index('column_name', inplace = True)
-    cat_df.sort_values(by = 'percentage_missing', inplace = True, ascending = False)
+    # printmd('### Dataframe containing unique items in each column and corresponding percentage as well as number of nulls')
+    cat_df.set_index("column_name", inplace=True)
+    cat_df.sort_values(by="percentage_missing", inplace=True, ascending=False)
     return pd.DataFrame(cat_df), cat_plots
