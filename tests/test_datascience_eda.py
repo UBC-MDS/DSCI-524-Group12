@@ -110,6 +110,11 @@ def verify_plot(plot, plot_fname, tol):
     test_image_file = currentdir + "/test_plots/" + plot_fname + ".png"
     plot.savefig(test_image_file)
     baseline_image = currentdir + "/reference_plots/" + plot_fname + ".png"
+
+    if not os.path.exists(baseline_image):
+        # first time running
+        plot.savefig(baseline_image)
+
     assert (
         compare_images(baseline_image, test_image_file, tol) is None
     ), f"Plot {plot_fname} is different from its baseline."
