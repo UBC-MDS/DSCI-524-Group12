@@ -107,9 +107,23 @@ def verify_plot(plot, plot_fname, tol):
     currentdir = os.path.dirname(
         os.path.abspath(inspect.getfile(inspect.currentframe()))
     )
-    test_image_file = currentdir + "/test_plots/" + plot_fname + ".png"
+    test_plot_folder = currentdir + "/test_plots/"
+    reference_plot_folder = currentdir + "/reference_plots/"
+
+    if not os.path.exists(test_plot_folder):
+        os.makedirs(test_plot_folder)
+
+    if not os.path.exists(reference_plot_folder):
+        os.makedirs(reference_plot_folder)
+
+    test_image_file = test_plot_folder + plot_fname + ".png"
     plot.savefig(test_image_file)
-    baseline_image = currentdir + "/reference_plots/" + plot_fname + ".png"
+    baseline_image = reference_plot_folder + plot_fname + ".png"
+
+    if not os.path.exists(baseline_image):
+        # first time running
+        plot.savefig(baseline_image)
+
     assert (
         compare_images(baseline_image, test_image_file, tol) is None
     ), f"Plot {plot_fname} is different from its baseline."
