@@ -1,9 +1,9 @@
 from nltk.corpus import stopwords
 from IPython.display import Markdown, display
 from wordcloud import WordCloud
+import spacy.cli
 from sklearn.feature_extraction.text import CountVectorizer
 from textblob import TextBlob
-import en_core_web_md
 from collections import Counter
 from sklearn.cluster import DBSCAN, KMeans
 from sklearn.decomposition import PCA
@@ -16,11 +16,15 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-
 import nltk
 
-nltk.download("stopwords")
+try:
+    import en_core_web_md
+except ImportError:
+    spacy.cli.download("en_core_web_md")
+    import en_core_web_md
 
+nltk.download("stopwords")
 
 # region support functions
 
