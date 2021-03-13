@@ -445,9 +445,9 @@ def explore_clustering(
 
     # endregion
 
-    print("***********************")
+    print("************************")
     print("EXPLORE CLUSTERING")
-    print("***********************")
+    print("************************")
 
     kmeans_plots = explore_KMeans_clustering(
         df,
