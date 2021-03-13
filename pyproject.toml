@@ -29,6 +29,12 @@ flake8 = "^3.8.4"
 Sphinx = "^3.5.1"
 sphinxcontrib-napoleon = "^0.7"
 
+[tool.semantic_release]
+version_variable = "datascience_eda/__init__.py:__version__"
+version_source = "commit"
+upload_to_pypi = "false"
+patch_without_tag = "true"
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"

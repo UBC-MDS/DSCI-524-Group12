@@ -180,8 +180,6 @@ def verify_elbow_plot(plot):
     # verify_plot(plot, plot_fname, 0)
 
 
-
-
 def test_explore_clustering(df):
     """test explore_clustering function
     Parameters
