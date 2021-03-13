@@ -295,6 +295,7 @@ spacy = ">=3.0.0,<3.1.0"
 [package.source]
 type = "url"
 url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.0.0/en_core_web_md-3.0.0.tar.gz"
+
 [[package]]
 name = "entrypoints"
 version = "0.3"
@@ -767,7 +768,6 @@ description = "Natural Language Toolkit"
 category = "main"
 optional = false
 python-versions = "*"
-develop = false
 
 [package.dependencies]
 click = "*"
@@ -776,18 +776,12 @@ regex = "*"
 tqdm = "*"
 
 [package.extras]
-all = ["python-crfsuite", "gensim", "pyparsing", "numpy", "scipy", "matplotlib", "scikit-learn", "twython", "requests"]
+all = ["requests", "numpy", "python-crfsuite", "scikit-learn", "twython", "pyparsing", "scipy", "matplotlib", "gensim"]
 corenlp = ["requests"]
 machine_learning = ["gensim", "numpy", "python-crfsuite", "scikit-learn", "scipy"]
 plot = ["matplotlib"]
 tgrep = ["pyparsing"]
 twitter = ["twython"]
-
-[package.source]
-type = "git"
-url = "https://github.com/nltk/nltk.git"
-reference = "3.5"
-resolved_reference = "6404712d0a64c3d6e3700032c23a59803615460c"
 
 [[package]]
 name = "notebook"
@@ -1861,7 +1855,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "8dce61ae2d35c81aafb765d3e05f493b9f861bcf1b4cc30ad321f2de4f39c831"
+content-hash = "d8e30c3b7d7f999046465a007ac3fd34af9764514a84f6ec2f4f3f951f65771d"
 
 [metadata.files]
 alabaster = [
@@ -2366,7 +2360,9 @@ nest-asyncio = [
     {file = "nest_asyncio-1.5.1-py3-none-any.whl", hash = "sha256:76d6e972265063fe92a90b9cc4fb82616e07d586b346ed9d2c89a4187acea39c"},
     {file = "nest_asyncio-1.5.1.tar.gz", hash = "sha256:afc5a1c515210a23c461932765691ad39e8eba6551c055ac8d5546e69250d0aa"},
 ]
-nltk = []
+nltk = [
+    {file = "nltk-3.5.zip", hash = "sha256:845365449cd8c5f9731f7cb9f8bd6fd0767553b9d53af9eb1b3abf7700936b35"},
+]
 notebook = [
     {file = "notebook-6.2.0-py3-none-any.whl", hash = "sha256:25ad93c982b623441b491e693ef400598d1a46cdf11b8c9c0b3be6c61ebbb6cd"},
     {file = "notebook-6.2.0.tar.gz", hash = "sha256:0464b28e18e7a06cec37e6177546c2322739be07962dd13bf712bcb88361f013"},
