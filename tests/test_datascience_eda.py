@@ -6,7 +6,6 @@ from sklearn.compose import make_column_transformer
 
 import matplotlib.pyplot as plt
 from matplotlib.testing.compare import compare_images
-from datascience_eda import __version__
 from datascience_eda import datascience_eda as eda
 
 import seaborn as sns
@@ -181,8 +180,6 @@ def verify_elbow_plot(plot):
     # verify_plot(plot, plot_fname, 0)
 
 
-def test_version():
-    assert __version__ == "0.1.0"
 
 
 def test_explore_clustering(df):
