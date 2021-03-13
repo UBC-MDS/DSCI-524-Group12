@@ -17,10 +17,14 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 import nltk
-nltk.download("stopwords")
-spacy.cli.download("en_core_web_md")
-import en_core_web_md
 
+try:
+    import en_core_web_md
+except ImportError:
+    spacy.cli.download("en_core_web_md")
+    import en_core_web_md
+
+nltk.download("stopwords")
 
 # region support functions
 
