@@ -4,6 +4,11 @@ version = "0.1.4"
 description = "This package includes functions helping with common tasks during EDA stage of a data science project."
 authors = ["Mai Le, Aditya Bhatraju,, Rahul Kuriyedath, Charles Suresh"]
 license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/UBC-MDS/datascience_eda"
+repository = "https://github.com/UBC-MDS/datascience_eda"
+documentation = "https://datascience_eda.readthedocs.io"
+
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -37,3 +42,4 @@ patch_without_tag = "true"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
