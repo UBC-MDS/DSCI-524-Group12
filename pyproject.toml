@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "datascience_eda"
-version = "0.1.4"
+version = "0.1.5"
 description = "This package includes functions helping with common tasks during EDA stage of a data science project."
 authors = ["Mai Le, Aditya Bhatraju,, Rahul Kuriyedath, Charles Suresh"]
 license = "MIT"
