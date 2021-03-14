@@ -17,9 +17,10 @@ Our functions are tailored based on our own experience, there are also similar p
 * [easy-data-analysis](https://github.com/jschnab/easy-data-analysis)
 
 ## Installation
+There are several dependencies not available on test.pypi, please use the exact command below to install our package.
 
 ```bash
-$ pip install -i https://test.pypi.org/simple/ datascience_eda
+$ pip install -i https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple datascience-eda
 ```
 
 ## Main Functions
