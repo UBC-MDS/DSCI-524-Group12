@@ -1,9 +1,12 @@
 # datascience_eda 
 
+[![build](https://github.com/UBC-MDS/datascience_eda/actions/workflows/build.yml/badge.svg)](https://github.com/UBC-MDS/datascience_eda/actions/workflows/build.yml) ![](https://github.com/lephanthuymai/datascience_eda/workflows/build/badge.svg) [![codecov](https://codecov.io/gh/UBC-MDS/datascience_eda/branch/main/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/datascience_eda) [![Deploy](https://github.com/UBC-MDS/datascience_eda/actions/workflows/deploy.yml/badge.svg)](https://github.com/UBC-MDS/datascience_eda/actions/workflows/deploy.yml) [![Documentation Status](https://readthedocs.org/projects/datascience_eda/badge/?version=latest)](https://datascience_eda.readthedocs.io/en/latest/?badge=latest)
+
+<!-- 
 ![](https://github.com/lephanthuymai/datascience_eda/workflows/build/badge.svg) 
 [![codecov](https://codecov.io/gh/UBC-MDS/datascience_eda/branch/main/graph/badge.svg?token=FL08APHGDS)](https://codecov.io/gh/UBC-MDS/datascience_eda)
 ![Release](https://github.com/lephanthuymai/datascience_eda/workflows/Release/badge.svg) 
-[![Documentation Status](https://readthedocs.org/projects/datascience_eda/badge/?version=latest)](https://datascience_eda.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/datascience_eda/badge/?version=latest)](https://datascience_eda.readthedocs.io/en/latest/?badge=latest) -->
 
 This package includes functions assisting data scientists with various common tasks during the exploratory data analysis stage of a data science project. Its functions will help the data scientist to do preliminary analysis on common column types like numeric columns, categorical columns and text columns; it will also conduct several experimental clusterings on the dataset.
 
